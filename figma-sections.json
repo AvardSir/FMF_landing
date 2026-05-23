@@ -1,0 +1,434 @@
+[
+  {
+    "name": "Rectangle 24",
+    "type": "RECTANGLE",
+    "y": 0,
+    "height": 1053,
+    "width": 1920,
+    "text": null
+  },
+  {
+    "name": "Frame 9",
+    "type": "FRAME",
+    "y": 0,
+    "height": 108,
+    "width": 1920,
+    "text": null
+  },
+  {
+    "name": "Свобода движения",
+    "type": "TEXT",
+    "y": 188,
+    "height": 230,
+    "width": 908,
+    "text": "Свобода движения"
+  },
+  {
+    "name": "банка суставы 1 4",
+    "type": "RECTANGLE",
+    "y": 231,
+    "height": 744,
+    "width": 588,
+    "text": null
+  },
+  {
+    "name": "Rectangle 25",
+    "type": "RECTANGLE",
+    "y": 458,
+    "height": 2,
+    "width": 1840,
+    "text": null
+  },
+  {
+    "name": "Frame 277130167",
+    "type": "FRAME",
+    "y": 500,
+    "height": 130,
+    "width": 516,
+    "text": null
+  },
+  {
+    "name": "Frame 277130168",
+    "type": "FRAME",
+    "y": 500,
+    "height": 66,
+    "width": 287,
+    "text": null
+  },
+  {
+    "name": "Frame 277130166",
+    "type": "FRAME",
+    "y": 821,
+    "height": 112,
+    "width": 753,
+    "text": null
+  },
+  {
+    "name": "Комплекс для тех, кто хочет свободно двигаться и заботиться о своих суставах каждый день",
+    "type": "TEXT",
+    "y": 1213,
+    "height": 128,
+    "width": 1530,
+    "text": "Комплекс для тех, кто хочет свободно двигаться и заботиться "
+  },
+  {
+    "name": "Frame 1067",
+    "type": "FRAME",
+    "y": 1335,
+    "height": 3330,
+    "width": 490,
+    "text": null
+  },
+  {
+    "name": "Frame 277130171",
+    "type": "FRAME",
+    "y": 1421,
+    "height": 479,
+    "width": 1840,
+    "text": null
+  },
+  {
+    "name": "Frame 1079",
+    "type": "FRAME",
+    "y": 2020,
+    "height": 2959,
+    "width": 490,
+    "text": null
+  },
+  {
+    "name": "Vector 44",
+    "type": "VECTOR",
+    "y": 2070,
+    "height": 688,
+    "width": 2252,
+    "text": null
+  },
+  {
+    "name": "Frame 277130172",
+    "type": "FRAME",
+    "y": 2100,
+    "height": 169,
+    "width": 597,
+    "text": null
+  },
+  {
+    "name": "Ellipse 8",
+    "type": "ELLIPSE",
+    "y": 2255.442626953125,
+    "height": 120,
+    "width": 120,
+    "text": null
+  },
+  {
+    "name": "Ellipse 7",
+    "type": "ELLIPSE",
+    "y": 2263.442626953125,
+    "height": 104,
+    "width": 104,
+    "text": null
+  },
+  {
+    "name": "healthicons:joints-outline-24px",
+    "type": "FRAME",
+    "y": 2297,
+    "height": 40,
+    "width": 40,
+    "text": null
+  },
+  {
+    "name": "Rectangle 30",
+    "type": "RECTANGLE",
+    "y": 2329.442626953125,
+    "height": 320,
+    "width": 597,
+    "text": null
+  },
+  {
+    "name": "Питание суставов",
+    "type": "TEXT",
+    "y": 2409.442626953125,
+    "height": 80,
+    "width": 247,
+    "text": "Питание суставов"
+  },
+  {
+    "name": "Полноценный рацион для ваших суставов. Ежедневно снабжаем хрящевую ткань важными витаминами и микроэлементами, необходимыми для поддержания ее структуры и функций.",
+    "type": "TEXT",
+    "y": 2513.442626953125,
+    "height": 88,
+    "width": 481,
+    "text": "Полноценный рацион для ваших суставов. Ежедневно снабжаем хр"
+  },
+  {
+    "name": "Ellipse 9",
+    "type": "ELLIPSE",
+    "y": 2654.442626953125,
+    "height": 120,
+    "width": 120,
+    "text": null
+  },
+  {
+    "name": "Ellipse 10",
+    "type": "ELLIPSE",
+    "y": 2662.442626953125,
+    "height": 104,
+    "width": 104,
+    "text": null
+  },
+  {
+    "name": "hugeicons:bone-02",
+    "type": "FRAME",
+    "y": 2695,
+    "height": 40,
+    "width": 40,
+    "text": null
+  },
+  {
+    "name": "Rectangle 31",
+    "type": "RECTANGLE",
+    "y": 2728.442626953125,
+    "height": 320,
+    "width": 597,
+    "text": null
+  },
+  {
+    "name": "Frame 1081",
+    "type": "FRAME",
+    "y": 2808,
+    "height": 174,
+    "width": 481,
+    "text": null
+  },
+  {
+    "name": "Ellipse 11",
+    "type": "ELLIPSE",
+    "y": 3052.442626953125,
+    "height": 120,
+    "width": 120,
+    "text": null
+  },
+  {
+    "name": "Ellipse 12",
+    "type": "ELLIPSE",
+    "y": 3060.442626953125,
+    "height": 104,
+    "width": 104,
+    "text": null
+  },
+  {
+    "name": "ph:person-simple-run-bold",
+    "type": "FRAME",
+    "y": 3094,
+    "height": 40,
+    "width": 40,
+    "text": null
+  },
+  {
+    "name": "Rectangle 32",
+    "type": "RECTANGLE",
+    "y": 3126.442626953125,
+    "height": 320,
+    "width": 597,
+    "text": null
+  },
+  {
+    "name": "Frame 1082",
+    "type": "FRAME",
+    "y": 3206,
+    "height": 152,
+    "width": 481,
+    "text": null
+  },
+  {
+    "name": "Ellipse 13",
+    "type": "ELLIPSE",
+    "y": 3451.4423828125,
+    "height": 120,
+    "width": 120,
+    "text": null
+  },
+  {
+    "name": "Ellipse 14",
+    "type": "ELLIPSE",
+    "y": 3459.4423828125,
+    "height": 104,
+    "width": 104,
+    "text": null
+  },
+  {
+    "name": "streamline-ultimate:science-molecule-strucutre",
+    "type": "FRAME",
+    "y": 3493,
+    "height": 40,
+    "width": 40,
+    "text": null
+  },
+  {
+    "name": "Rectangle 33",
+    "type": "RECTANGLE",
+    "y": 3525.4423828125,
+    "height": 320,
+    "width": 597,
+    "text": null
+  },
+  {
+    "name": "Frame 277130186",
+    "type": "FRAME",
+    "y": 3605.4423828125,
+    "height": 192,
+    "width": 501,
+    "text": null
+  },
+  {
+    "name": "Vector 45",
+    "type": "VECTOR",
+    "y": 3741.9423828125,
+    "height": 907.5,
+    "width": 2566,
+    "text": null
+  },
+  {
+    "name": "Group 8",
+    "type": "GROUP",
+    "y": 3849.4423828125,
+    "height": 394,
+    "width": 597,
+    "text": null
+  },
+  {
+    "name": "Frame 1073",
+    "type": "FRAME",
+    "y": 4523.4423828125,
+    "height": 383,
+    "width": 736,
+    "text": null
+  },
+  {
+    "name": "Frame 277130173",
+    "type": "FRAME",
+    "y": 4979,
+    "height": 278,
+    "width": 1006,
+    "text": null
+  },
+  {
+    "name": "Group 6",
+    "type": "GROUP",
+    "y": 5337,
+    "height": 890,
+    "width": 1840,
+    "text": null
+  },
+  {
+    "name": "Frame 1076",
+    "type": "FRAME",
+    "y": 6227,
+    "height": 809,
+    "width": 1920,
+    "text": null
+  },
+  {
+    "name": "Сравнение с другими продуктами",
+    "type": "TEXT",
+    "y": 7156,
+    "height": 53,
+    "width": 1839,
+    "text": "Сравнение с другими продуктами"
+  },
+  {
+    "name": "«Complex SW СУСТАВЫ» — это комплексная добавка, сочетающая высокие дозировки глюкозамина и хондроитина с противовоспалительной босвеллией и полным набором витаминов для защиты соединительной ткани. В отличие от многих стандартных средств на рынке, он предлагает законченную систему «все в одной порции». Ключевым преимуществом является наличие клинически значимых дозировок (например, 1250 мг глюкозамина), тогда как многие на рынке используют уменьшенные дозировки ради экономии.",
+    "type": "TEXT",
+    "y": 7241,
+    "height": 214,
+    "width": 597,
+    "text": "«Complex SW СУСТАВЫ» — это комплексная добавка, сочетающая в"
+  },
+  {
+    "name": "image 27",
+    "type": "RECTANGLE",
+    "y": 7241,
+    "height": 614,
+    "width": 462,
+    "text": null
+  },
+  {
+    "name": "boxicons:science",
+    "type": "FRAME",
+    "y": 7337,
+    "height": 40,
+    "width": 40,
+    "text": null
+  },
+  {
+    "name": "Rectangle 39",
+    "type": "RECTANGLE",
+    "y": 7401,
+    "height": 2,
+    "width": 908,
+    "text": null
+  },
+  {
+    "name": "Frame 277130182",
+    "type": "FRAME",
+    "y": 7427,
+    "height": 150,
+    "width": 597,
+    "text": null
+  },
+  {
+    "name": "boxicons:science",
+    "type": "FRAME",
+    "y": 7644,
+    "height": 40,
+    "width": 40,
+    "text": null
+  },
+  {
+    "name": "Rectangle 38",
+    "type": "RECTANGLE",
+    "y": 7708,
+    "height": 2,
+    "width": 908,
+    "text": null
+  },
+  {
+    "name": "Frame 277130181",
+    "type": "FRAME",
+    "y": 7734,
+    "height": 70,
+    "width": 597,
+    "text": null
+  },
+  {
+    "name": "Group 10",
+    "type": "GROUP",
+    "y": 7975,
+    "height": 824,
+    "width": 1840,
+    "text": null
+  },
+  {
+    "name": "Frame 1077",
+    "type": "FRAME",
+    "y": 8919,
+    "height": 346,
+    "width": 1840,
+    "text": null
+  },
+  {
+    "name": "Group 5",
+    "type": "GROUP",
+    "y": 9385,
+    "height": 370,
+    "width": 1840,
+    "text": null
+  },
+  {
+    "name": "Frame 1111",
+    "type": "FRAME",
+    "y": 9755,
+    "height": 171,
+    "width": 1840,
+    "text": null
+  }
+]

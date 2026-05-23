@@ -1,0 +1,1256 @@
+{
+  "colors": [
+    "rgba(243, 243, 243, 1)",
+    "rgba(47, 157, 207, 1)",
+    "rgba(217, 217, 217, 1)",
+    "rgba(28, 28, 28, 1)",
+    "rgba(128, 128, 128, 1)",
+    "rgba(255, 255, 255, 1)",
+    "rgba(49, 147, 204, 1)",
+    "rgba(219, 226, 211, 1)",
+    "rgba(0, 0, 0, 1)",
+    "rgba(52, 150, 206, 1)",
+    "rgba(154, 213, 239, 1)",
+    "rgba(78, 156, 205, 1)",
+    "rgba(92, 107, 96, 1)",
+    "rgba(218, 226, 234, 1)",
+    "rgba(35, 35, 35, 1)",
+    "rgba(50, 98, 148, 1)",
+    "rgba(54, 73, 59, 1)"
+  ],
+  "fonts": [
+    "Onest"
+  ],
+  "textStyles": [
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 35.20000076293945
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 35.20000076293945
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 35.20000076293945
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 32
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 64,
+      "fontWeight": 400,
+      "lineHeight": 57.599998474121094
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 32
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 18
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 18
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 18
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 18
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 35.20000076293945
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 22.399999618530273
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 22.399999618530273
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 22.399999618530273
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 19.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 128,
+      "fontWeight": 400,
+      "lineHeight": 115.19999694824219
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 38.400001525878906
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 64,
+      "fontWeight": 500,
+      "lineHeight": 64
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 40,
+      "fontWeight": 500,
+      "lineHeight": 40
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 40,
+      "fontWeight": 500,
+      "lineHeight": 40
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 48,
+      "fontWeight": 500,
+      "lineHeight": 52.80000305175781
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 32
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 32
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 32
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 48,
+      "fontWeight": 500,
+      "lineHeight": 52.80000305175781
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 32
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 40,
+      "fontWeight": 500,
+      "lineHeight": 40
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 40,
+      "fontWeight": 500,
+      "lineHeight": 40
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 48,
+      "fontWeight": 500,
+      "lineHeight": 52.80000305175781
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 40,
+      "fontWeight": 500,
+      "lineHeight": 40
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 16.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 38.400001525878906
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 38.400001525878906
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 38.400001525878906
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 400,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 38.400001525878906
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 64,
+      "fontWeight": 500,
+      "lineHeight": 57.599998474121094
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 32
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 21.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 48,
+      "fontWeight": 500,
+      "lineHeight": 48
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 32,
+      "fontWeight": 500,
+      "lineHeight": 38.400001525878906
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 19.200000762939453
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28.80000114440918
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 22.399999618530273
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 25.19999885559082
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 22.399999618530273
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 25.19999885559082
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": 22.399999618530273
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 18,
+      "fontWeight": 400,
+      "lineHeight": 25.19999885559082
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": 19.600000381469727
+    },
+    {
+      "fontFamily": "Onest",
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 24
+    }
+  ]
+}
