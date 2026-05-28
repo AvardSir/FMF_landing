@@ -1,1969 +1,964 @@
 <!DOCTYPE html>
-<html lang="english">
-  <head>
-    <title>exported project</title>
-    <meta property="og:title" content="exported project" />
+<html lang="ru">
+<head>
+    <title>Complex SW СУСТАВЫ — поддержка суставов</title>
+    <meta property="og:title" content="Complex SW СУСТАВЫ" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+        html {
+            line-height: 1.15;
+        }
+        body {
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            -webkit-font-smoothing: antialiased;
+        }
+        p,
+        li,
+        ul,
+        pre,
+        div,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        figure,
+        blockquote,
+        figcaption {
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            background-color: transparent;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+        button,
+        select {
+            text-transform: none;
+        }
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+            color: inherit;
+        }
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+        button:-moz-focus,
+        [type="button"]:-moz-focus,
+        [type="reset"]:-moz-focus,
+        [type="submit"]:-moz-focus {
+            outline: 1px dotted ButtonText;
+        }
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+        pre {
+            white-space: normal;
+        }
+        input {
+            padding: 2px 4px;
+        }
+        img {
+            display: block;
+        }
+        details {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        [data-thq="accordion"] [data-thq="accordion-content"] {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            padding: 0;
+        }
+        [data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {
+            max-height: 1000vh;
+        }
+        details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {
+            transform: rotate(180deg);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
     <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
-
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-theme-neutral-dark);
-        background: var(--dl-color-theme-neutral-light);
-
-        fill: var(--dl-color-theme-neutral-dark);
-      }
+        html {
+            font-family: 'Onest', 'Inter', sans-serif;
+            font-size: 16px;
+        }
+        body {
+            font-weight: 400;
+            font-style: normal;
+            text-decoration: none;
+            text-transform: none;
+            letter-spacing: normal;
+            line-height: 1.15;
+            color: var(--dl-color-theme-neutral-dark);
+            background: var(--dl-color-theme-neutral-light);
+            fill: var(--dl-color-theme-neutral-dark);
+        }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-  </head>
-  <body>
+
+    <!-- ========== ДЕСКТОП-ФИКСЫ: адаптивная обёртка ========== -->
+    <style>
+        /* Основной контейнер — центрируем и ограничиваем ширину */
+        .joint-mob2-container1 {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Внутренняя обёртка всего лендинга */
+        .joint-mob2-thq-joint-mob2-elm {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 16px;
+        }
+
+        /* Адаптивные изображения */
+        .joint-mob2-thq-joint-mob2-elm img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Десктопные медиазапросы */
+        @media screen and (min-width: 768px) {
+            .joint-mob2-thq-joint-mob2-elm {
+                padding: 0 32px;
+            }
+
+            /* Хедер / навигация */
+            .joint-mob2-thq-frame13-elm {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 20px 0;
+                flex-direction: row !important;
+                position: relative !important;
+                gap: 16px;
+            }
+
+            /* Блоки с текстом — даём больше ширины */
+            .joint-mob2-thq-frame1097-elm,
+            .joint-mob2-thq-frame1106-elm,
+            .joint-mob2-thq-frame1104-elm,
+            .joint-mob2-thq-frame1100-elm {
+                max-width: 800px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Карточки компонентов (9 активных компонентов) */
+            .joint-mob2-thq-frame65-elm {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                width: 100%;
+            }
+
+            .joint-mob2-thq-frame65-elm > div {
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                border-radius: 12px;
+                padding: 16px;
+                background: #fff;
+            }
+
+            /* Блоки "Питание суставов / Регенерация / Результат" */
+            .joint-mob2-thq-frame15-elm {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+                width: 100%;
+            }
+            .joint-mob2-thq-frame15-elm > div {
+                flex: 1 1 280px;
+                max-width: 350px;
+            }
+
+            /* Сравнение с другими продуктами */
+            .joint-mob2-thq-frame1091-elm {
+                display: flex;
+                flex-direction: row !important;
+                gap: 32px;
+                align-items: flex-start;
+                width: 100%;
+            }
+            .joint-mob2-thq-frame1091-elm > div {
+                flex: 1;
+            }
+
+            /* FAQ / аккордеон */
+            .joint-mob2-thq-frame1049-elm {
+                max-width: 800px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            /* Блок с ценой и кнопкой */
+            .joint-mob2-thq-group13-elm {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            /* Форма обратной связи */
+            .joint-mob2-thq-frame277130164-elm {
+                display: flex;
+                flex-direction: row !important;
+                gap: 32px;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+            }
+            .joint-mob2-thq-frame277130164-elm > div {
+                flex: 1 1 300px;
+                max-width: 500px;
+            }
+
+            /* Футер */
+            .joint-mob2-thq-frame1110-elm {
+                display: flex;
+                flex-direction: row !important;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 16px;
+                padding: 24px 0;
+            }
+
+            /* Текстовые блоки — улучшаем читаемость */
+            .joint-mob2-thq-text-elm10,
+            .joint-mob2-thq-text-elm56,
+            .joint-mob2-thq-text-elm59,
+            .joint-mob2-thq-text-elm70 {
+                font-size: clamp(24px, 4vw, 36px) !important;
+                line-height: 1.3 !important;
+            }
+
+            /* Кнопки */
+            .joint-mob2-thq-frame1078-elm1,
+            .joint-mob2-thq-frame1078-elm2,
+            .joint-mob2-thq-frame1078-elm3,
+            .joint-mob2-thq-frame1078-elm4,
+            .joint-mob2-thq-frame1078-elm5,
+            .joint-mob2-thq-frame1078-elm6,
+            .joint-mob2-thq-frame1078-elm7 {
+                max-width: 280px;
+                cursor: pointer;
+                transition: transform 0.2s ease, opacity 0.2s ease;
+            }
+            .joint-mob2-thq-frame1078-elm1:hover,
+            .joint-mob2-thq-frame1078-elm2:hover,
+            .joint-mob2-thq-frame1078-elm3:hover,
+            .joint-mob2-thq-frame1078-elm4:hover,
+            .joint-mob2-thq-frame1078-elm5:hover,
+            .joint-mob2-thq-frame1078-elm6:hover,
+            .joint-mob2-thq-frame1078-elm7:hover {
+                transform: scale(1.03);
+                opacity: 0.9;
+            }
+
+            /* Скрываем ссылку "Built in TeleportHQ" на десктопе (опционально) */
+            .joint-mob2-link {
+                opacity: 0.6;
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .joint-mob2-thq-joint-mob2-elm {
+                padding: 0 40px;
+            }
+
+            /* Ещё более просторная сетка для карточек */
+            .joint-mob2-thq-frame65-elm {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+
+            .joint-mob2-thq-frame15-elm > div {
+                max-width: 320px;
+            }
+        }
+
+        /* Убираем возможные артефакты абсолютного позиционирования */
+        @media screen and (min-width: 768px) {
+            .joint-mob2-thq-rectangle35-elm,
+            .joint-mob2-thq-rectangle45-elm,
+            .joint-mob2-thq-ellipse23-elm,
+            .joint-mob2-thq-vector47-elm,
+            .joint-mob2-thq-vector44-elm1,
+            .joint-mob2-thq-vector44-elm2 {
+                position: relative !important;
+                left: auto !important;
+                top: auto !important;
+                right: auto !important;
+                bottom: auto !important;
+            }
+        }
+    </style>
+    <!-- ========== КОНЕЦ ДЕСКТОП-ФИКСОВ ========== -->
+
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        data-tag="font" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        data-tag="font" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        data-tag="font" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        data-tag="font" />
+    <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+</head>
+<body>
     <link rel="stylesheet" href="./style.css" />
     <div>
-      <link href="./index.css" rel="stylesheet" />
+        <link href="./index.css" rel="stylesheet" />
 
-      <div class="joint-mob2-container1">
-        <div class="joint-mob2-thq-joint-mob2-elm">
-          <div class="joint-mob2-thq-frame1099-elm">
-            <img
-              alt="Rectangle446761"
-              src="public/rectangle446761-onv-400h.png"
-              class="joint-mob2-thq-rectangle44-elm"
-            />
-            <div class="joint-mob2-thq-frame1098-elm">
-              <img
-                alt="Rectangle406761"
-                src="public/rectangle406761-p28-1100h.png"
-                class="joint-mob2-thq-rectangle40-elm"
-              />
-              <img
-                alt="IMAGE146761"
-                src="public/image146761-m8y-400h.png"
-                class="joint-mob2-thq-image14-elm1"
-              />
-            </div>
-            <img
-              alt="Rectangle436761"
-              src="public/rectangle436761-glj-200h.png"
-              class="joint-mob2-thq-rectangle43-elm"
-            />
-          </div>
-          <img
-            alt="Vector446761"
-            src="public/vector446761-epkjv.svg"
-            class="joint-mob2-thq-vector44-elm1"
-          />
-          <div class="joint-mob2-thq-frame1091-elm">
-            <div class="joint-mob2-thq-frame1089-elm">
-              <span class="joint-mob2-thq-text-elm10">
-                Сравнение с другими продуктами
-              </span>
-              <div class="joint-mob2-thq-frame1088-elm">
-                <span class="joint-mob2-thq-text-elm11">
-                  «Complex SW СУСТАВЫ» — это комплексная добавка, сочетающая
-                  высокие дозировки глюкозамина и хондроитина
-                  с&nbsp;противовоспалительной босвеллией и&nbsp;полным набором
-                  витаминов для защиты соединительной ткани.
-                </span>
-                <span class="joint-mob2-thq-text-elm12">
-                  В отличие от многих стандартных средств на рынке, он
-                  предлагает законченную систему «все в одной порции».
-                </span>
-                <span class="joint-mob2-thq-text-elm13">
-                  Ключевым преимуществом является наличие клинически значимых
-                  дозировок (например, 1250 мг глюкозамина), тогда
-                  как&nbsp;многие на&nbsp;рынке используют уменьшенные дозировки
-                  ради экономии.
-                </span>
-              </div>
-            </div>
-            <div class="joint-mob2-thq-frame1090-elm">
-              <img
-                alt="IMAGE136761"
-                src="public/image136761-axu-300w.png"
-                class="joint-mob2-thq-image13-elm1"
-              />
-              <div class="joint-mob2-thq-frame1087-elm">
-                <div class="joint-mob2-thq-frame1085-elm">
-                  <img
-                    alt="boxiconsscience6761"
-                    src="public/boxiconsscience6761-7vjd.svg"
-                    class="joint-mob2-thq-boxiconsscience-elm1"
-                  />
-                  <div class="joint-mob2-thq-frame1084-elm1">
-                    <span class="joint-mob2-thq-text-elm14">
-                      1 порция = 17 обычных капсул
-                    </span>
-                    <span class="joint-mob2-thq-text-elm15">
-                      Доза в 3 раза выше конкурентов. Достаточно одной порции в
-                      день
-                    </span>
-                  </div>
-                </div>
-                <div class="joint-mob2-thq-frame1086-elm">
-                  <img
-                    alt="boxiconsscience6761"
-                    src="public/boxiconsscience6761-iqx.svg"
-                    class="joint-mob2-thq-boxiconsscience-elm2"
-                  />
-                  <div class="joint-mob2-thq-frame1084-elm2">
-                    <span class="joint-mob2-thq-text-elm16">
-                      Курс на 1 месяц
-                    </span>
-                    <span class="joint-mob2-thq-text-elm17">
-                      30 порций = 130₽ в день
-                    </span>
-                  </div>
-                  <div class="joint-mob2-thq-frame1078-elm1">
-                    <div class="joint-mob2-thq-frame5-elm1">
-                      <span class="joint-mob2-thq-text-elm18">
-                        Купить в 1 клик
-                      </span>
+        <div class="joint-mob2-container1">
+            <div class="joint-mob2-thq-joint-mob2-elm">
+                <div class="joint-mob2-thq-frame1099-elm">
+                    <img alt="Rectangle446761" src="public/rectangle446761-onv-400h.png"
+                        class="joint-mob2-thq-rectangle44-elm" />
+                    <div class="joint-mob2-thq-frame1098-elm">
+                        <img alt="Rectangle406761" src="public/rectangle406761-p28-1100h.png"
+                            class="joint-mob2-thq-rectangle40-elm" />
+                        <img alt="IMAGE146761" src="public/image146761-m8y-400h.png"
+                            class="joint-mob2-thq-image14-elm1" />
                     </div>
-                    <div class="joint-mob2-thq-frame1059-elm1">
-                      <img
-                        alt="Frame10616761"
-                        src="public/frame10616761-8a2o.svg"
-                        class="joint-mob2-thq-frame1061-elm1"
-                      />
-                    </div>
-                  </div>
+                    <img alt="Rectangle436761" src="public/rectangle436761-glj-200h.png"
+                        class="joint-mob2-thq-rectangle43-elm" />
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame1094-elm">
-            <div class="joint-mob2-thq-group13-elm">
-              <img
-                alt="Rectangle416761"
-                src="public/rectangle416761-73ry-400w.png"
-                class="joint-mob2-thq-rectangle41-elm"
-              />
-              <div class="joint-mob2-thq-frame1078-elm2">
-                <div class="joint-mob2-thq-frame5-elm2">
-                  <span class="joint-mob2-thq-text-elm19">Купить в 1 клик</span>
-                </div>
-                <div class="joint-mob2-thq-frame1059-elm2">
-                  <img
-                    alt="Frame10616761"
-                    src="public/frame10616761-5xko.svg"
-                    class="joint-mob2-thq-frame1061-elm2"
-                  />
-                </div>
-              </div>
-              <img
-                alt="IMAGE136761"
-                src="public/image136761-xqb3-300h.png"
-                class="joint-mob2-thq-image13-elm2"
-              />
-              <span class="joint-mob2-thq-text-elm20">
-                «Complex SW СУСТАВЫ» для&nbsp;опорно-двигательного аппарата
-              </span>
-              <div class="joint-mob2-thq-frame1092-elm">
-                <span class="joint-mob2-thq-text-elm21">3 900 ₽</span>
-                <span class="joint-mob2-thq-text-elm22">420г. / 30 порций</span>
-              </div>
-            </div>
-            <div class="joint-mob2-thq-frame1114-elm">
-              <img
-                alt="Ellipse187281"
-                src="public/ellipse187281-x2fk-200h.png"
-                class="joint-mob2-thq-ellipse18-elm"
-              />
-              <img
-                alt="Ellipse197281"
-                src="public/ellipse197281-bh8-200h.png"
-                class="joint-mob2-thq-ellipse19-elm"
-              />
-              <img
-                alt="Ellipse177281"
-                src="public/ellipse177281-xenb-200h.png"
-                class="joint-mob2-thq-ellipse17-elm"
-              />
-              <img
-                alt="Ellipse207281"
-                src="public/ellipse207281-cayh-200h.png"
-                class="joint-mob2-thq-ellipse20-elm"
-              />
-              <img
-                alt="Ellipse217281"
-                src="public/ellipse217281-wcjd-200h.png"
-                class="joint-mob2-thq-ellipse21-elm"
-              />
-              <img
-                alt="Ellipse227282"
-                src="public/ellipse227282-gbmo-200h.png"
-                class="joint-mob2-thq-ellipse22-elm"
-              />
-              <img
-                alt="Rectangle427282"
-                src="public/rectangle427282-q7ht-400w.png"
-                class="joint-mob2-thq-rectangle42-elm"
-              />
-              <span class="joint-mob2-thq-text-elm23">
-                Инструкция и рекомендации по применению
-              </span>
-              <div class="joint-mob2-thq-frame1093-elm">
-                <span class="joint-mob2-thq-text-elm24">1 ложка в день</span>
-                <span class="joint-mob2-thq-text-elm25">
-                  Растворить в 200 мл воды
-                </span>
-                <span class="joint-mob2-thq-text-elm26">Принимать утром</span>
-              </div>
-            </div>
-          </div>
-          <img
-            alt="Rectangle356761"
-            src="public/rectangle356761-sfda-700h.png"
-            class="joint-mob2-thq-rectangle35-elm"
-          />
-          <span class="joint-mob2-thq-text-elm27">
-            Подходит для всех, кто&nbsp;заботиться о&nbsp;своем здоровье
-            и&nbsp;думает о своем будущем заранее.
-          </span>
-          <div class="joint-mob2-thq-frame1103-elm1">
-            <div class="joint-mob2-thq-frame1084-elm3">
-              <span class="joint-mob2-thq-text-elm28">18+ лет</span>
-              <span class="joint-mob2-thq-text-elm29">
-                Поддержка суставов при травмах
-              </span>
-            </div>
-            <div class="joint-mob2-thq-frame1103-elm2">
-              <span class="joint-mob2-thq-text-elm30">35+ лет</span>
-              <span class="joint-mob2-thq-text-elm31">
-                Профилактика возрастных изменений
-              </span>
-            </div>
-            <div class="joint-mob2-thq-frame1102-elm">
-              <span class="joint-mob2-thq-text-elm32">45+</span>
-              <span class="joint-mob2-thq-text-elm33">
-                Сохранение здоровья у женщин
-              </span>
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame1105-elm">
-            <span class="joint-mob2-thq-text-elm34">
-              <span class="joint-mob2-thq-text-elm35">
-                «Complex SW СУСТАВЫ» — комплекс
-              </span>
-              <span>из&nbsp;9 активных компонентов</span>
-            </span>
-            <div class="joint-mob2-thq-frame1069-elm">
-              <img
-                alt="Rectangle366761"
-                src="public/rectangle366761-a7zm-400h.png"
-                class="joint-mob2-thq-rectangle36-elm"
-              />
-              <img
-                alt="ChatGPTImage18202617035216761"
-                src="public/chatgptimage18202617035216761-kr7j-500h.png"
-                class="joint-mob2-thq-chat-gpt-image1820261703521-elm"
-              />
-              <img
-                alt="Vector446761"
-                src="public/vector446761-fbh.svg"
-                class="joint-mob2-thq-vector44-elm2"
-              />
-              <img
-                alt="ChatGPTImage18202613583816761"
-                src="public/chatgptimage18202613583816761-ilm-300h.png"
-                class="joint-mob2-thq-chat-gpt-image1820261358381-elm"
-              />
-            </div>
-            <div class="joint-mob2-thq-frame65-elm">
-              <div class="joint-mob2-thq-frame64-elm">
-                <span class="joint-mob2-thq-text-elm37">Глюкозамин</span>
-                <span class="joint-mob2-thq-text-elm38">
-                  Хондропротектор, который восстанавливает хрящевую ткань,
-                  уменьшает боль и&nbsp;воспаление в&nbsp;суставах, а также
-                  улучшает их&nbsp;подвижность
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame57-elm">
-                <span class="joint-mob2-thq-text-elm39">Хондроитин</span>
-                <span class="joint-mob2-thq-text-elm40">
-                  Является структурным компонентом хряща, который защищает его
-                  от разрушения, улучшает минеральный обмен и стимулирует
-                  выработку суставной жидкости.
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame60-elm">
-                <span class="joint-mob2-thq-text-elm41">МСМ</span>
-                <span class="joint-mob2-thq-text-elm42">
-                  Метилсульфонилметан укрепляет суставы, снимает воспаление и
-                  боль, улучшает кожу, волосы, ногти и&nbsp;нормализует
-                  иммунитет
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame62-elm">
-                <span class="joint-mob2-thq-text-elm43">Коллаген</span>
-                <span class="joint-mob2-thq-text-elm44">
-                  Является основным фибриллярным белком соединительной ткани,
-                  обеспечивающим прочность и&nbsp;эластичность сухожилий, костей
-                  и хрящей
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame59-elm">
-                <span class="joint-mob2-thq-text-elm45">Босвелия</span>
-                <span class="joint-mob2-thq-text-elm46">
-                  Подавляет воспаление в суставах, блокируя синтез лейкотриенов,
-                  что уменьшает боль и&nbsp;защищает хрящ от&nbsp;разрушения без
-                  вреда для&nbsp;ЖКТ
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame58-elm">
-                <span class="joint-mob2-thq-text-elm47">Витамин С</span>
-                <span class="joint-mob2-thq-text-elm48">
-                  Участвует в синтезе коллагена, метаболизме гормонов
-                  и&nbsp;тирозина, окислительно-восстановительных процессах и
-                  улучшает усвоение железа в кишечнике
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame61-elm">
-                <span class="joint-mob2-thq-text-elm49">Витамин Е</span>
-                <span class="joint-mob2-thq-text-elm50">
-                  Защищает суставы, замедляя разрушение хряща и&nbsp;уменьшая
-                  боль и скованность
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame63-elm">
-                <span class="joint-mob2-thq-text-elm51">Марганец</span>
-                <span class="joint-mob2-thq-text-elm52">
-                  Необходим для работы центральной нервной системы, крепости
-                  костей и жирового обмена
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame66-elm">
-                <span class="joint-mob2-thq-text-elm53">Селен</span>
-                <span class="joint-mob2-thq-text-elm54">
-                  Замедляет старение как антиоксидант и&nbsp;сохраняет
-                  эластичность тканей
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame1078-elm3">
-                <div class="joint-mob2-thq-frame5-elm3">
-                  <span class="joint-mob2-thq-text-elm55">Заказать</span>
-                </div>
-                <div class="joint-mob2-thq-frame1059-elm3">
-                  <img
-                    alt="Frame10616761"
-                    src="public/frame10616761-hzdn.svg"
-                    class="joint-mob2-thq-frame1061-elm3"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame1073-elm">
-            <div class="joint-mob2-thq-frame1072-elm">
-              <img
-                alt="IMAGE166761"
-                src="public/image166761-t8c8-200w.png"
-                class="joint-mob2-thq-image16-elm"
-              />
-              <img
-                alt="IMAGE176761"
-                src="public/image176761-2gtb-200w.png"
-                class="joint-mob2-thq-image17-elm"
-              />
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame1106-elm">
-            <span class="joint-mob2-thq-text-elm56">
-              Питаем. Восстанавливаем. Сохраняем подвижность.
-            </span>
-            <span class="joint-mob2-thq-text-elm57">
-              БАД «Complex SW СУСТАВЫ» от&nbsp;Оптисалт решает три главные
-              задачи здоровья суставов
-            </span>
-            <div class="joint-mob2-thq-frame1078-elm4">
-              <div class="joint-mob2-thq-frame5-elm4">
-                <span class="joint-mob2-thq-text-elm58">Оставить заявку</span>
-              </div>
-              <div class="joint-mob2-thq-frame1059-elm4">
-                <img
-                  alt="Frame10616761"
-                  src="public/frame10616761-5nx.svg"
-                  class="joint-mob2-thq-frame1061-elm4"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame13-elm">
-            <img
-              alt="tablerbasket6761"
-              src="public/tablerbasket6761-07vx.svg"
-              class="joint-mob2-thq-tablerbasket-elm1"
-            />
-            <img
-              alt="logowhite0415001"
-              src="public/logowhite0415001-a2kn.svg"
-              class="joint-mob2-thq-logowhite041-elm1"
-            />
-            <div class="joint-mob2-thq-tablerbasket-elm2">
-              <div class="joint-mob2-thq-group-elm1">
-                <img
-                  alt="Vector6761"
-                  src="public/vector6761-ly1r.svg"
-                  class="joint-mob2-thq-vector-elm1"
-                />
-                <img
-                  alt="Vector6761"
-                  src="public/vector6761-v1pe.svg"
-                  class="joint-mob2-thq-vector-elm2"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame1100-elm">
-            <span class="joint-mob2-thq-text-elm59">Свобода движения</span>
-            <img
-              alt="Rectangle256761"
-              src="public/rectangle256761-oru-200h.png"
-              class="joint-mob2-thq-rectangle25-elm"
-            />
-            <div class="joint-mob2-thq-frame1096-elm">
-              <div class="joint-mob2-thq-frame277130165-elm">
-                <span class="joint-mob2-thq-text-elm60">
-                  «Complex SW СУСТАВЫ» порошок для&nbsp;опорно-двигательного
-                  аппарата
-                </span>
-                <div class="joint-mob2-thq-frame1095-elm">
-                  <span class="joint-mob2-thq-text-elm61">
-                    420г. / 30 порций
-                  </span>
-                  <span class="joint-mob2-thq-text-elm62">Месячный курс</span>
-                </div>
-                <div class="joint-mob2-thq-frame1078-elm5">
-                  <div class="joint-mob2-thq-frame5-elm5">
-                    <span class="joint-mob2-thq-text-elm63">
-                      Купить в 1 клик
-                    </span>
-                  </div>
-                  <div class="joint-mob2-thq-frame1059-elm5">
-                    <img
-                      alt="Frame10617341"
-                      src="public/frame10617341-9zld.svg"
-                      class="joint-mob2-thq-frame1061-elm5"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame1097-elm">
-            <span class="joint-mob2-thq-text-elm64">
-              1 порция = 17 обычных капсул
-            </span>
-            <span class="joint-mob2-thq-text-elm65">
-              Комплекс, который питает суставы изнутри и&nbsp;способствует
-              обновлению хрящевой ткани
-            </span>
-          </div>
-          <div class="joint-mob2-thq-frame277130189-elm">
-            <span class="joint-mob2-thq-text-elm66">
-              Комплекс для тех, кто&nbsp;хочет свободно двигаться и заботиться о
-              своих суставах каждый день
-            </span>
-            <img
-              alt="IMAGE466761"
-              src="public/image466761-s02-300h.png"
-              class="joint-mob2-thq-image46-elm"
-            />
-            <div class="joint-mob2-thq-frame1101-elm">
-              <span class="joint-mob2-thq-text-elm67">
-                Комплекс для ежедневной нутритивной поддержки суставов
-                и&nbsp;естественного обновления хрящевой ткани, помогающий
-                сохранять подвижность и&nbsp;комфорт при&nbsp;активном образе
-                жизни
-              </span>
-              <span class="joint-mob2-thq-text-elm68">
-                Комплекс для ежедневной нутритивной поддержки суставов
-                и&nbsp;естественного обновления хрящевой ткани, помогающий
-                сохранять подвижность и&nbsp;комфорт при&nbsp;активном образе
-                жизни
-              </span>
-              <div class="joint-mob2-thq-frame1078-elm6">
-                <div class="joint-mob2-thq-frame5-elm6">
-                  <span class="joint-mob2-thq-text-elm69">Оставить заявку</span>
-                </div>
-                <div class="joint-mob2-thq-frame1059-elm6">
-                  <img
-                    alt="Frame10616761"
-                    src="public/frame10616761-11gh.svg"
-                    class="joint-mob2-thq-frame1061-elm6"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame1104-elm">
-            <span class="joint-mob2-thq-text-elm70">
-              Представьте, что вы каждый день даете своим суставам «витамин
-              бодрости», который помогает им оставаться гибкими и здоровыми.
-            </span>
-            <span class="joint-mob2-thq-text-elm71">
-              Комплекс для ежедневной нутритивной поддержки суставов
-              и&nbsp;естественного обновления хрящевой ткани, помогающий
-              сохранять подвижность и&nbsp;комфорт при&nbsp;активном образе
-              жизни
-            </span>
-          </div>
-          <div class="joint-mob2-thq-frame1079-elm">
-            <div class="joint-mob2-thq-frame1068-elm">
-              <img
-                alt="IMAGE146761"
-                src="public/image146761-nxmx-400w.png"
-                class="joint-mob2-thq-image14-elm2"
-              />
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame15-elm">
-            <div class="joint-mob2-thq-group9-elm">
-              <div class="joint-mob2-thq-frame1108-elm1">
-                <div class="joint-mob2-thq-frame1107-elm1">
-                  <span class="joint-mob2-thq-text-elm72">
-                    Питание суставов
-                  </span>
-                  <span class="joint-mob2-thq-text-elm73">
-                    Полноценный рацион для ваших суставов. Ежедневно снабжаем
-                    хрящевую ткань важными витаминами и&nbsp;микроэлементами,
-                    необходимыми для поддержания ее структуры и функций.
-                  </span>
-                </div>
-              </div>
-              <div class="joint-mob2-thq-group14-elm1">
-                <img
-                  alt="Ellipse156761"
-                  src="public/ellipse156761-5eal-200h.png"
-                  class="joint-mob2-thq-ellipse15-elm1"
-                />
-                <img
-                  alt="Ellipse166761"
-                  src="public/ellipse166761-0kus-200h.png"
-                  class="joint-mob2-thq-ellipse16-elm1"
-                />
-                <img
-                  alt="healthiconsjointsoutline24px6761"
-                  src="public/healthiconsjointsoutline24px6761-u7jl.svg"
-                  class="joint-mob2-thq-healthiconsjointsoutline24px-elm"
-                />
-              </div>
-            </div>
-            <div class="joint-mob2-thq-group10-elm">
-              <div class="joint-mob2-thq-frame1108-elm2">
-                <div class="joint-mob2-thq-frame1107-elm2">
-                  <span class="joint-mob2-thq-text-elm74">Регенерация</span>
-                  <span class="joint-mob2-thq-text-elm75">
-                    Запуск собственных механизмов организма
-                    по&nbsp;восстановлению хряща, а не просто временное
-                    маскирование проблемы. Стимулируем внутренние ресурсы
-                    организма для восстановления хрящевой ткани, способствуя ее
-                    здоровью изнутри.
-                  </span>
-                </div>
-              </div>
-              <div class="joint-mob2-thq-group14-elm2">
-                <img
-                  alt="Ellipse156761"
-                  src="public/ellipse156761-uvn-200h.png"
-                  class="joint-mob2-thq-ellipse15-elm2"
-                />
-                <img
-                  alt="Ellipse166761"
-                  src="public/ellipse166761-dnsd-200h.png"
-                  class="joint-mob2-thq-ellipse16-elm2"
-                />
-              </div>
-            </div>
-            <div class="joint-mob2-thq-group11-elm">
-              <div class="joint-mob2-thq-frame1108-elm3">
-                <div class="joint-mob2-thq-frame1107-elm3">
-                  <span class="joint-mob2-thq-text-elm76">Результат</span>
-                  <span class="joint-mob2-thq-text-elm77">
-                    Сохраняем комфорт в любом движении. Благодаря комплексной
-                    поддержке вы дольше остаетесь активными, забываете о
-                    скованности и с легкостью занимаетесь любимыми делами.
-                  </span>
-                </div>
-              </div>
-              <div class="joint-mob2-thq-group14-elm3">
-                <img
-                  alt="Ellipse156761"
-                  src="public/ellipse156761-6iwk-200h.png"
-                  class="joint-mob2-thq-ellipse15-elm3"
-                />
-                <img
-                  alt="Ellipse166761"
-                  src="public/ellipse166761-owsd-200h.png"
-                  class="joint-mob2-thq-ellipse16-elm3"
-                />
-              </div>
-            </div>
-            <div class="joint-mob2-thq-group12-elm">
-              <div class="joint-mob2-thq-frame1108-elm4">
-                <div class="joint-mob2-thq-frame1107-elm4">
-                  <span class="joint-mob2-thq-text-elm78">
-                    Особенный состав
-                  </span>
-                  <span class="joint-mob2-thq-text-elm79">
-                    Витамины и микроэлементы, традиционно используемые для
-                    поддержки хрящевой ткани и&nbsp;суставов. Являются их
-                    элементами и участвуют в&nbsp;их&nbsp;метаболизме.
-                    Представлено в эффективной дозировке.
-                  </span>
-                </div>
-              </div>
-              <div class="joint-mob2-thq-group14-elm4">
-                <img
-                  alt="Ellipse156761"
-                  src="public/ellipse156761-59qg-200h.png"
-                  class="joint-mob2-thq-ellipse15-elm4"
-                />
-                <img
-                  alt="Ellipse166761"
-                  src="public/ellipse166761-eenr-200h.png"
-                  class="joint-mob2-thq-ellipse16-elm4"
-                />
-                <div
-                  class="joint-mob2-thq-streamlineultimatesciencemoleculestrucutre-elm"
-                >
-                  <div class="joint-mob2-thq-group-elm2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="joint-mob2-thq-group8-elm">
-              <div class="joint-mob2-thq-frame1108-elm5">
-                <div class="joint-mob2-thq-frame1107-elm5">
-                  <span class="joint-mob2-thq-text-elm80">
-                    Комплексный эффект
-                  </span>
-                  <span class="joint-mob2-thq-text-elm81">
-                    Мы объединили нутритивную защиту и стимуляцию регенерации
-                    хряща. Это комплексный подход к здоровью суставов: питание +
-                    обновление = ваша уверенная подвижность и комфорт при любом
-                    уровне активности.
-                  </span>
-                </div>
-              </div>
-              <div class="joint-mob2-thq-group14-elm5">
-                <img
-                  alt="Ellipse156761"
-                  src="public/ellipse156761-sa6m-200h.png"
-                  class="joint-mob2-thq-ellipse15-elm5"
-                />
-                <img
-                  alt="Ellipse166761"
-                  src="public/ellipse166761-qzv-200h.png"
-                  class="joint-mob2-thq-ellipse16-elm5"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame1049-elm">
-            <div class="joint-mob2-thq-frame755-elm">
-              <div class="joint-mob2-thq-frame1051-elm1">
-                <span class="joint-mob2-thq-text-elm82">
-                  Можно ли «Complex SW СУСТАВЫ» принимать с другими препаратами
-                </span>
-                <div class="joint-mob2-thq-frame38-elm1">
-                  <div class="joint-mob2-thq-group16-elm">
-                    <img
-                      alt="Vector406761"
-                      src="public/vector406761-a13o.svg"
-                      class="joint-mob2-thq-vector40-elm1"
-                    />
-                    <img
-                      alt="Vector396761"
-                      src="public/vector396761-ie8l.svg"
-                      class="joint-mob2-thq-vector39-elm1"
-                    />
-                    <img
-                      alt="Ellipse16761"
-                      src="public/ellipse16761-ymm-200h.png"
-                      class="joint-mob2-thq-ellipse1-elm1"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="joint-mob2-thq-frame761-elm">
-              <div class="joint-mob2-thq-frame1052-elm">
-                <div class="joint-mob2-thq-frame1051-elm2">
-                  <span class="joint-mob2-thq-text-elm83">
-                    Какие противопоказания?
-                  </span>
-                  <img
-                    alt="Frame386761"
-                    src="public/frame386761-ngha.svg"
-                    class="joint-mob2-thq-frame38-elm2"
-                  />
-                </div>
-              </div>
-              <span class="joint-mob2-thq-text-elm84">
-                Противопоказанием является индивидуальная непереносимость
-                компонентов препарата.
-              </span>
-            </div>
-            <div class="joint-mob2-thq-frame762-elm">
-              <div class="joint-mob2-thq-frame1051-elm3">
-                <span class="joint-mob2-thq-text-elm85">
-                  Почему в форме порошка, а&nbsp;не капсул?
-                </span>
-                <div class="joint-mob2-thq-frame38-elm3">
-                  <div class="joint-mob2-thq-group17-elm">
-                    <img
-                      alt="Vector406761"
-                      src="public/vector406761-065c.svg"
-                      class="joint-mob2-thq-vector40-elm2"
-                    />
-                    <img
-                      alt="Vector396761"
-                      src="public/vector396761-50y.svg"
-                      class="joint-mob2-thq-vector39-elm2"
-                    />
-                    <img
-                      alt="Ellipse16761"
-                      src="public/ellipse16761-x8w-200h.png"
-                      class="joint-mob2-thq-ellipse1-elm2"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="joint-mob2-thq-frame763-elm">
-              <div class="joint-mob2-thq-frame1051-elm4">
-                <span class="joint-mob2-thq-text-elm86">
-                  Какие показания для приема&nbsp;комплекса
-                </span>
-                <div class="joint-mob2-thq-frame38-elm4">
-                  <div class="joint-mob2-thq-group18-elm">
-                    <img
-                      alt="Vector406761"
-                      src="public/vector406761-exmp.svg"
-                      class="joint-mob2-thq-vector40-elm3"
-                    />
-                    <img
-                      alt="Vector396761"
-                      src="public/vector396761-wqyw.svg"
-                      class="joint-mob2-thq-vector39-elm3"
-                    />
-                    <img
-                      alt="Ellipse16761"
-                      src="public/ellipse16761-zj7k-200h.png"
-                      class="joint-mob2-thq-ellipse1-elm3"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="joint-mob2-thq-frame1110-elm">
-            <div class="joint-mob2-thq-frame1113-elm">
-              <div class="joint-mob2-thq-group211-elm">
-                <img
-                  alt="logowhite0415001"
-                  src="public/logowhite0415001-62g.svg"
-                  class="joint-mob2-thq-logowhite041-elm2"
-                />
-              </div>
-              <span class="joint-mob2-thq-text-elm87">
-                БАД. Не является лекарственным средством. Требуется консультация
-                специалиста
-              </span>
-            </div>
-            <div class="joint-mob2-thq-frame1109-elm">
-              <div class="joint-mob2-thq-frame1054-elm">
-                <span class="joint-mob2-thq-text-elm88">Оферта</span>
-                <span class="joint-mob2-thq-text-elm89">
-                  Политика конфиденциальности
-                </span>
-              </div>
-              <div class="joint-mob2-thq-frame1055-elm">
-                <span class="joint-mob2-thq-text-elm90">
-                  Все права защищены
-                </span>
-                <span class="joint-mob2-thq-text-elm91">© 2026, Оптисалт</span>
-              </div>
-            </div>
-          </div>
-          <img
-            alt="Rectangle457285"
-            src="public/rectangle457285-mzfu-200w.png"
-            class="joint-mob2-thq-rectangle45-elm"
-          />
-          <img
-            alt="Ellipse237285"
-            src="public/ellipse237285-gtk-200h.png"
-            class="joint-mob2-thq-ellipse23-elm"
-          />
-          <img
-            alt="Vector477285"
-            src="public/vector477285-ytoc.svg"
-            class="joint-mob2-thq-vector47-elm"
-          />
-          <div class="joint-mob2-thq-frame277130162-elm1">
-            <span class="joint-mob2-thq-text-elm92">
-              Остались вопросы? Напишите нам
-            </span>
-            <div class="joint-mob2-thq-frame277130164-elm">
-              <div class="joint-mob2-thq-frame277130163-elm">
-                <div class="joint-mob2-thq-frame48-elm1">
-                  <span class="joint-mob2-thq-text-elm93">Эл. почта</span>
-                  <span class="joint-mob2-thq-text-elm94">
-                    info@optisalt.ru
-                  </span>
-                </div>
-                <div class="joint-mob2-thq-frame277130162-elm2">
-                  <span class="joint-mob2-thq-text-elm95">Эл. почта</span>
-                  <div class="joint-mob2-thq-frame71-elm">
-                    <img
-                      alt="logostelegram7288"
-                      src="public/logostelegram7288-ekpf.svg"
-                      class="joint-mob2-thq-logostelegram-elm1"
-                    />
-                    <div class="joint-mob2-thq-logostelegram-elm2">
-                      <img
-                        alt="Vector7288"
-                        src="public/vector7288-cu2c.svg"
-                        class="joint-mob2-thq-vector-elm3"
-                      />
-                      <div
-                        class="joint-mob2-thq-maxmessengerhorizontallogo1-elm"
-                      >
-                        <div class="joint-mob2-thq-group-elm3">
-                          <div class="joint-mob2-thq-clippathgroup-elm1">
-                            <div
-                              class="joint-mob2-thq-svgid000000412575222465570809300000162176433937619-elm"
-                            >
-                              <img
-                                alt="Vector7288"
-                                src="public/vector7288-upkh.svg"
-                                class="joint-mob2-thq-vector-elm4"
-                              />
-                            </div>
-                            <div class="joint-mob2-thq-group-elm4">
-                              <div class="joint-mob2-thq-clippathgroup-elm2">
-                                <div
-                                  class="joint-mob2-thq-svgid000000275732895343244076300000044975713446446-elm"
-                                >
-                                  <img
-                                    alt="Vector7288"
-                                    src="public/vector7288-c0na.svg"
-                                    class="joint-mob2-thq-vector-elm5"
-                                  />
-                                </div>
-                                <div class="joint-mob2-thq-group-elm5">
-                                  <div
-                                    class="joint-mob2-thq-clippathgroup-elm3"
-                                  >
-                                    <div
-                                      class="joint-mob2-thq-svgid000001817935301781070939000000160947296855471-elm"
-                                    >
-                                      <img
-                                        alt="Vector7288"
-                                        src="public/vector7288-14hi.svg"
-                                        class="joint-mob2-thq-vector-elm6"
-                                      />
-                                    </div>
-                                    <div class="joint-mob2-thq-group-elm6">
-                                      <img
-                                        alt="Rectangle7288"
-                                        src="public/rectangle7288-nfp9-200h.png"
-                                        class="joint-mob2-thq-rectangle-elm"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                <img alt="Vector446761" src="public/vector446761-epkjv.svg" class="joint-mob2-thq-vector44-elm1" />
+                <div class="joint-mob2-thq-frame1091-elm">
+                    <div class="joint-mob2-thq-frame1089-elm">
+                        <span class="joint-mob2-thq-text-elm10">Сравнение с другими продуктами</span>
+                        <div class="joint-mob2-thq-frame1088-elm">
+                            <span class="joint-mob2-thq-text-elm11">
+                                «Complex SW СУСТАВЫ» — это комплексная добавка, сочетающая высокие дозировки глюкозамина
+                                и хондроитина с противовоспалительной босвеллией и полным набором витаминов для защиты
+                                соединительной ткани.
+                            </span>
+                            <span class="joint-mob2-thq-text-elm12">
+                                В отличие от многих стандартных средств на рынке, он предлагает законченную систему «все в
+                                одной порции».
+                            </span>
+                            <span class="joint-mob2-thq-text-elm13">
+                                Ключевым преимуществом является наличие клинически значимых дозировок (например, 1250 мг
+                                глюкозамина), тогда как многие на рынке используют уменьшенные дозировки ради экономии.
+                            </span>
                         </div>
-                      </div>
                     </div>
-                    <img
-                      alt="logostelegram7288"
-                      src="public/logostelegram7288-p8es.svg"
-                      class="joint-mob2-thq-logostelegram-elm3"
-                    />
-                    <img
-                      alt="logostelegram7288"
-                      src="public/logostelegram7288-mbc2.svg"
-                      class="joint-mob2-thq-logostelegram-elm4"
-                    />
-                  </div>
+                    <div class="joint-mob2-thq-frame1090-elm">
+                        <img alt="IMAGE136761" src="public/image136761-axu-300w.png"
+                            class="joint-mob2-thq-image13-elm1" />
+                        <div class="joint-mob2-thq-frame1087-elm">
+                            <div class="joint-mob2-thq-frame1085-elm">
+                                <img alt="boxiconsscience6761" src="public/boxiconsscience6761-7vjd.svg"
+                                    class="joint-mob2-thq-boxiconsscience-elm1" />
+                                <div class="joint-mob2-thq-frame1084-elm1">
+                                    <span class="joint-mob2-thq-text-elm14">1 порция = 17 обычных капсул</span>
+                                    <span class="joint-mob2-thq-text-elm15">Доза в 3 раза выше конкурентов. Достаточно
+                                        одной порции в день</span>
+                                </div>
+                            </div>
+                            <div class="joint-mob2-thq-frame1086-elm">
+                                <img alt="boxiconsscience6761" src="public/boxiconsscience6761-iqx.svg"
+                                    class="joint-mob2-thq-boxiconsscience-elm2" />
+                                <div class="joint-mob2-thq-frame1084-elm2">
+                                    <span class="joint-mob2-thq-text-elm16">Курс на 1 месяц</span>
+                                    <span class="joint-mob2-thq-text-elm17">30 порций = 130₽ в день</span>
+                                </div>
+                                <div class="joint-mob2-thq-frame1078-elm1">
+                                    <div class="joint-mob2-thq-frame5-elm1">
+                                        <span class="joint-mob2-thq-text-elm18">Купить в 1 клик</span>
+                                    </div>
+                                    <div class="joint-mob2-thq-frame1059-elm1">
+                                        <img alt="Frame10616761" src="public/frame10616761-8a2o.svg"
+                                            class="joint-mob2-thq-frame1061-elm1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="joint-mob2-thq-frame277130161-elm">
-                <div class="joint-mob2-thq-frame46-elm">
-                  <div class="joint-mob2-thq-frame48-elm2">
-                    <span class="joint-mob2-thq-text-elm96">Имя</span>
-                    <div class="joint-mob2-thq-frame48-elm3">
-                      <div class="joint-mob2-thq-frame49-elm1">
-                        <span class="joint-mob2-thq-text-elm97">
-                          Как к вам обращаться
-                        </span>
-                      </div>
+                <div class="joint-mob2-thq-frame1094-elm">
+                    <div class="joint-mob2-thq-group13-elm">
+                        <img alt="Rectangle416761" src="public/rectangle416761-73ry-400w.png"
+                            class="joint-mob2-thq-rectangle41-elm" />
+                        <div class="joint-mob2-thq-frame1078-elm2">
+                            <div class="joint-mob2-thq-frame5-elm2">
+                                <span class="joint-mob2-thq-text-elm19">Купить в 1 клик</span>
+                            </div>
+                            <div class="joint-mob2-thq-frame1059-elm2">
+                                <img alt="Frame10616761" src="public/frame10616761-5xko.svg"
+                                    class="joint-mob2-thq-frame1061-elm2" />
+                            </div>
+                        </div>
+                        <img alt="IMAGE136761" src="public/image136761-xqb3-300h.png"
+                            class="joint-mob2-thq-image13-elm2" />
+                        <span class="joint-mob2-thq-text-elm20">«Complex SW СУСТАВЫ» для опорно-двигательного
+                            аппарата</span>
+                        <div class="joint-mob2-thq-frame1092-elm">
+                            <span class="joint-mob2-thq-text-elm21">3 900 ₽</span>
+                            <span class="joint-mob2-thq-text-elm22">420г. / 30 порций</span>
+                        </div>
                     </div>
-                  </div>
-                  <div class="joint-mob2-thq-frame47-elm">
-                    <span class="joint-mob2-thq-text-elm98">Телефон</span>
-                    <div class="joint-mob2-thq-frame48-elm4">
-                      <div class="joint-mob2-thq-frame49-elm2">
-                        <span class="joint-mob2-thq-text-elm99">
-                          +7 (___) ___-__-__
-                        </span>
-                      </div>
+                    <div class="joint-mob2-thq-frame1114-elm">
+                        <img alt="Ellipse187281" src="public/ellipse187281-x2fk-200h.png"
+                            class="joint-mob2-thq-ellipse18-elm" />
+                        <img alt="Ellipse197281" src="public/ellipse197281-bh8-200h.png"
+                            class="joint-mob2-thq-ellipse19-elm" />
+                        <img alt="Ellipse177281" src="public/ellipse177281-xenb-200h.png"
+                            class="joint-mob2-thq-ellipse17-elm" />
+                        <img alt="Ellipse207281" src="public/ellipse207281-cayh-200h.png"
+                            class="joint-mob2-thq-ellipse20-elm" />
+                        <img alt="Ellipse217281" src="public/ellipse217281-wcjd-200h.png"
+                            class="joint-mob2-thq-ellipse21-elm" />
+                        <img alt="Ellipse227282" src="public/ellipse227282-gbmo-200h.png"
+                            class="joint-mob2-thq-ellipse22-elm" />
+                        <img alt="Rectangle427282" src="public/rectangle427282-q7ht-400w.png"
+                            class="joint-mob2-thq-rectangle42-elm" />
+                        <span class="joint-mob2-thq-text-elm23">Инструкция и рекомендации по применению</span>
+                        <div class="joint-mob2-thq-frame1093-elm">
+                            <span class="joint-mob2-thq-text-elm24">1 ложка в день</span>
+                            <span class="joint-mob2-thq-text-elm25">Растворить в 200 мл воды</span>
+                            <span class="joint-mob2-thq-text-elm26">Принимать утром</span>
+                        </div>
                     </div>
-                  </div>
-                  <div class="joint-mob2-thq-frame51-elm">
-                    <span class="joint-mob2-thq-text-elm100">Эл. почта</span>
-                    <div class="joint-mob2-thq-frame48-elm5">
-                      <div class="joint-mob2-thq-frame49-elm3">
-                        <span class="joint-mob2-thq-text-elm101">
-                          Ваша эл.почта
-                        </span>
-                      </div>
+                </div>
+                <img alt="Rectangle356761" src="public/rectangle356761-sfda-700h.png"
+                    class="joint-mob2-thq-rectangle35-elm" />
+                <span class="joint-mob2-thq-text-elm27">
+                    Подходит для всех, кто заботится о своем здоровье и думает о своем будущем заранее.
+                </span>
+                <div class="joint-mob2-thq-frame1103-elm1">
+                    <div class="joint-mob2-thq-frame1084-elm3">
+                        <span class="joint-mob2-thq-text-elm28">18+ лет</span>
+                        <span class="joint-mob2-thq-text-elm29">Поддержка суставов при травмах</span>
                     </div>
-                  </div>
-                  <div class="joint-mob2-thq-frame50-elm">
-                    <img
-                      alt="Rectangle117288"
-                      src="public/rectangle117288-igkd-200h.png"
-                      class="joint-mob2-thq-rectangle11-elm"
-                    />
-                    <span class="joint-mob2-thq-text-elm102">
-                      Я даю свое согласие на обработку персональных данных
+                    <div class="joint-mob2-thq-frame1103-elm2">
+                        <span class="joint-mob2-thq-text-elm30">35+ лет</span>
+                        <span class="joint-mob2-thq-text-elm31">Профилактика возрастных изменений</span>
+                    </div>
+                    <div class="joint-mob2-thq-frame1102-elm">
+                        <span class="joint-mob2-thq-text-elm32">45+</span>
+                        <span class="joint-mob2-thq-text-elm33">Сохранение здоровья у женщин</span>
+                    </div>
+                </div>
+                <div class="joint-mob2-thq-frame1105-elm">
+                    <span class="joint-mob2-thq-text-elm34">
+                        <span class="joint-mob2-thq-text-elm35">«Complex SW СУСТАВЫ» — комплекс</span>
+                        <span>из 9 активных компонентов</span>
                     </span>
-                  </div>
+                    <div class="joint-mob2-thq-frame1069-elm">
+                        <img alt="Rectangle366761" src="public/rectangle366761-a7zm-400h.png"
+                            class="joint-mob2-thq-rectangle36-elm" />
+                        <img alt="ChatGPTImage18202617035216761"
+                            src="public/chatgptimage18202617035216761-kr7j-500h.png"
+                            class="joint-mob2-thq-chat-gpt-image1820261703521-elm" />
+                        <img alt="Vector446761" src="public/vector446761-fbh.svg"
+                            class="joint-mob2-thq-vector44-elm2" />
+                        <img alt="ChatGPTImage18202613583816761"
+                            src="public/chatgptimage18202613583816761-ilm-300h.png"
+                            class="joint-mob2-thq-chat-gpt-image1820261358381-elm" />
+                    </div>
+                    <div class="joint-mob2-thq-frame65-elm">
+                        <div class="joint-mob2-thq-frame64-elm">
+                            <span class="joint-mob2-thq-text-elm37">Глюкозамин</span>
+                            <span class="joint-mob2-thq-text-elm38">Хондропротектор, который восстанавливает хрящевую
+                                ткань, уменьшает боль и воспаление в суставах, а также улучшает их подвижность</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame57-elm">
+                            <span class="joint-mob2-thq-text-elm39">Хондроитин</span>
+                            <span class="joint-mob2-thq-text-elm40">Является структурным компонентом хряща, который
+                                защищает его от разрушения, улучшает минеральный обмен и стимулирует выработку суставной
+                                жидкости.</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame60-elm">
+                            <span class="joint-mob2-thq-text-elm41">МСМ</span>
+                            <span class="joint-mob2-thq-text-elm42">Метилсульфонилметан укрепляет суставы, снимает
+                                воспаление и боль, улучшает кожу, волосы, ногти и нормализует иммунитет</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame62-elm">
+                            <span class="joint-mob2-thq-text-elm43">Коллаген</span>
+                            <span class="joint-mob2-thq-text-elm44">Является основным фибриллярным белком соединительной
+                                ткани, обеспечивающим прочность и эластичность сухожилий, костей и хрящей</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame59-elm">
+                            <span class="joint-mob2-thq-text-elm45">Босвелия</span>
+                            <span class="joint-mob2-thq-text-elm46">Подавляет воспаление в суставах, блокируя синтез
+                                лейкотриенов, что уменьшает боль и защищает хрящ от разрушения без вреда для ЖКТ</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame58-elm">
+                            <span class="joint-mob2-thq-text-elm47">Витамин С</span>
+                            <span class="joint-mob2-thq-text-elm48">Участвует в синтезе коллагена, метаболизме гормонов и
+                                тирозина, окислительно-восстановительных процессах и улучшает усвоение железа в
+                                кишечнике</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame61-elm">
+                            <span class="joint-mob2-thq-text-elm49">Витамин Е</span>
+                            <span class="joint-mob2-thq-text-elm50">Защищает суставы, замедляя разрушение хряща и уменьшая
+                                боль и скованность</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame63-elm">
+                            <span class="joint-mob2-thq-text-elm51">Марганец</span>
+                            <span class="joint-mob2-thq-text-elm52">Необходим для работы центральной нервной системы,
+                                крепости костей и жирового обмена</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame66-elm">
+                            <span class="joint-mob2-thq-text-elm53">Селен</span>
+                            <span class="joint-mob2-thq-text-elm54">Замедляет старение как антиоксидант и сохраняет
+                                эластичность тканей</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame1078-elm3">
+                            <div class="joint-mob2-thq-frame5-elm3">
+                                <span class="joint-mob2-thq-text-elm55">Заказать</span>
+                            </div>
+                            <div class="joint-mob2-thq-frame1059-elm3">
+                                <img alt="Frame10616761" src="public/frame10616761-hzdn.svg"
+                                    class="joint-mob2-thq-frame1061-elm3" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="joint-mob2-thq-frame1078-elm7">
-                  <div class="joint-mob2-thq-frame5-elm7">
-                    <span class="joint-mob2-thq-text-elm103">
-                      Оставить заявку
-                    </span>
-                  </div>
-                  <div class="joint-mob2-thq-frame1059-elm7">
-                    <img
-                      alt="Frame10617288"
-                      src="public/frame10617288-w7b2.svg"
-                      class="joint-mob2-thq-frame1061-elm7"
-                    />
-                  </div>
+                <div class="joint-mob2-thq-frame1073-elm">
+                    <div class="joint-mob2-thq-frame1072-elm">
+                        <img alt="IMAGE166761" src="public/image166761-t8c8-200w.png"
+                            class="joint-mob2-thq-image16-elm" />
+                        <img alt="IMAGE176761" src="public/image176761-2gtb-200w.png"
+                            class="joint-mob2-thq-image17-elm" />
+                    </div>
                 </div>
-              </div>
+                <div class="joint-mob2-thq-frame1106-elm">
+                    <span class="joint-mob2-thq-text-elm56">Питаем. Восстанавливаем. Сохраняем подвижность.</span>
+                    <span class="joint-mob2-thq-text-elm57">БАД «Complex SW СУСТАВЫ» от Оптисалт решает три главные задачи
+                        здоровья суставов</span>
+                    <div class="joint-mob2-thq-frame1078-elm4">
+                        <div class="joint-mob2-thq-frame5-elm4">
+                            <span class="joint-mob2-thq-text-elm58">Оставить заявку</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame1059-elm4">
+                            <img alt="Frame10616761" src="public/frame10616761-5nx.svg"
+                                class="joint-mob2-thq-frame1061-elm4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="joint-mob2-thq-frame13-elm">
+                    <img alt="tablerbasket6761" src="public/tablerbasket6761-07vx.svg"
+                        class="joint-mob2-thq-tablerbasket-elm1" />
+                    <img alt="logowhite0415001" src="public/logowhite0415001-a2kn.svg"
+                        class="joint-mob2-thq-logowhite041-elm1" />
+                    <div class="joint-mob2-thq-tablerbasket-elm2">
+                        <div class="joint-mob2-thq-group-elm1">
+                            <img alt="Vector6761" src="public/vector6761-ly1r.svg" class="joint-mob2-thq-vector-elm1" />
+                            <img alt="Vector6761" src="public/vector6761-v1pe.svg" class="joint-mob2-thq-vector-elm2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="joint-mob2-thq-frame1100-elm">
+                    <span class="joint-mob2-thq-text-elm59">Свобода движения</span>
+                    <img alt="Rectangle256761" src="public/rectangle256761-oru-200h.png"
+                        class="joint-mob2-thq-rectangle25-elm" />
+                    <div class="joint-mob2-thq-frame1096-elm">
+                        <div class="joint-mob2-thq-frame277130165-elm">
+                            <span class="joint-mob2-thq-text-elm60">«Complex SW СУСТАВЫ» порошок для
+                                опорно-двигательного аппарата</span>
+                            <div class="joint-mob2-thq-frame1095-elm">
+                                <span class="joint-mob2-thq-text-elm61">420г. / 30 порций</span>
+                                <span class="joint-mob2-thq-text-elm62">Месячный курс</span>
+                            </div>
+                            <div class="joint-mob2-thq-frame1078-elm5">
+                                <div class="joint-mob2-thq-frame5-elm5">
+                                    <span class="joint-mob2-thq-text-elm63">Купить в 1 клик</span>
+                                </div>
+                                <div class="joint-mob2-thq-frame1059-elm5">
+                                    <img alt="Frame10617341" src="public/frame10617341-9zld.svg"
+                                        class="joint-mob2-thq-frame1061-elm5" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="joint-mob2-thq-frame1097-elm">
+                    <span class="joint-mob2-thq-text-elm64">1 порция = 17 обычных капсул</span>
+                    <span class="joint-mob2-thq-text-elm65">Комплекс, который питает суставы изнутри и способствует
+                        обновлению хрящевой ткани</span>
+                </div>
+                <div class="joint-mob2-thq-frame277130189-elm">
+                    <span class="joint-mob2-thq-text-elm66">Комплекс для тех, кто хочет свободно двигаться и заботиться о
+                        своих суставах каждый день</span>
+                    <img alt="IMAGE466761" src="public/image466761-s02-300h.png" class="joint-mob2-thq-image46-elm" />
+                    <div class="joint-mob2-thq-frame1101-elm">
+                        <span class="joint-mob2-thq-text-elm67">Комплекс для ежедневной нутритивной поддержки суставов и
+                            естественного обновления хрящевой ткани, помогающий сохранять подвижность и комфорт при
+                            активном образе жизни</span>
+                        <span class="joint-mob2-thq-text-elm68">Комплекс для ежедневной нутритивной поддержки суставов и
+                            естественного обновления хрящевой ткани, помогающий сохранять подвижность и комфорт при
+                            активном образе жизни</span>
+                        <div class="joint-mob2-thq-frame1078-elm6">
+                            <div class="joint-mob2-thq-frame5-elm6">
+                                <span class="joint-mob2-thq-text-elm69">Оставить заявку</span>
+                            </div>
+                            <div class="joint-mob2-thq-frame1059-elm6">
+                                <img alt="Frame10616761" src="public/frame10616761-11gh.svg"
+                                    class="joint-mob2-thq-frame1061-elm6" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="joint-mob2-thq-frame1104-elm">
+                    <span class="joint-mob2-thq-text-elm70">Представьте, что вы каждый день даете своим суставам «витамин
+                        бодрости», который помогает им оставаться гибкими и здоровыми.</span>
+                    <span class="joint-mob2-thq-text-elm71">Комплекс для ежедневной нутритивной поддержки суставов и
+                        естественного обновления хрящевой ткани, помогающий сохранять подвижность и комфорт при активном
+                        образе жизни</span>
+                </div>
+                <div class="joint-mob2-thq-frame1079-elm">
+                    <div class="joint-mob2-thq-frame1068-elm">
+                        <img alt="IMAGE146761" src="public/image146761-nxmx-400w.png"
+                            class="joint-mob2-thq-image14-elm2" />
+                    </div>
+                </div>
+                <div class="joint-mob2-thq-frame15-elm">
+                    <div class="joint-mob2-thq-group9-elm">
+                        <div class="joint-mob2-thq-frame1108-elm1">
+                            <div class="joint-mob2-thq-frame1107-elm1">
+                                <span class="joint-mob2-thq-text-elm72">Питание суставов</span>
+                                <span class="joint-mob2-thq-text-elm73">Полноценный рацион для ваших суставов. Ежедневно
+                                    снабжаем хрящевую ткань важными витаминами и микроэлементами, необходимыми для
+                                    поддержания ее структуры и функций.</span>
+                            </div>
+                        </div>
+                        <div class="joint-mob2-thq-group14-elm1">
+                            <img alt="Ellipse156761" src="public/ellipse156761-5eal-200h.png"
+                                class="joint-mob2-thq-ellipse15-elm1" />
+                            <img alt="Ellipse166761" src="public/ellipse166761-0kus-200h.png"
+                                class="joint-mob2-thq-ellipse16-elm1" />
+                            <img alt="healthiconsjointsoutline24px6761"
+                                src="public/healthiconsjointsoutline24px6761-u7jl.svg"
+                                class="joint-mob2-thq-healthiconsjointsoutline24px-elm" />
+                        </div>
+                    </div>
+                    <div class="joint-mob2-thq-group10-elm">
+                        <div class="joint-mob2-thq-frame1108-elm2">
+                            <div class="joint-mob2-thq-frame1107-elm2">
+                                <span class="joint-mob2-thq-text-elm74">Регенерация</span>
+                                <span class="joint-mob2-thq-text-elm75">Запуск собственных механизмов организма по
+                                    восстановлению хряща, а не просто временное маскирование проблемы. Стимулируем
+                                    внутренние ресурсы организма для восстановления хрящевой ткани, способствуя ее
+                                    здоровью изнутри.</span>
+                            </div>
+                        </div>
+                        <div class="joint-mob2-thq-group14-elm2">
+                            <img alt="Ellipse156761" src="public/ellipse156761-uvn-200h.png"
+                                class="joint-mob2-thq-ellipse15-elm2" />
+                            <img alt="Ellipse166761" src="public/ellipse166761-dnsd-200h.png"
+                                class="joint-mob2-thq-ellipse16-elm2" />
+                        </div>
+                    </div>
+                    <div class="joint-mob2-thq-group11-elm">
+                        <div class="joint-mob2-thq-frame1108-elm3">
+                            <div class="joint-mob2-thq-frame1107-elm3">
+                                <span class="joint-mob2-thq-text-elm76">Результат</span>
+                                <span class="joint-mob2-thq-text-elm77">Сохраняем комфорт в любом движении. Благодаря
+                                    комплексной поддержке вы дольше остаетесь активными, забываете о скованности и с
+                                    легкостью занимаетесь любимыми делами.</span>
+                            </div>
+                        </div>
+                        <div class="joint-mob2-thq-group14-elm3">
+                            <img alt="Ellipse156761" src="public/ellipse156761-6iwk-200h.png"
+                                class="joint-mob2-thq-ellipse15-elm3" />
+                            <img alt="Ellipse166761" src="public/ellipse166761-owsd-200h.png"
+                                class="joint-mob2-thq-ellipse16-elm3" />
+                        </div>
+                    </div>
+                    <div class="joint-mob2-thq-group12-elm">
+                        <div class="joint-mob2-thq-frame1108-elm4">
+                            <div class="joint-mob2-thq-frame1107-elm4">
+                                <span class="joint-mob2-thq-text-elm78">Особенный состав</span>
+                                <span class="joint-mob2-thq-text-elm79">Витамины и микроэлементы, традиционно используемые
+                                    для поддержки хрящевой ткани и суставов. Являются их элементами и участвуют в их
+                                    метаболизме. Представлено в эффективной дозировке.</span>
+                            </div>
+                        </div>
+                        <div class="joint-mob2-thq-group14-elm4">
+                            <img alt="Ellipse156761" src="public/ellipse156761-59qg-200h.png"
+                                class="joint-mob2-thq-ellipse15-elm4" />
+                            <img alt="Ellipse166761" src="public/ellipse166761-eenr-200h.png"
+                                class="joint-mob2-thq-ellipse16-elm4" />
+                            <div class="joint-mob2-thq-streamlineultimatesciencemoleculestrucutre-elm">
+                                <div class="joint-mob2-thq-group-elm2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="joint-mob2-thq-group8-elm">
+                        <div class="joint-mob2-thq-frame1108-elm5">
+                            <div class="joint-mob2-thq-frame1107-elm5">
+                                <span class="joint-mob2-thq-text-elm80">Комплексный эффект</span>
+                                <span class="joint-mob2-thq-text-elm81">Мы объединили нутритивную защиту и стимуляцию
+                                    регенерации хряща. Это комплексный подход к здоровью суставов: питание + обновление =
+                                    ваша уверенная подвижность и комфорт при любом уровне активности.</span>
+                            </div>
+                        </div>
+                        <div class="joint-mob2-thq-group14-elm5">
+                            <img alt="Ellipse156761" src="public/ellipse156761-sa6m-200h.png"
+                                class="joint-mob2-thq-ellipse15-elm5" />
+                            <img alt="Ellipse166761" src="public/ellipse166761-qzv-200h.png"
+                                class="joint-mob2-thq-ellipse16-elm5" />
+                        </div>
+                    </div>
+                </div>
+                <div class="joint-mob2-thq-frame1049-elm">
+                    <div class="joint-mob2-thq-frame755-elm">
+                        <div class="joint-mob2-thq-frame1051-elm1">
+                            <span class="joint-mob2-thq-text-elm82">Можно ли «Complex SW СУСТАВЫ» принимать с другими
+                                препаратами</span>
+                            <div class="joint-mob2-thq-frame38-elm1">
+                                <div class="joint-mob2-thq-group16-elm">
+                                    <img alt="Vector406761" src="public/vector406761-a13o.svg"
+                                        class="joint-mob2-thq-vector40-elm1" />
+                                    <img alt="Vector396761" src="public/vector396761-ie8l.svg"
+                                        class="joint-mob2-thq-vector39-elm1" />
+                                    <img alt="Ellipse16761" src="public/ellipse16761-ymm-200h.png"
+                                        class="joint-mob2-thq-ellipse1-elm1" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="joint-mob2-thq-frame761-elm">
+                        <div class="joint-mob2-thq-frame1052-elm">
+                            <div class="joint-mob2-thq-frame1051-elm2">
+                                <span class="joint-mob2-thq-text-elm83">Какие противопоказания?</span>
+                                <img alt="Frame386761" src="public/frame386761-ngha.svg"
+                                    class="joint-mob2-thq-frame38-elm2" />
+                            </div>
+                        </div>
+                        <span class="joint-mob2-thq-text-elm84">Противопоказанием является индивидуальная
+                            непереносимость компонентов препарата.</span>
+                    </div>
+                    <div class="joint-mob2-thq-frame762-elm">
+                        <div class="joint-mob2-thq-frame1051-elm3">
+                            <span class="joint-mob2-thq-text-elm85">Почему в форме порошка, а не капсул?</span>
+                            <div class="joint-mob2-thq-frame38-elm3">
+                                <div class="joint-mob2-thq-group17-elm">
+                                    <img alt="Vector406761" src="public/vector406761-065c.svg"
+                                        class="joint-mob2-thq-vector40-elm2" />
+                                    <img alt="Vector396761" src="public/vector396761-50y.svg"
+                                        class="joint-mob2-thq-vector39-elm2" />
+                                    <img alt="Ellipse16761" src="public/ellipse16761-x8w-200h.png"
+                                        class="joint-mob2-thq-ellipse1-elm2" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="joint-mob2-thq-frame763-elm">
+                        <div class="joint-mob2-thq-frame1051-elm4">
+                            <span class="joint-mob2-thq-text-elm86">Какие показания для приема комплекса</span>
+                            <div class="joint-mob2-thq-frame38-elm4">
+                                <div class="joint-mob2-thq-group18-elm">
+                                    <img alt="Vector406761" src="public/vector406761-exmp.svg"
+                                        class="joint-mob2-thq-vector40-elm3" />
+                                    <img alt="Vector396761" src="public/vector396761-wqyw.svg"
+                                        class="joint-mob2-thq-vector39-elm3" />
+                                    <img alt="Ellipse16761" src="public/ellipse16761-zj7k-200h.png"
+                                        class="joint-mob2-thq-ellipse1-elm3" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="joint-mob2-thq-frame1110-elm">
+                    <div class="joint-mob2-thq-frame1113-elm">
+                        <div class="joint-mob2-thq-group211-elm">
+                            <img alt="logowhite0415001" src="public/logowhite0415001-62g.svg"
+                                class="joint-mob2-thq-logowhite041-elm2" />
+                        </div>
+                        <span class="joint-mob2-thq-text-elm87">БАД. Не является лекарственным средством. Требуется
+                            консультация специалиста</span>
+                    </div>
+                    <div class="joint-mob2-thq-frame1109-elm">
+                        <div class="joint-mob2-thq-frame1054-elm">
+                            <span class="joint-mob2-thq-text-elm88">Оферта</span>
+                            <span class="joint-mob2-thq-text-elm89">Политика конфиденциальности</span>
+                        </div>
+                        <div class="joint-mob2-thq-frame1055-elm">
+                            <span class="joint-mob2-thq-text-elm90">Все права защищены</span>
+                            <span class="joint-mob2-thq-text-elm91">© 2026, Оптисалт</span>
+                        </div>
+                    </div>
+                </div>
+                <img alt="Rectangle457285" src="public/rectangle457285-mzfu-200w.png"
+                    class="joint-mob2-thq-rectangle45-elm" />
+                <img alt="Ellipse237285" src="public/ellipse237285-gtk-200h.png"
+                    class="joint-mob2-thq-ellipse23-elm" />
+                <img alt="Vector477285" src="public/vector477285-ytoc.svg" class="joint-mob2-thq-vector47-elm" />
+                <div class="joint-mob2-thq-frame277130162-elm1">
+                    <span class="joint-mob2-thq-text-elm92">Остались вопросы? Напишите нам</span>
+                    <div class="joint-mob2-thq-frame277130164-elm">
+                        <div class="joint-mob2-thq-frame277130163-elm">
+                            <div class="joint-mob2-thq-frame48-elm1">
+                                <span class="joint-mob2-thq-text-elm93">Эл. почта</span>
+                                <span class="joint-mob2-thq-text-elm94">info@optisalt.ru</span>
+                            </div>
+                            <div class="joint-mob2-thq-frame277130162-elm2">
+                                <span class="joint-mob2-thq-text-elm95">Эл. почта</span>
+                                <div class="joint-mob2-thq-frame71-elm">
+                                    <img alt="logostelegram7288" src="public/logostelegram7288-ekpf.svg"
+                                        class="joint-mob2-thq-logostelegram-elm1" />
+                                    <div class="joint-mob2-thq-logostelegram-elm2">
+                                        <img alt="Vector7288" src="public/vector7288-cu2c.svg"
+                                            class="joint-mob2-thq-vector-elm3" />
+                                        <div class="joint-mob2-thq-maxmessengerhorizontallogo1-elm">
+                                            <div class="joint-mob2-thq-group-elm3">
+                                                <div class="joint-mob2-thq-clippathgroup-elm1">
+                                                    <div
+                                                        class="joint-mob2-thq-svgid000000412575222465570809300000162176433937619-elm">
+                                                        <img alt="Vector7288" src="public/vector7288-upkh.svg"
+                                                            class="joint-mob2-thq-vector-elm4" />
+                                                    </div>
+                                                    <div class="joint-mob2-thq-group-elm4">
+                                                        <div class="joint-mob2-thq-clippathgroup-elm2">
+                                                            <div
+                                                                class="joint-mob2-thq-svgid000000275732895343244076300000044975713446446-elm">
+                                                                <img alt="Vector7288" src="public/vector7288-c0na.svg"
+                                                                    class="joint-mob2-thq-vector-elm5" />
+                                                            </div>
+                                                            <div class="joint-mob2-thq-group-elm5">
+                                                                <div class="joint-mob2-thq-clippathgroup-elm3">
+                                                                    <div
+                                                                        class="joint-mob2-thq-svgid000001817935301781070939000000160947296855471-elm">
+                                                                        <img alt="Vector7288"
+                                                                            src="public/vector7288-14hi.svg"
+                                                                            class="joint-mob2-thq-vector-elm6" />
+                                                                    </div>
+                                                                    <div class="joint-mob2-thq-group-elm6">
+                                                                        <img alt="Rectangle7288"
+                                                                            src="public/rectangle7288-nfp9-200h.png"
+                                                                            class="joint-mob2-thq-rectangle-elm" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img alt="logostelegram7288" src="public/logostelegram7288-p8es.svg"
+                                        class="joint-mob2-thq-logostelegram-elm3" />
+                                    <img alt="logostelegram7288" src="public/logostelegram7288-mbc2.svg"
+                                        class="joint-mob2-thq-logostelegram-elm4" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="joint-mob2-thq-frame277130161-elm">
+                            <div class="joint-mob2-thq-frame46-elm">
+                                <div class="joint-mob2-thq-frame48-elm2">
+                                    <span class="joint-mob2-thq-text-elm96">Имя</span>
+                                    <div class="joint-mob2-thq-frame48-elm3">
+                                        <div class="joint-mob2-thq-frame49-elm1">
+                                            <span class="joint-mob2-thq-text-elm97">Как к вам обращаться</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="joint-mob2-thq-frame47-elm">
+                                    <span class="joint-mob2-thq-text-elm98">Телефон</span>
+                                    <div class="joint-mob2-thq-frame48-elm4">
+                                        <div class="joint-mob2-thq-frame49-elm2">
+                                            <span class="joint-mob2-thq-text-elm99">+7 (___) ___-__-__</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="joint-mob2-thq-frame51-elm">
+                                    <span class="joint-mob2-thq-text-elm100">Эл. почта</span>
+                                    <div class="joint-mob2-thq-frame48-elm5">
+                                        <div class="joint-mob2-thq-frame49-elm3">
+                                            <span class="joint-mob2-thq-text-elm101">Ваша эл.почта</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="joint-mob2-thq-frame50-elm">
+                                    <img alt="Rectangle117288" src="public/rectangle117288-igkd-200h.png"
+                                        class="joint-mob2-thq-rectangle11-elm" />
+                                    <span class="joint-mob2-thq-text-elm102">Я даю свое согласие на обработку
+                                        персональных данных</span>
+                                </div>
+                            </div>
+                            <div class="joint-mob2-thq-frame1078-elm7">
+                                <div class="joint-mob2-thq-frame5-elm7">
+                                    <span class="joint-mob2-thq-text-elm103">Оставить заявку</span>
+                                </div>
+                                <div class="joint-mob2-thq-frame1059-elm7">
+                                    <img alt="Frame10617288" src="public/frame10617288-w7b2.svg"
+                                        class="joint-mob2-thq-frame1061-elm7" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <a href="https://play.teleporthq.io/signup" class="joint-mob2-link">
+                <div aria-label="Sign up to TeleportHQ" class="joint-mob2-container2">
+                    <svg width="24" height="24" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="joint-mob2-icon1">
+                        <path
+                            d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
+                            fill="#B23ADE"></path>
+                        <path
+                            d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
+                            fill="#FF5C5C"></path>
+                        <path
+                            d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
+                            fill="#2874DE"></path>
+                    </svg>
+                    <span class="joint-mob2-text">Built in TeleportHQ</span>
+                </div>
+            </a>
         </div>
-        <a href="https://play.teleporthq.io/signup" class="joint-mob2-link">
-          <div aria-label="Sign up to TeleportHQ" class="joint-mob2-container2">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 19 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="joint-mob2-icon1"
-            >
-              <path
-                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
-                fill="#B23ADE"
-              ></path>
-              <path
-                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
-                fill="#FF5C5C"
-              ></path>
-              <path
-                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
-                fill="#2874DE"
-              ></path>
-            </svg>
-            <span class="joint-mob2-text">Built in TeleportHQ</span>
-          </div>
-        </a>
-      </div>
-      <link rel="canonical" href="https://fmf-test-tt4ask.teleporthq.app/" />
+        <link rel="canonical" href="https://fmf-test-tt4ask.teleporthq.app/" />
     </div>
-  </body>
+</body>
 </html>
