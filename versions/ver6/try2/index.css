@@ -2371,7 +2371,7 @@
 }
  
 .joint3-thq-frame9-elm1 {
-  gap: 1266px;
+  
   top: 0px;
   left: 0px;
   width: 1920px;
@@ -2511,6 +2511,10 @@
   display: flex;
   z-index: 2;
   align-items: center;
+
+  /* йо*/
+  position: relative;
+
 }
  
 .joint3-thq-frame1060-elm5 {
@@ -2532,8 +2536,20 @@
   border-radius: 60px;
   justify-content: center;
   background-color: rgba(255, 255, 255, 1);
+
+  /* йоу */
+  transition: transform 0.3s ease;
 }
  
+.joint3-thq-component5-elm:hover .joint3-thq-left-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+.joint3-thq-component5-elm:hover .joint3-thq-frame5-elm4 {
+  transform: translateX(5px); /* текст чуть вправо */
+}
+
+
 .joint3-thq-text-elm179 {
   color: rgba(49, 147, 204, 1);
   height: auto;
@@ -2555,7 +2571,28 @@
   border-radius: 60px;
   justify-content: center;
   background-color: rgba(255, 255, 255, 1);
+
+  /* йоу */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+
 }
+
+/* Иконка слева — изначально скрыта */
+.joint3-thq-left-icon {
+  opacity: 0;
+  transform: translateX(-20px);
+  order: 0;
+}
+
+/* Иконка справа — изначально видна */
+.joint3-thq-right-icon {
+  opacity: 1;
+  transform: translateX(0);
+  order: 2;
+}
+
+
  
 .joint3-thq-frame1061-elm4 {
   width: 24px;
