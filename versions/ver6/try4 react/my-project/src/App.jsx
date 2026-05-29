@@ -1,6 +1,6 @@
-// import ActionButtonWhiteBigText from './components/ '
+import ActionButtonWhiteBigText from './components/ActionButtonWhiteBigText/ActionButtonWhiteBigText'
 
-import ActionButtonWhiteSmallText from './components/ActionButtonWhiteSmallText'
+import ActionButtonWhiteSmallText from './components/ActionButtonWhiteSmallText/ActionButtonWhiteSmallText'
 
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -28,6 +28,8 @@ function App() {
                 «Complex SW СУСТАВЫ» порошок для&nbsp;опорно-двигательного
                 аппарата
               </span>
+
+              <ActionButtonWhiteBigText />
               <div class="joint3-thq-component4-elm1">
                 <div class="joint3-thq-frame1060-elm1">
                   <div class="joint3-thq-tablerbasket-elm1">
@@ -41,6 +43,9 @@ function App() {
                   <img alt="Frame1061I734" src="public/frame1061i734-zms.svg" class="joint3-thq-frame1061-elm1" />
                 </div>
               </div>
+
+
+
             </div>
             <div class="joint3-thq-frame277130166-elm">
               <span class="joint3-thq-text-elm103">
@@ -269,6 +274,10 @@ function App() {
                     </span>
                   </div>
 
+
+                  {/* <ActionButtonWhiteBigText /> */}
+
+
                   <div class="joint3-thq-frame1075-elm">
                     <div class="joint3-thq-component2-elm1">
                       <div class="joint3-thq-frame1060-elm2">
@@ -288,7 +297,7 @@ function App() {
                   </div>
 
 
-                  
+
                 </div>
               </div>
             </div>
@@ -424,6 +433,9 @@ function App() {
                         420г. / 30 порций
                       </span>
                     </div>
+
+                    {/* <ActionButtonWhiteBigText> */}
+
                     <div class="joint3-thq-component3-elm1">
                       <div class="joint3-thq-frame1060-elm3">
                         <div class="joint3-thq-tablerbasket-elm3">
@@ -439,6 +451,9 @@ function App() {
                         <img alt="Frame1061I676" src="public/frame1061i676-d6wk.svg" class="joint3-thq-frame1061-elm3" />
                       </div>
                     </div>
+
+
+
                   </div>
                 </div>
               </div>
