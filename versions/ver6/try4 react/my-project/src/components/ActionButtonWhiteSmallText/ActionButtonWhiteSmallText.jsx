@@ -1,4 +1,5 @@
 import React from 'react'
+import './ActionButtonWhiteSmallText.css'
 
 const ActionButtonWhiteSmallText = ({ text = "Оставить заявку", iconSrc = "public/frame1061i734-1gkq.svg" }) => {
   return (
