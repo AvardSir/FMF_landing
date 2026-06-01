@@ -1,0 +1,92 @@
+/* Контейнер */
+.action-button-blue {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+/* Базовые стили для обеих иконок */
+.action-button-blue__left-icon,
+.action-button-blue__right-icon {
+  gap: 10px;
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  border-radius: 60px;
+  justify-content: center;
+  background-color: rgba(49, 147, 204, 1);
+  transition: all 0.3s ease;
+  width: 56px;
+  box-sizing: border-box;
+}
+
+/* Левая иконка — изначально скрыта, но занимает место */
+.action-button-blue__left-icon {
+  opacity: 0;
+  transform: scale(0.8);
+  width: 0;
+  padding: 16px 0;
+  overflow: hidden;
+}
+
+/* Правая иконка — изначально видна */
+.action-button-blue__right-icon {
+  opacity: 1;
+  transform: scale(1);
+  width: 56px;
+}
+
+/* Стиль текстового блока */
+.action-button-blue__text-wrapper {
+  gap: 10px;
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+  border-radius: 60px;
+  justify-content: center;
+  background-color: rgba(49, 147, 204, 1);
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+/* Стиль текста (сохранен оригинальный) */
+.action-button-blue__text {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 24px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Onest;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Стиль иконки */
+.action-button-blue__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ============ HOVER АНИМАЦИЯ ============ */
+/* При наведении левая иконка появляется */
+.action-button-blue:hover .action-button-blue__left-icon {
+  opacity: 1;
+  transform: scale(1);
+  width: 56px;
+  padding: 16px;
+}
+
+/* При наведении правая иконка исчезает */
+.action-button-blue:hover .action-button-blue__right-icon {
+  opacity: 0;
+  transform: scale(0.8);
+  width: 0;
+  padding: 16px 0;
+  overflow: hidden;
+}
