@@ -29,7 +29,7 @@ function App() {
                 аппарата
               </span>
 
-              <ActionButtonWhiteBigText />
+              <ActionButtonWhiteBigText text ="Купить в 1 клик" iconSrc = "public/frame1061i676-d6wk.svg"/>
 
 {/*               
               <div className="joint3-thq-component4-elm1">
