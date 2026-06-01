@@ -7,6 +7,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import ActionButtonBlueMediumText from './components/ActionButtonBlueMediumText/ActionButtonBlueMediumText '
 
 function App() {
   const [count, setCount] = useState(0)
@@ -283,6 +284,10 @@ function App() {
 
                   {/* <ActionButtonWhiteBigText /> */}
 
+                  {/* <ActionButtonBlueMediumText></ActionButtonBlueMediumText> */}
+                  {/* ActionButtonBlueMediumText */}
+                  <ActionButtonBlueMediumText />
+
 
                   <div className="joint3-thq-frame1075-elm">
                     <div className="joint3-thq-component2-elm1">
@@ -293,7 +298,7 @@ function App() {
                       </div>
                       <div className="joint3-thq-frame5-elm2">
                         <span className="joint3-thq-text-elm149">
-                          Купить в 1 клик
+                          СИНЯЯ Купить в 1 клик
                         </span>
                       </div>
                       <div className="joint3-thq-frame1059-elm2">
@@ -450,7 +455,7 @@ function App() {
                       </div>
                       <div className="joint3-thq-frame5-elm3">
                         <span className="joint3-thq-text-elm169">
-                          Купить в 1 клик
+                          БЕЛАЯ Купить в 1 клик
                         </span>
                       </div>
                       <div className="joint3-thq-frame1059-elm3">
@@ -537,15 +542,22 @@ function App() {
                     физических нагрузках.
                   </span>
                 </div>
+                
+
+<ActionButtonBlueMediumText/>
+
                 <div className="joint3-thq-component1-elm">
                   <div className="joint3-thq-frame1060-elm6"></div>
                   <div className="joint3-thq-frame5-elm5">
-                    <span className="joint3-thq-text-elm182">Оставить заявку</span>
+                    <span className="joint3-thq-text-elm182">СИНЯЯ Оставить заявку</span>
                   </div>
                   <div className="joint3-thq-frame1059-elm5">
                     <img alt="Frame1061I676" src="public/frame1061i676-dwu.svg" className="joint3-thq-frame1061-elm5" />
                   </div>
                 </div>
+
+
+
               </div>
             </div>
             <div className="joint3-thq-frame277130173-elm">
@@ -558,11 +570,12 @@ function App() {
               </span>
 
 
-
+{/* убрать */}
+<ActionButtonWhiteSmallText/>
               <div className="joint3-thq-component2-elm2">
                 <div className="joint3-thq-frame1060-elm7"></div>
                 <div className="joint3-thq-frame5-elm6">
-                  <span className="joint3-thq-text-elm185">Оставить заявку</span>
+                  <span className="joint3-thq-text-elm185">СИНЯЯ Оставить заявку</span>
                 </div>
                 <div className="joint3-thq-frame1059-elm6">
                   <img alt="Frame1061I676" src="public/frame1061i676-tcax.svg" className="joint3-thq-frame1061-elm6" />
@@ -580,6 +593,7 @@ function App() {
                   30 порций = 130₽ в день
                 </span>
               </div>
+
               <div className="joint3-thq-component3-elm2">
                 <div className="joint3-thq-frame1060-elm8">
                   <div className="joint3-thq-tablerbasket-elm4">
@@ -587,12 +601,14 @@ function App() {
                   </div>
                 </div>
                 <div className="joint3-thq-frame5-elm7">
-                  <span className="joint3-thq-text-elm188">Купить в 1 клик</span>
+                  <span className="joint3-thq-text-elm188">СИНЯЯ Купить в 1 клик</span>
                 </div>
                 <div className="joint3-thq-frame1059-elm7">
                   <img alt="Frame1061I676" src="public/frame1061i676-m24a.svg" className="joint3-thq-frame1061-elm7" />
                 </div>
               </div>
+
+              
             </div>
             <div className="joint3-thq-group5-elm">
               <div className="joint3-thq-frame1119-elm">
@@ -701,7 +717,7 @@ function App() {
                       <div className="joint3-thq-frame1060-elm9"></div>
                       <div className="joint3-thq-frame5-elm8">
                         <span className="joint3-thq-text-elm202">
-                          Оставить заявку
+                          СИНЯЯ Оставить заявку
                         </span>
                       </div>
                       <div className="joint3-thq-frame1059-elm8">
