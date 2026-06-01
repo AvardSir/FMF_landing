@@ -15,7 +15,8 @@ const ActionButtonBlueMediumText = ({
 
       {/* Левая иконка (клон, появляется при hover) */}
       {showLeftIcon && leftIconSrc && (
-        <div className="joint3-thq-frame1059-elm2 joint3-thq-left-icon">
+
+        <div className=" joint3-thq-left-icon">
           <img
             alt="Left icon"
             src={leftIconSrc}
