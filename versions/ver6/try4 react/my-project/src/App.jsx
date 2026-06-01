@@ -29,9 +29,13 @@ function App() {
                 аппарата
               </span>
 
-              <ActionButtonWhiteBigText text ="Купить в 1 клик" iconSrc = "public/frame1061i676-d6wk.svg"/>
+              <ActionButtonWhiteBigText
+                text="Купить в 1 клик"
+                leftIconSrc="public/folder.svg"
+                rightIconSrc="public/frame1061i676-d6wk.svg"
+              />
 
-{/*               
+              {/*               
               <div className="joint3-thq-component4-elm1">
                 <div className="joint3-thq-frame1060-elm1">
                   <div className="joint3-thq-tablerbasket-elm1">
@@ -552,9 +556,9 @@ function App() {
                 БАД «Complex SW СУСТАВЫ» от Оптисалт решает три главные задачи
                 здоровья суставов
               </span>
-              
 
-              
+
+
               <div className="joint3-thq-component2-elm2">
                 <div className="joint3-thq-frame1060-elm7"></div>
                 <div className="joint3-thq-frame5-elm6">
@@ -712,7 +716,7 @@ function App() {
               </div>
             </div>
           </div>
-          
+
         </div>
         <link rel="canonical" href="https://fmf-test-2d269j.teleporthq.site/" />
       </div>
