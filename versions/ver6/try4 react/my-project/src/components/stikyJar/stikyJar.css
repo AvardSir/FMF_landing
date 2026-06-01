@@ -1,0 +1,52 @@
+.joint3-thq-frame1079-elm {
+  top: 2020px;
+  left: 715px;
+  width: 490px;
+  height: 2959px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.joint3-thq-frame1068-elm {
+  top: -79.557373046875px;
+  left: 0px;
+  width: 490px;
+  height: 653px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.joint3-thq-image14-elm2 {
+  top: 140.557373046875px;
+  left: -54px;
+  width: 598px;
+  height: 460px;
+  position: absolute;
+  object-fit: cover;
+  pointer-events: none; /* Чтобы изображение не мешало кликам */
+}
+
+/* Опционально: стили для sticky-поведения */
+.joint3-thq-frame1079-elm.sticky {
+  position: sticky;
+  top: 100px; /* Отступ сверху при залипании */
+}
+
+/* Медиа-запрос для адаптации */
+@media (max-width: 1200px) {
+  .joint3-thq-frame1079-elm {
+    transform: scale(0.8);
+    transform-origin: top left;
+  }
+}
+
+@media (max-width: 768px) {
+  .joint3-thq-frame1079-elm {
+    display: none; /* Скрываем на мобильных устройствах */
+  }
+}

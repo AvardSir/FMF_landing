@@ -8,6 +8,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import ActionButtonBlueMediumText from './components/hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText '
+import StikyJar from './components/stikyJar/stikyJar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -190,12 +191,12 @@ function App() {
               </div>
             </div>
 
-
-            <div className="joint3-thq-frame1079-elm">
+            <StikyJar></StikyJar>
+            {/* <div className="joint3-thq-frame1079-elm">
               <div className="joint3-thq-frame1068-elm">
                 <img alt="IMAGE146761" src="public/image146761-6dy-500h.png" className="joint3-thq-image14-elm2" />
               </div>
-            </div>
+            </div> */}
 
 
 
@@ -450,7 +451,7 @@ function App() {
                       </span>
                     </div>
 
-                    <ActionButtonWhiteBigText text='Купить в 1 клик'/>
+                    <ActionButtonWhiteBigText text='Купить в 1 клик' />
 
                     {/* <div className="joint3-thq-component3-elm1">
                       <div className="joint3-thq-frame1060-elm3">
@@ -724,7 +725,7 @@ function App() {
                     </div>
 
 
-<ActionButtonBlueMediumText text='Оставить заявку'> </ActionButtonBlueMediumText>
+                    <ActionButtonBlueMediumText text='Оставить заявку'> </ActionButtonBlueMediumText>
                     {/* <div className="joint3-thq-component4-elm2">
                       <div className="joint3-thq-frame1060-elm9"></div>
                       <div className="joint3-thq-frame5-elm8">
