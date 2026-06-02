@@ -68,7 +68,14 @@ function App() {
               <span className="joint3-thq-text-elm105">420г. / 30 порций</span>
               <span className="joint3-thq-text-elm106">Месячный курс</span>
             </div>
+
+
+
+
             <div className="joint3-thq-frame1067-elm"></div>
+
+
+
             <div className="joint3-thq-frame277130172-elm">
               <span className="joint3-thq-text-elm107">
                 Представьте, что вы каждый день даете своим суставам «витамин
@@ -747,7 +754,7 @@ function App() {
           </div>
 
         </div>
-        <link rel="canonical" href="https://fmf-test-2d269j.teleporthq.site/" />
+        {/* <link rel="canonical" href="https://fmf-test-2d269j.teleporthq.site/" /> */}
       </div>
 
     </>

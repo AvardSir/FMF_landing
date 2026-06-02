@@ -4,7 +4,7 @@
   width: 490px;
   height: 2959px;
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   align-items: flex-start;
   flex-shrink: 0;
 }
@@ -26,5 +26,6 @@
   left: -54px;
   width: 598px;
   height: 460px;
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
 }
