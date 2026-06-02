@@ -4,7 +4,7 @@
   width: 490px;
   height: 2959px;
   display: flex;
-  position: relative; /* Важно: контейнер должен быть relative */
+  position: relative;
   align-items: flex-start;
   flex-shrink: 0;
 }
@@ -16,9 +16,8 @@
   display: flex;
   align-items: flex-start;
   flex-shrink: 0;
-  /* Позиция будет управляться через JS */
-  z-index: 10; /* Чтобы элемент был поверх других */
-  transition: top 0.05s linear; /* Плавное движение */
+  z-index: 10;
+  /* Убрал transition */
 }
 
 .joint3-thq-image14-elm2 {

@@ -19,54 +19,54 @@ const StikyJar = ({
 
       // Получаем позиции элементов
       const containerRect = container.getBoundingClientRect();
-      const stickyRect = stickyElement.getBoundingClientRect();
-      const stickyHeight = stickyRect.height;
+      const stickyHeight = stickyElement.offsetHeight;
       
-      // Верхняя граница для прилипания (отступ от верха окна)
-      const stickyTopOffset = 0; // Прилипает к самому верху
+      // Верхняя граница для прилипания
+      const stickyTopOffset = 0;
       
       // Нижняя граница контейнера
       const containerBottom = containerRect.bottom;
       
-      // Вычисляем позицию, где элемент должен перестать прилипать
+      // Позиция, где элемент должен перестать прилипать
       const stopPosition = containerBottom - stickyHeight;
       
       let topPosition;
+      let useFixed = true;
       
-      // Если элемент еще не достиг зоны прилипания
+      // Логика прилипания
       if (containerRect.top > stickyTopOffset) {
-        // Элемент следует за контейнером (обычное поведение)
+        // Элемент еще не достиг зоны прилипания
         topPosition = containerRect.top;
+        useFixed = false;
       } 
-      // Если элемент в зоне прилипания
       else if (containerRect.top <= stickyTopOffset && stopPosition > stickyTopOffset) {
         // Элемент прилипает к верху
         topPosition = stickyTopOffset;
+        useFixed = true;
       }
-      // Если элемент достиг нижней границы контейнера
       else {
-        // Элемент прижимается к низу контейнера
+        // Элемент достиг нижней границы
         topPosition = stopPosition;
+        useFixed = stopPosition > stickyTopOffset;
       }
       
-      // Применяем позицию
-      if (topPosition !== undefined) {
+      // Применяем стили без transition для мгновенного отклика
+      if (useFixed && topPosition <= stopPosition) {
         stickyElement.style.position = 'fixed';
         stickyElement.style.top = `${topPosition}px`;
         stickyElement.style.left = `${containerRect.left}px`;
-        stickyElement.style.width = `${stickyRect.width}px`;
-        
-        // Проверяем, не вышел ли элемент за пределы контейнера
-        if (topPosition >= stopPosition) {
-          stickyElement.style.position = 'absolute';
-          stickyElement.style.top = 'auto';
-          stickyElement.style.bottom = '0';
-          stickyElement.style.left = '0';
-        }
+        stickyElement.style.width = `${stickyElement.offsetWidth}px`;
+        stickyElement.style.bottom = 'auto';
+      } else {
+        stickyElement.style.position = 'absolute';
+        stickyElement.style.top = 'auto';
+        stickyElement.style.bottom = '0';
+        stickyElement.style.left = '0';
+        stickyElement.style.width = '100%';
       }
     };
 
-    // Функция для сброса стилей при монтировании
+    // Функция для сброса стилей
     const resetStyles = () => {
       const stickyElement = stickyRef.current;
       if (stickyElement) {
@@ -78,13 +78,25 @@ const StikyJar = ({
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleScroll); // Пересчет при изменении размера окна
+    // Используем requestAnimationFrame для оптимизации
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
     resetStyles();
-    handleScroll(); // Вызываем сразу для установки начальной позиции
+    handleScroll();
     
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', handleScroll);
       resetStyles();
     };
