@@ -1,3 +1,4 @@
+/* StikyJar.css */
 .joint3-thq-frame1079-elm {
   top: 2020px;
   left: 715px;
@@ -11,13 +12,13 @@
 
 .joint3-thq-frame1068-elm {
   left: 0px;
-  width: 490px;
+  width: 100%; /* Changed from fixed width */
   height: 653px;
   display: flex;
   align-items: flex-start;
   flex-shrink: 0;
   z-index: 10;
-  /* Убрал transition */
+  position: relative; /* Added */
 }
 
 .joint3-thq-image14-elm2 {
@@ -26,4 +27,14 @@
   width: 598px;
   height: 460px;
   position: relative;
+}
+
+/* Optional: Add smooth transition when switching modes */
+.joint3-thq-frame1068-elm.position-fixed {
+  transition: none; /* Instant switching */
+}
+
+/* For better performance on scroll */
+.will-change-transform {
+  will-change: transform;
 }

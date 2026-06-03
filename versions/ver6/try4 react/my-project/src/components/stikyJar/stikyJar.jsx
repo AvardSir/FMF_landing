@@ -1,6 +1,6 @@
 // StikyJar.jsx
-import React, { useRef, useEffect } from 'react'
-import './StikyJar.css'
+import React, { useRef, useEffect } from 'react';
+import './StikyJar.css';
 
 const StikyJar = ({ 
   imageSrc = "public/image146761-6dy-500h.png",
@@ -8,77 +8,51 @@ const StikyJar = ({
   className = ""
 }) => {
   const stickyRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const stickyElement = stickyRef.current;
-      if (!stickyElement) return;
+      const container = containerRef.current;
+      
+      if (!stickyElement || !container) return;
 
-      const container = stickyElement.closest('.joint3-thq-frame1079-elm');
-      if (!container) return;
-
-      // Получаем позиции элементов
+      // Get positions
       const containerRect = container.getBoundingClientRect();
       const stickyHeight = stickyElement.offsetHeight;
+      const viewportHeight = window.innerHeight;
       
-      // Верхняя граница для прилипания
-      const stickyTopOffset = 0;
+      // Calculate thresholds
+      const startStickPoint = 0; // Stick to top of viewport
+      const stopStickPoint = containerRect.bottom - stickyHeight;
       
-      // Нижняя граница контейнера
-      const containerBottom = containerRect.bottom;
-      
-      // Позиция, где элемент должен перестать прилипать
-      const stopPosition = containerBottom - stickyHeight;
-      
-      let topPosition;
-      let useFixed = true;
-      
-      // Логика прилипания
-      if (containerRect.top > stickyTopOffset) {
-        // Элемент еще не достиг зоны прилипания
-        topPosition = containerRect.top;
-        useFixed = false;
-      } 
-      else if (containerRect.top <= stickyTopOffset && stopPosition > stickyTopOffset) {
-        // Элемент прилипает к верху
-        topPosition = stickyTopOffset;
-        useFixed = true;
-      }
-      else {
-        // Элемент достиг нижней границы
-        topPosition = stopPosition;
-        useFixed = stopPosition > stickyTopOffset;
-      }
-      
-      // Применяем стили без transition для мгновенного отклика
-      if (useFixed && topPosition <= stopPosition) {
+      if (containerRect.top <= startStickPoint && stopStickPoint > startStickPoint) {
+        // Sticky mode - element should stick to top
         stickyElement.style.position = 'fixed';
-        stickyElement.style.top = `${topPosition}px`;
+        stickyElement.style.top = `${startStickPoint}px`;
         stickyElement.style.left = `${containerRect.left}px`;
-        stickyElement.style.width = `${stickyElement.offsetWidth}px`;
+        stickyElement.style.width = `${containerRect.width}px`;
         stickyElement.style.bottom = 'auto';
-      } else {
+      } 
+      else if (containerRect.bottom <= stickyHeight) {
+        // Bottom mode - element reached bottom of container
         stickyElement.style.position = 'absolute';
         stickyElement.style.top = 'auto';
         stickyElement.style.bottom = '0';
         stickyElement.style.left = '0';
-        stickyElement.style.width = '100%';
+        stickyElement.style.right = '0';
+      }
+      else {
+        // Normal mode - element scrolls naturally
+        stickyElement.style.position = 'absolute';
+        stickyElement.style.top = 'auto';
+        stickyElement.style.bottom = 'auto';
+        stickyElement.style.left = '0';
+        stickyElement.style.right = '0';
       }
     };
 
-    // Функция для сброса стилей
-    const resetStyles = () => {
-      const stickyElement = stickyRef.current;
-      if (stickyElement) {
-        stickyElement.style.position = '';
-        stickyElement.style.top = '';
-        stickyElement.style.left = '';
-        stickyElement.style.width = '';
-        stickyElement.style.bottom = '';
-      }
-    };
-
-    // Используем requestAnimationFrame для оптимизации
+    // Optimized scroll handler
     let ticking = false;
     const onScroll = () => {
       if (!ticking) {
@@ -90,20 +64,19 @@ const StikyJar = ({
       }
     };
 
+    // Initial call and event listeners
+    handleScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', handleScroll);
-    resetStyles();
-    handleScroll();
     
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', handleScroll);
-      resetStyles();
     };
   }, []);
 
   return (
-    <div className="joint3-thq-frame1079-elm">
+    <div className="joint3-thq-frame1079-elm" ref={containerRef}>
       <div className="joint3-thq-frame1068-elm" ref={stickyRef}>
         <img 
           alt={altText} 
@@ -112,7 +85,7 @@ const StikyJar = ({
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default StikyJar
+export default StikyJar;
