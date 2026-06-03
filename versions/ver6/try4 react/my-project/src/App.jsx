@@ -9,6 +9,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import ActionButtonBlueMediumText from './components/hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText '
 import StikyJar from './components/stikyJar/stikyJar'
+import MaxLogo from './components/MaxLogo/MaxLogo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -394,8 +395,8 @@ function App() {
 
                       {/* <blueSmallChekcbox /> */}
                       {/* <BlueSmallChekcbox></BlueSmallChekcbox> */}
-                      <BlueSmallChekcbox/>
-{/*                       
+                      <BlueSmallChekcbox />
+                      {/*                       
                       <div className="joint3-thq-frame38-elm2">
                         <div className="joint3-thq-group19-elm">
                           <img alt="Vector396761" src="public/vector396761-0blg.svg" className="joint3-thq-vector39-elm" />
@@ -653,6 +654,9 @@ function App() {
                       <div className="joint3-thq-frame71-elm">
                         <img alt="logostelegram7286" src="public/logostelegram7286-9tf.svg"
                           className="joint3-thq-logostelegram-elm1" />
+
+                        <MaxLogo />
+
                         <div className="joint3-thq-logostelegram-elm2">
                           <img alt="Vector7286" src="public/vector7286-15ru.svg" className="joint3-thq-vector-elm5" />
                           <div className="joint3-thq-maxmessengerhorizontallogo1-elm">
@@ -673,10 +677,13 @@ function App() {
                                           <img alt="Vector7287" src="public/vector7287-tqho.svg"
                                             className="joint3-thq-vector-elm8" />
                                         </div>
+
                                         <div className="joint3-thq-group-elm9">
-                                          <img alt="Rectangle7287" src="public/rectangle7287-mcua-200h.png"
-                                            className="joint3-thq-rectangle-elm" />
+                                          {/* <img alt="Rectangle7287" src="public/Max_logo-32x32.png"
+                                            className="joint3-thq-rectangle-elm" /> */}
+                                          <img src="https://maxicons.ru/icons/Max_logo.svg" alt="MAX" width={32} height={32} />
                                         </div>
+
                                       </div>
                                     </div>
                                   </div>
@@ -685,6 +692,17 @@ function App() {
                             </div>
                           </div>
                         </div>
+
+
+
+
+
+
+
+
+
+
+
                         <img alt="logostelegram7286" src="public/logostelegram7286-26se.svg"
                           className="joint3-thq-logostelegram-elm3" />
                         <img alt="logostelegram7287" src="public/logostelegram7287-0rp.svg"
