@@ -1,5 +1,5 @@
 import ActionButtonWhiteBigText from './components/hoverButtons/ActionButtonWhiteBigText/ActionButtonWhiteBigText'
-
+import BlueSmallChekcbox from './components/BlueSmallChekcbox/BlueSmallChekcbox'
 import ActionButtonWhiteSmallText from './components/hoverButtons/ActionButtonWhiteSmallText/ActionButtonWhiteSmallText'
 
 import { useState } from 'react'
@@ -390,12 +390,19 @@ function App() {
                       <span className="joint3-thq-text-elm157">
                         Какие противопоказания?
                       </span>
+
+
+                      {/* <blueSmallChekcbox /> */}
+                      {/* <BlueSmallChekcbox></BlueSmallChekcbox> */}
+                      <BlueSmallChekcbox/>
+{/*                       
                       <div className="joint3-thq-frame38-elm2">
                         <div className="joint3-thq-group19-elm">
                           <img alt="Vector396761" src="public/vector396761-0blg.svg" className="joint3-thq-vector39-elm" />
                           <img alt="Ellipse16761" src="public/ellipse16761-jmb-200h.png" className="joint3-thq-ellipse1-elm" />
                         </div>
-                      </div>
+                      </div> */}
+
                     </div>
                   </div>
                   <span className="joint3-thq-text-elm158">
