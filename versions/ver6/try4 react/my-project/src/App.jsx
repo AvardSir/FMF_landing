@@ -1,3 +1,4 @@
+
 import ActionButtonWhiteBigText from './components/hoverButtons/ActionButtonWhiteBigText/ActionButtonWhiteBigText'
 import BlueSmallChekcbox from './components/BlueSmallChekcbox/BlueSmallChekcbox'
 import ActionButtonWhiteSmallText from './components/hoverButtons/ActionButtonWhiteSmallText/ActionButtonWhiteSmallText'
@@ -10,6 +11,8 @@ import './App.css'
 import ActionButtonBlueMediumText from './components/hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText '
 import StikyJar from './components/stikyJar/stikyJar'
 import MaxLogo from './components/MaxLogo/MaxLogo'
+import LeftRightArrow from './components/LeftRightArrow/LeftRightArrow'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -123,10 +126,12 @@ function App() {
                 и&nbsp;думает о своем будущем заранее.
               </span>
               <div className="joint3-thq-frame277130179-elm">
-                <div className="joint3-thq-frame42-elm">
-                  <img alt="Frame406761" src="public/frame406761-hjgq.svg" className="joint3-thq-frame40-elm" />
-                  <img alt="Frame416761" src="public/frame416761-l4m.svg" className="joint3-thq-frame41-elm" />
-                </div>
+
+
+                <LeftRightArrow></LeftRightArrow>
+
+
+
                 <div className="joint3-thq-frame277130178-elm">
                   <div className="joint3-thq-frame277130175-elm">
                     <span className="joint3-thq-text-elm115">18+ лет</span>

@@ -500,27 +500,6 @@
   flex-direction: column;
 }
 
-.joint3-thq-frame42-elm {
-  gap: 8px;
-  width: 40px;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
-  flex-direction: column;
-}
-
-.joint3-thq-frame40-elm {
-  width: 40px;
-  height: 40px;
-  align-self: stretch;
-}
-
-.joint3-thq-frame41-elm {
-  width: 40px;
-  height: 40px;
-  align-self: stretch;
-}
-
 .joint3-thq-frame277130178-elm {
   gap: 24px;
   display: flex;
