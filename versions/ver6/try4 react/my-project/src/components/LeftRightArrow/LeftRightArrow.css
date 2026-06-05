@@ -6,7 +6,7 @@
   display: flex;
   align-items: flex-start;
   flex-shrink: 0;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .joint3-thq-frame40-elm {
