@@ -753,9 +753,9 @@ function App() {
                           className="joint3-thq-rectangle11-elm" />
                         <span className="joint3-thq-text-elm199">
                           <span className="joint3-thq-text-elm200">
-                            Я даю свое согласие на обработку
+                            Я даю свое согласие на обработку персональных данных
                           </span>
-                          <span>персональных данных</span>
+                          
                         </span>
                       </div>
                     </div>
