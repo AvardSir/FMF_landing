@@ -16,7 +16,11 @@ const MaxLogo = () => {
                   </div>
                   <div className="joint3-thq-clippathgroup-elm3">
                     <div className="joint3-thq-group-elm9">
-                      <img src="https://maxicons.ru/icons/Max_logo.svg" alt="MAX" width={32} height={32} />
+                      <img 
+                        src="https://maxicons.ru/icons/Max_logo.svg" 
+                        alt="MAX" 
+                        className="joint3-thq-max-logo-centered"
+                      />
                     </div>
                   </div>
                 </div>
