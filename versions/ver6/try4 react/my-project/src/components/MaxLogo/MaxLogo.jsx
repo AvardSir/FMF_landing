@@ -1,6 +1,7 @@
 import React from 'react'
 
 import "./MaxLogo.css"  // ✅ точка указывает на текущую директорию
+import MaxLogoSvg from '../../../public/Max_logo.svg'
 
 
 const MaxLogo = () => {
