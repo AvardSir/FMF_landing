@@ -657,7 +657,7 @@ function App() {
 
                         <MaxLogo />
 
-                        <div className="joint3-thq-logostelegram-elm2">
+                        {/* <div className="joint3-thq-logostelegram-elm2">
                           <img alt="Vector7286" src="public/vector7286-15ru.svg" className="joint3-thq-vector-elm5" />
                           <div className="joint3-thq-maxmessengerhorizontallogo1-elm">
                             <div className="joint3-thq-group-elm6">
@@ -679,8 +679,7 @@ function App() {
                                         </div>
 
                                         <div className="joint3-thq-group-elm9">
-                                          {/* <img alt="Rectangle7287" src="public/Max_logo-32x32.png"
-                                            className="joint3-thq-rectangle-elm" /> */}
+                                          
                                           <img src="https://maxicons.ru/icons/Max_logo.svg" alt="MAX" width={32} height={32} />
                                         </div>
 
@@ -691,7 +690,7 @@ function App() {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
 
 
 
