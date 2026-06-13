@@ -1,4 +1,5 @@
 import React from "react";
+import "./QuestionsLeftSection.css"
 import MaxLogo from "../MaxLogo/MaxLogo";
 import ActionButtonBlueMediumText from "../hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText ";
 export function QuestionsLeftSection({ }) {
