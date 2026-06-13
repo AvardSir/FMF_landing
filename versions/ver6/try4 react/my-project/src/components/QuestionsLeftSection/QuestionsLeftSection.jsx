@@ -1,8 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./QuestionsLeftSection.css";
 import MaxLogo from "../MaxLogo/MaxLogo";
 import ActionButtonBlueMediumText from "../hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText";
-// import ActionButtonBlueMediumText
+
+// Функция форматирования телефона под маску +7 (XXX) XXX-XX-XX
+const formatPhone = (value) => {
+  // Оставляем только цифры, максимум 11 (первая всегда 7, остальные 10)
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+  if (digits.length === 0) return "";
+  // Если начинается не с 7, принудительно добавляем 7 (можно убрать, если нужна свобода)
+  if (!digits.startsWith("7")) {
+    return `+7 (${digits.slice(0, 3)}${digits.length > 3 ? ") " + digits.slice(3, 6) : ""}${digits.length > 6 ? "-" + digits.slice(6, 8) : ""}${digits.length > 8 ? "-" + digits.slice(8, 10) : ""}`;
+  }
+  // Основной шаблон
+  let formatted = "+7";
+  if (digits.length > 1) {
+    formatted += ` (${digits.slice(1, 4)}`;
+  }
+  if (digits.length > 4) {
+    formatted += `) ${digits.slice(4, 7)}`;
+  }
+  if (digits.length > 7) {
+    formatted += `-${digits.slice(7, 9)}`;
+  }
+  if (digits.length > 9) {
+    formatted += `-${digits.slice(9, 11)}`;
+  }
+  return formatted;
+};
+
 export function QuestionsLeftSection() {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,10 +39,19 @@ export function QuestionsLeftSection() {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
+  const handlePhoneChange = useCallback((e) => {
+    const rawValue = e.target.value;
+    const formatted = formatPhone(rawValue);
+    setFormData((prev) => ({ ...prev, phone: formatted }));
+    // Сброс ошибки при вводе
+    if (errors.phone) {
+      setErrors((prev) => ({ ...prev, phone: "" }));
+    }
+  }, [errors.phone]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Сброс ошибки при вводе
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -27,12 +62,17 @@ export function QuestionsLeftSection() {
     const newErrors = {};
 
     if (!formData.name.trim()) newErrors.name = "Введите имя";
-    if (!formData.phone.trim()) newErrors.phone = "Введите телефон";
-    else if (!/^\+7\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}$/.test(formData.phone.trim()))
-      newErrors.phone = "Формат: +7 (___) ___-__-__";
-    if (!formData.email.trim()) newErrors.email = "Введите email";
-    else if (!/\S+@\S+\.\S+/.test(formData.email))
+    // Проверка полного номера: ровно 15 символов с маской (без учёта пробелов и скобок — 11 цифр)
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Введите телефон";
+    } else if (formData.phone.replace(/\D/g, "").length !== 11) {
+      newErrors.phone = "Введите номер полностью";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Введите email";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Некорректный email";
+    }
     if (!consent) newErrors.consent = "Необходимо согласие";
 
     if (Object.keys(newErrors).length > 0) {
@@ -40,10 +80,13 @@ export function QuestionsLeftSection() {
       return;
     }
 
-    // Имитация отправки данных
-    console.log("Отправка формы:", { ...formData, consent });
+    // Имитация отправки
+    console.log("Отправка формы:", {
+      ...formData,
+      phoneDigits: formData.phone.replace(/\D/g, ""),
+      consent,
+    });
     setSubmitted(true);
-    // Можно добавить реальный запрос к API
   };
 
   const resetForm = () => {
@@ -97,7 +140,7 @@ export function QuestionsLeftSection() {
           >
             <div className="joint3-thq-frame1116-elm">
               <div className="joint3-thq-frame46-elm">
-                {/* Поле Имя */}
+                {/* Имя */}
                 <div className="joint3-thq-frame48-elm1">
                   <span className="joint3-thq-text-elm193">Имя</span>
                   <div className="joint3-thq-frame48-elm2">
@@ -108,7 +151,6 @@ export function QuestionsLeftSection() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Как к вам обращаться"
-                        className="joint3-thq-text-elm194"
                         style={{
                           width: "100%",
                           border: "none",
@@ -128,7 +170,7 @@ export function QuestionsLeftSection() {
                   )}
                 </div>
 
-                {/* Поле Телефон */}
+                {/* Телефон с маской */}
                 <div className="joint3-thq-frame47-elm">
                   <span className="joint3-thq-text-elm195">Телефон</span>
                   <div className="joint3-thq-frame48-elm3">
@@ -137,9 +179,8 @@ export function QuestionsLeftSection() {
                         type="tel"
                         name="phone"
                         value={formData.phone}
-                        onChange={handleChange}
+                        onChange={handlePhoneChange}
                         placeholder="+7 (___) ___-__-__"
-                        className="joint3-thq-text-elm196"
                         style={{
                           width: "100%",
                           border: "none",
@@ -159,7 +200,7 @@ export function QuestionsLeftSection() {
                   )}
                 </div>
 
-                {/* Поле Эл. почта */}
+                {/* Email */}
                 <div className="joint3-thq-frame49-elm3">
                   <span className="joint3-thq-text-elm197">Эл. почта</span>
                   <div className="joint3-thq-frame48-elm4">
@@ -170,7 +211,6 @@ export function QuestionsLeftSection() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Ваша эл.почта"
-                        className="joint3-thq-text-elm198"
                         style={{
                           width: "100%",
                           border: "none",
@@ -213,7 +253,7 @@ export function QuestionsLeftSection() {
                       width: "24px",
                       height: "24px",
                       borderRadius: "4px",
-                      accentColor: "#3193cc", // можно стилизовать под дизайн
+                      accentColor: "#3193cc",
                     }}
                   />
                   <span
@@ -235,7 +275,7 @@ export function QuestionsLeftSection() {
               text={submitted ? "Отправлено" : "Оставить заявку"}
               onClick={() => {
                 if (!submitted) {
-                  // кнопка внутри формы — вызовется submit через form
+                  // будет вызван submit через форму
                 } else {
                   resetForm();
                 }
