@@ -1,8 +1,9 @@
 import React, { useState, useCallback } from "react";
 import "./QuestionsLeftSection.css";
+// import MaxLogo from "../MaxLogo/MaxLogo";
 import MaxLogo from "../MaxLogo/MaxLogo";
+// import ActionButtonBlueMediumText from "../hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText";
 import ActionButtonBlueMediumText from "../hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText";
-
 // Функция форматирования телефона под маску +7 (XXX) XXX-XX-XX
 const formatPhone = (value) => {
   // Оставляем только цифры, максимум 11 (первая всегда 7, остальные 10)
@@ -108,8 +109,13 @@ export function QuestionsLeftSection() {
           <div className="joint3-thq-frame1115-elm">
             <div className="joint3-thq-frame64-elm2">
               <span className="joint3-thq-text-elm190">Эл. почта</span>
-              <span className="joint3-thq-text-elm191">info@test.ru</span>
-            </div>
+<a 
+  href="mailto:info@test.ru" 
+  className="joint3-thq-text-elm191"
+  style={{ color: '#3193cc', textDecoration: 'underline' }}
+>
+  info@test.ru
+</a>            </div>
             <div className="joint3-thq-frame70-elm">
               <span className="joint3-thq-text-elm192">Мессенджеры</span>
               <div className="joint3-thq-frame71-elm">
