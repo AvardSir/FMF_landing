@@ -1,62 +1,66 @@
-// import BlueSmallCheckbox from 'BlueSmallChekcbox'  // ← убрал лишний "="
+import { useState } from 'react';
 import BlueSmallChekcbox from './../BlueSmallChekcbox/BlueSmallChekcbox';
-// import { BlueSmallChekcbox } from 'BlueSmallChekcbox';
-
-// import "AccordionSectio.css"
-import "./AccordionSection.css"  // ← две точки
-
+import "./AccordionSection.css"
 
 const AccordionSection = () => {
+  const [openItems, setOpenItems] = useState({});
+  
+  const toggleItem = (id) => {
+    setOpenItems(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const accordionItems = [
+    {
+      id: 1,
+      title: "Можно ли «Complex SW СУСТАВЫ» принимать с другими препаратами",
+      content: "Содержимое для первого аккордеона..."
+    },
+    {
+      id: 2,
+      title: "Какие противопоказания?",
+      content: "Противопоказанием является индивидуальная непереносимость компонентов препарата.",
+      hasCheckbox: true
+    },
+    {
+      id: 3,
+      title: "Почему в форме порошка, а не капсул?",
+      content: "Содержимое для третьего аккордеона..."
+    },
+    {
+      id: 4,
+      title: "Какие показания для приема комплекса",
+      content: "Содержимое для четвертого аккордеона..."
+    }
+  ];
+
   return (
-    <>
-      <div className="joint3-thq-frame1077-elm">
-        <div className="joint3-thq-frame1049-elm">
-          <div className="joint3-thq-frame755-elm">
-            <div className="joint3-thq-frame1051-elm1">
-              <span className="joint3-thq-text-elm156">
-                Можно ли «Complex SW СУСТАВЫ» принимать с другими
-                препаратами
-              </span>
-              <img alt="Frame386761" src="public/frame386761-hulo.svg" className="joint3-thq-frame38-elm1" />
+    <div className="accordion-container">
+      {accordionItems.map((item) => (
+        <div key={item.id} className="accordion-item">
+          <div 
+            className="accordion-header"
+            onClick={() => toggleItem(item.id)}
+          >
+            <span className="accordion-title">{item.title}</span>
+            <img 
+              alt="toggle" 
+              src="public/frame386761-hulo.svg" 
+              className={`accordion-icon ${openItems[item.id] ? 'rotated' : ''}`}
+            />
+          </div>
+          
+          <div className={`accordion-content ${openItems[item.id] ? 'open' : ''}`}>
+            <div className="accordion-content-inner">
+              {item.hasCheckbox && <BlueSmallChekcbox />}
+              <span className="accordion-text">{item.content}</span>
             </div>
           </div>
-          <div className="joint3-thq-frame761-elm">
-            <div className="joint3-thq-frame1052-elm">
-              <div className="joint3-thq-frame1051-elm2">
-                <span className="joint3-thq-text-elm157">
-                  Какие противопоказания?
-                </span>
-
-                <BlueSmallChekcbox /> {/* ← теперь работает */}
-
-              </div>
-            </div>
-            <span className="joint3-thq-text-elm158">
-              Противопоказанием является индивидуальная непереносимость
-              компонентов препарата.
-            </span>
-          </div>
-          {/* ... остальной код ... */}
-
-          </div>
-          <div className="joint3-thq-frame762-elm">
-            <div className="joint3-thq-frame1051-elm3">
-              <span className="joint3-thq-text-elm159">
-                Почему в форме порошка, а не капсул?
-              </span>
-              <img alt="Frame386761" src="public/frame386761-uqwf.svg" className="joint3-thq-frame38-elm3" />
-            </div>
-          </div>
-          <div className="joint3-thq-frame763-elm">
-            <div className="joint3-thq-frame1051-elm4">
-              <span className="joint3-thq-text-elm160">
-                Какие показания для приема комплекса
-              </span>
-              <img alt="Frame386761" src="public/frame386761-47n.svg" className="joint3-thq-frame38-elm4" />
-            </div>
         </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 
