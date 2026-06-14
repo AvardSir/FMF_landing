@@ -379,12 +379,14 @@ function App() {
                   специалиста
                 </span>
               </div>
+
               <div className="joint3-thq-frame1054-elm">
                 <span className="joint3-thq-text-elm164">Оферта</span>
                 <span className="joint3-thq-text-elm165">
                   Политика конфиденциальности
                 </span>
               </div>
+              
             </div>
 
 
