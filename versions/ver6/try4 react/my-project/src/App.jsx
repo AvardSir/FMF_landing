@@ -14,6 +14,7 @@ import ActionButtonBlueMediumText from './components/hoverButtons/ActionButtonBl
 import StikyJar from './components/stikyJar/stikyJar'
 // import MaxLogo from './components/MaxLogo/MaxLogo'
 import LeftRightArrow from './components/LeftRightArrow/LeftRightArrow'
+import AccordionSection from "./components/AccordionSection/AccordionSection";
 
 
 function App() {
@@ -358,61 +359,12 @@ function App() {
               className="joint3-thq-boxiconsscience-elm2" />
             <img alt="boxiconsscience6761" src="public/boxiconsscience6761-jgqm.svg"
               className="joint3-thq-boxiconsscience-elm3" />
-            <div className="joint3-thq-frame1077-elm">
-              <div className="joint3-thq-frame1049-elm">
-                <div className="joint3-thq-frame755-elm">
-                  <div className="joint3-thq-frame1051-elm1">
-                    <span className="joint3-thq-text-elm156">
-                      Можно ли «Complex SW СУСТАВЫ» принимать с другими
-                      препаратами
-                    </span>
-                    <img alt="Frame386761" src="public/frame386761-hulo.svg" className="joint3-thq-frame38-elm1" />
-                  </div>
-                </div>
-                <div className="joint3-thq-frame761-elm">
-                  <div className="joint3-thq-frame1052-elm">
-                    <div className="joint3-thq-frame1051-elm2">
-                      <span className="joint3-thq-text-elm157">
-                        Какие противопоказания?
-                      </span>
 
 
-                      {/* <blueSmallChekcbox /> */}
-                      {/* <BlueSmallChekcbox></BlueSmallChekcbox> */}
-                      <BlueSmallChekcbox />
-                      {/*                       
-                      <div className="joint3-thq-frame38-elm2">
-                        <div className="joint3-thq-group19-elm">
-                          <img alt="Vector396761" src="public/vector396761-0blg.svg" className="joint3-thq-vector39-elm" />
-                          <img alt="Ellipse16761" src="public/ellipse16761-jmb-200h.png" className="joint3-thq-ellipse1-elm" />
-                        </div>
-                      </div> */}
+            <AccordionSection />
 
-                    </div>
-                  </div>
-                  <span className="joint3-thq-text-elm158">
-                    Противопоказанием является индивидуальная непереносимость
-                    компонентов препарата.
-                  </span>
-                </div>
-                <div className="joint3-thq-frame762-elm">
-                  <div className="joint3-thq-frame1051-elm3">
-                    <span className="joint3-thq-text-elm159">
-                      Почему в форме порошка, а не капсул?
-                    </span>
-                    <img alt="Frame386761" src="public/frame386761-uqwf.svg" className="joint3-thq-frame38-elm3" />
-                  </div>
-                </div>
-                <div className="joint3-thq-frame763-elm">
-                  <div className="joint3-thq-frame1051-elm4">
-                    <span className="joint3-thq-text-elm160">
-                      Какие показания для приема комплекса
-                    </span>
-                    <img alt="Frame386761" src="public/frame386761-47n.svg" className="joint3-thq-frame38-elm4" />
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            
             <div className="joint3-thq-frame1111-elm">
               <div className="joint3-thq-frame1055-elm">
                 <span className="joint3-thq-text-elm161">© 2026, Оптисалт</span>
@@ -434,6 +386,9 @@ function App() {
                 </span>
               </div>
             </div>
+
+
+
             <div className="joint3-thq-group10-elm">
               <div className="joint3-thq-frame68-elm">
                 <img alt="IMAGE476761" src="public/image476761-y3so-1000w.png" className="joint3-thq-image47-elm1" />
@@ -493,6 +448,10 @@ function App() {
                 </div>
               </div>
             </div>
+
+
+
+
             <div className="joint3-thq-frame9-elm1">
               <div className="joint3-thq-group211-elm2">
                 <img alt="logowhite0415001" src="public/logowhite0415001-5ula.svg" className="joint3-thq-logowhite041-elm2" />
