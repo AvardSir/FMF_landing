@@ -48,9 +48,10 @@
   flex-shrink: 0;
 }
 
-.accordion-icon.rotated {
+/* Убираем класс rotated, так как он больше не нужен */
+/* .accordion-icon.rotated {
   transform: rotate(45deg);
-}
+} */
 
 .accordion-content {
   max-height: 0;

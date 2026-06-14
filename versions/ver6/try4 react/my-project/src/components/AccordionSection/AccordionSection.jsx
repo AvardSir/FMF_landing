@@ -1,67 +1,105 @@
-import { useState } from 'react';
-import BlueSmallChekcbox from './../BlueSmallChekcbox/BlueSmallChekcbox';
-import "./AccordionSection.css"
+.accordion-container {
+  width: 100%;
+  max-width: 1530px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  top: 8919px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-const AccordionSection = () => {
-  const [openItems, setOpenItems] = useState({});
+.accordion-item {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  gap: 24px;
+}
+
+.accordion-header:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.accordion-title {
+  color: rgba(28, 28, 28, 1);
+  font-size: 24px;
+  font-family: Onest;
+  font-weight: 500;
+  line-height: 100%;
+  flex: 1;
+}
+
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Убираем класс rotated, так как он больше не нужен */
+/* .accordion-icon.rotated {
+  transform: rotate(45deg);
+} */
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.open {
+  max-height: 500px;
+}
+
+.accordion-content-inner {
+  padding: 0 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.accordion-text {
+  color: rgba(127, 127, 127, 1);
+  font-size: 18px;
+  font-family: Onest;
+  font-weight: 400;
+  line-height: 120%;
+  display: block;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .accordion-container {
+    width: calc(100% - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
   
-  const toggleItem = (id) => {
-    setOpenItems(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
-
-  const accordionItems = [
-    {
-      id: 1,
-      title: "Можно ли «Complex SW СУСТАВЫ» принимать с другими препаратами",
-      content: "Содержимое для первого аккордеона..."
-    },
-    {
-      id: 2,
-      title: "Какие противопоказания?",
-      content: "Противопоказанием является индивидуальная непереносимость компонентов препарата.",
-      hasCheckbox: true
-    },
-    {
-      id: 3,
-      title: "Почему в форме порошка, а не капсул?",
-      content: "Содержимое для третьего аккордеона..."
-    },
-    {
-      id: 4,
-      title: "Какие показания для приема комплекса",
-      content: "Содержимое для четвертого аккордеона..."
-    }
-  ];
-
-  return (
-    <div className="accordion-container">
-      {accordionItems.map((item) => (
-        <div key={item.id} className="accordion-item">
-          <div 
-            className="accordion-header"
-            onClick={() => toggleItem(item.id)}
-          >
-            <span className="accordion-title">{item.title}</span>
-            <img 
-              alt="toggle" 
-              src="public/frame386761-hulo.svg" 
-              className={`accordion-icon ${openItems[item.id] ? 'rotated' : ''}`}
-            />
-          </div>
-          
-          <div className={`accordion-content ${openItems[item.id] ? 'open' : ''}`}>
-            <div className="accordion-content-inner">
-              {item.hasCheckbox && <BlueSmallChekcbox />}
-              <span className="accordion-text">{item.content}</span>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default AccordionSection;
+  .accordion-title {
+    font-size: 18px;
+  }
+  
+  .accordion-text {
+    font-size: 16px;
+  }
+  
+  .accordion-header {
+    padding: 16px;
+  }
+  
+  .accordion-content-inner {
+    padding: 0 16px 16px 16px;
+  }
+}
