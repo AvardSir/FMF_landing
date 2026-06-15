@@ -17,6 +17,7 @@ import LeftRightArrow from './components/LeftRightArrow/LeftRightArrow'
 import AccordionSection from "./components/AccordionSection/AccordionSection";
 
 import Navigation from './components/Navigation/Navigation';
+import SelectionSection from './components/SelectionSection/SelectionSection';
 
 
 function App() {
@@ -86,7 +87,9 @@ function App() {
 
 
             <div className="joint3-thq-frame277130172-elm">
+
               <span className="joint3-thq-text-elm107">
+
                 Представьте, что вы каждый день даете своим суставам «витамин
                 бодрости», который помогает им оставаться гибкими и здоровыми.
               </span>
@@ -96,10 +99,12 @@ function App() {
                 спортом или прогулками.
               </span>
             </div>
-            
+
             <span className="joint3-thq-text-elm109">
+              <section id="about-product" />
               Комплекс для тех, кто хочет свободно двигаться и заботиться о своих
               суставах каждый день
+
             </span>
             <img alt="Vector446761" src="public/vector446761-6yrp.svg" className="joint3-thq-vector44-elm1" />
             <img alt="Vector456761" src="public/vector456761-rer.svg" className="joint3-thq-vector45-elm" />
@@ -124,10 +129,17 @@ function App() {
             <img alt="Ellipse106761" src="public/ellipse106761-ioh8-200h.png" className="joint3-thq-ellipse10-elm" />
             <img alt="hugeiconsbone026761" src="public/hugeiconsbone026761-l2fq.svg"
               className="joint3-thq-hugeiconsbone02-elm" />
-            <div className="joint3-thq-frame1076-elm">
+
+            <SelectionSection />
+
+            
+            {/* <div className="joint3-thq-frame1076-elm">
+              <section id='for-whom'></section>
               <img alt="Rectangle356761" src="public/rectangle356761-jsri-900h.png" className="joint3-thq-rectangle35-elm" />
               <img alt="Vector466761" src="public/vector466761-x0yv.svg" className="joint3-thq-vector46-elm" />
               <span className="joint3-thq-text-elm114">
+
+
                 Подходит для всех, кто&nbsp;заботиться о&nbsp;своем здоровье
                 и&nbsp;думает о своем будущем заранее.
               </span>
@@ -159,7 +171,9 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+
             <span className="joint3-thq-text-elm121">
               Сравнение с другими продуктами
             </span>
@@ -231,6 +245,7 @@ function App() {
               <div className="joint3-thq-frame277130174-elm">
                 <span className="joint3-thq-text-elm128">
                   <span className="joint3-thq-text-elm129">
+                    <section id='composition'></section>
                     «Complex SW СУСТАВЫ» — комплекс
                   </span>
                   <span>из&nbsp;9 активных компонентов</span>
@@ -395,6 +410,7 @@ function App() {
 
 
             <div className="joint3-thq-group10-elm">
+              <section id='price'></section>
               <div className="joint3-thq-frame68-elm">
                 <img alt="IMAGE476761" src="public/image476761-y3so-1000w.png" className="joint3-thq-image47-elm1" />
                 <div className="joint3-thq-frame277130185-elm">
@@ -466,7 +482,7 @@ function App() {
               <Navigation />
 
               {/*  */}
-              <div className="joint3-thq-frame1060-elm4">
+              {/* <div className="joint3-thq-frame1060-elm4">
                 <div className="joint3-thq-frame9-elm2">
                   <span className="joint3-thq-text-elm174">О продукте</span>
                 </div>
@@ -482,7 +498,7 @@ function App() {
                 <div className="joint3-thq-frame13-elm">
                   <span className="joint3-thq-text-elm178">Вопросы</span>
                 </div>
-              </div>
+              </div> */}
 
               {/*  */}
 
@@ -498,8 +514,11 @@ function App() {
 
 
             </div>
+
             <div className="joint3-thq-frame277130171-elm">
+
               <img alt="IMAGE466761" src="public/image466761-yd6l-800w.png" className="joint3-thq-image46-elm" />
+
               <div className="joint3-thq-frame277130170-elm">
                 <div className="joint3-thq-frame277130169-elm">
                   <span className="joint3-thq-text-elm180">
@@ -507,9 +526,10 @@ function App() {
                     и&nbsp;естественного обновления хрящевой ткани, помогающий
                     сохранять подвижность и&nbsp;комфорт при&nbsp;активном образе
                     жизни
+
                   </span>
-                  
-                  <section id="about-product"></section>
+
+
 
                   <span className="joint3-thq-text-elm181">
                     Это сбалансированный комплекс витаминов и микроэлементов,
@@ -518,6 +538,7 @@ function App() {
                     вам свободу движений без дискомфорта даже при&nbsp;высоких
                     физических нагрузках.
                   </span>
+
                 </div>
 
 
@@ -536,9 +557,9 @@ function App() {
 
 
               </div>
-              
+
             </div>
-            
+
             <div className="joint3-thq-frame277130173-elm">
               <span className="joint3-thq-text-elm183">
                 Питаем. Восстанавливаем. Сохраняем подвижность.

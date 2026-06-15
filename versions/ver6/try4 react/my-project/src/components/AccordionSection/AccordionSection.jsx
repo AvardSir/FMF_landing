@@ -37,6 +37,7 @@ const AccordionSection = () => {
 
   return (
     <div className="accordion-container">
+       <section id='faq'></section>
       {accordionItems.map((item) => (
         <div key={item.id} className="accordion-item">
           <div 
