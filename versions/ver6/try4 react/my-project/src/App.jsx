@@ -19,6 +19,7 @@ import AccordionSection from "./components/AccordionSection/AccordionSection";
 
 import Navigation from './components/Navigation/Navigation';
 import SelectionSection from './components/SelectionSection/SelectionSection';
+import OfferBlock from './components/OfferBlock/OfferBlock';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
   return (
     <>
       <div>
-LeftRightArrow
+        
         <link href="./index.css" rel="stylesheet" />
 
         <div className="joint3-container1">
@@ -133,7 +134,7 @@ LeftRightArrow
 
             <SelectionSection />
 
-            
+
             {/* <div className="joint3-thq-frame1076-elm">
               <section id='for-whom'></section>
               <img alt="Rectangle356761" src="public/rectangle356761-jsri-900h.png" className="joint3-thq-rectangle35-elm" />
@@ -398,13 +399,13 @@ LeftRightArrow
                   специалиста
                 </span>
               </div>
-
-              <div className="joint3-thq-frame1054-elm">
+              <OfferBlock />
+              {/* <div className="joint3-thq-frame1054-elm">
                 <span className="joint3-thq-text-elm164">Оферта</span>
                 <span className="joint3-thq-text-elm165">
                   Политика конфиденциальности
                 </span>
-              </div>
+              </div> */}
 
             </div>
 
