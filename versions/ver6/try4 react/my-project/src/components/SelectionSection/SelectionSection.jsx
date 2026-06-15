@@ -5,6 +5,8 @@ import { LeftRightArrow } from './../LeftRightArrow/LeftRightArrow';
 import './SelectionSection.css'
 import { UnderSelectionPart } from './UnderSelectionPart/UnderSelectionPart';
 import { WhiteSelection } from './WhiteSelection/WhiteSelection';
+import { SelectionItem } from './SelectionItem/SelectionItem';
+import { OverChoice } from './OverChoice/OverChoice';
 
 const SelectionSection = () => {
     return (
@@ -27,38 +29,31 @@ const SelectionSection = () => {
                 Подходит для всех, кто заботиться о своем здоровье
                 и думает о своем будущем заранее.
             </span>
-            <div className="joint3-thq-frame277130179-elm">
+
+
+            {/* OverChoice */}
+            <OverChoice />
+
+            {/* <div className="joint3-thq-frame277130179-elm">
                 <LeftRightArrow />
 
                 <div className="joint3-thq-frame277130178-elm">
-                    <UnderSelectionPart age="18+ лет" text="Поддержка суставов при травмах" />
-        
-                    {/* <div className="joint3-thq-frame277130175-elm">
-                        <span className="joint3-thq-text-elm115">18+ лет</span>
-                        <span className="joint3-thq-text-elm116">
-                            Поддержка суставов при травмах
-                        </span>
-                    </div> */}
 
-                    {/* WhiteSelection */}
-                    <WhiteSelection age="35+ лет" text="Профилактика возрастных изменений" />
+                    <SelectionItem age="18+ лет" text="Поддержка суставов при травмах" variant="under" />
+                    <SelectionItem age="35+ лет" text="Профилактика возрастных изменений" variant="white" />
 
-                    {/* <div className="joint3-thq-frame277130176-elm">
-                        <span className="joint3-thq-text-elm117">35+ лет</span>
-                        <span className="joint3-thq-text-elm118">
-                            Профилактика возрастных изменений
-                        </span>
-                    </div> */}
 
-                    
-                    <div className="joint3-thq-frame277130177-elm">
-                        <span className="joint3-thq-text-elm119">45+</span>
-                        <span className="joint3-thq-text-elm120">
-                            Сохранение здоровья у женщин
-                        </span>
-                    </div>
+                    <SelectionItem
+                        age="45+ "
+                        text="Сохранение здоровья у женщин"
+                        variant="under"
+                    />
+
                 </div>
-            </div>
+
+
+
+            </div> */}
         </div>
     );
 };
