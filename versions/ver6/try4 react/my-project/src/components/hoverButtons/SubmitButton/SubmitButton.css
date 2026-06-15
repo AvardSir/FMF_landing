@@ -1,0 +1,27 @@
+/* Состояние успеха */
+.action-button-blue--success {
+  background-color: #4CAF50 !important; /* Зелёный фон */
+  pointer-events: none; /* Блокируем повторное нажатие */
+}
+
+.action-button-blue__success-icon {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Анимация появления */
+.action-button-blue--success .action-button-blue__text {
+  animation: fadeInSuccess 0.3s ease-in;
+}
+
+@keyframes fadeInSuccess {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

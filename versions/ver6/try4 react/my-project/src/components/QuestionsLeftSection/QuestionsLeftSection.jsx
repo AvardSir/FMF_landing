@@ -4,6 +4,8 @@ import "./QuestionsLeftSection.css";
 import MaxLogo from "../MaxLogo/MaxLogo";
 // import ActionButtonBlueMediumText from "../hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText";
 import ActionButtonBlueMediumText from "../hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText";
+import SubmitButton from './../hoverButtons/SubmitButton/SubmitButton';
+import { SubmissionForm } from './../SubmissionForm/SubmissionForm';
 // Функция форматирования телефона под маску +7 (XXX) XXX-XX-XX
 const formatPhone = (value) => {
     // Оставляем только цифры, максимум 11 (первая всегда 7, остальные 10)
@@ -148,164 +150,15 @@ export function QuestionsLeftSection() {
                                     />
                                 </a>
 
-                                
+
                             </div>
 
 
 
                         </div>
                     </div>
-
-                    <form
-                        className="joint3-thq-frame1117-elm"
-                        onSubmit={handleSubmit}
-                        noValidate
-                    >
-                        <div className="joint3-thq-frame1116-elm">
-                            <div className="joint3-thq-frame46-elm">
-                                {/* Имя */}
-                                <div className="joint3-thq-frame48-elm1">
-                                    <span className="joint3-thq-text-elm193">Имя</span>
-                                    <div className="joint3-thq-frame48-elm2">
-                                        <div className="joint3-thq-frame49-elm1">
-                                            <input
-                                                type="text"
-                                                name="name"
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                placeholder="Как к вам обращаться"
-                                                style={{
-                                                    width: "100%",
-                                                    border: "none",
-                                                    background: "transparent",
-                                                    fontSize: "18px",
-                                                    fontFamily: "Onest",
-                                                    color: "#1c1c1c",
-                                                    outline: "none",
-                                                }}
-                                            />
-                                        </div>
-                                    </div>
-                                    {errors.name && (
-                                        <span style={{ color: "red", fontSize: "12px" }}>
-                                            {errors.name}
-                                        </span>
-                                    )}
-                                </div>
-
-                                {/* Телефон с маской */}
-                                <div className="joint3-thq-frame47-elm">
-                                    <span className="joint3-thq-text-elm195">Телефон</span>
-                                    <div className="joint3-thq-frame48-elm3">
-                                        <div className="joint3-thq-frame49-elm2">
-                                            <input
-                                                type="tel"
-                                                name="phone"
-                                                value={formData.phone}
-                                                onChange={handlePhoneChange}
-                                                placeholder="+7 (___) ___-__-__"
-                                                style={{
-                                                    width: "100%",
-                                                    border: "none",
-                                                    background: "transparent",
-                                                    fontSize: "18px",
-                                                    fontFamily: "Onest",
-                                                    color: "#1c1c1c",
-                                                    outline: "none",
-                                                }}
-                                            />
-                                        </div>
-                                    </div>
-                                    {errors.phone && (
-                                        <span style={{ color: "red", fontSize: "12px" }}>
-                                            {errors.phone}
-                                        </span>
-                                    )}
-                                </div>
-
-                                {/* Email */}
-                                <div className="joint3-thq-frame49-elm3">
-                                    <span className="joint3-thq-text-elm197">Эл. почта</span>
-                                    <div className="joint3-thq-frame48-elm4">
-                                        <div className="joint3-thq-frame49-elm4">
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                placeholder="Ваша эл.почта"
-                                                style={{
-                                                    width: "100%",
-                                                    border: "none",
-                                                    background: "transparent",
-                                                    fontSize: "18px",
-                                                    fontFamily: "Onest",
-                                                    color: "#1c1c1c",
-                                                    outline: "none",
-                                                }}
-                                            />
-                                        </div>
-                                    </div>
-                                    {errors.email && (
-                                        <span style={{ color: "red", fontSize: "12px" }}>
-                                            {errors.email}
-                                        </span>
-                                    )}
-                                </div>
-                            </div>
-
-                            {/* Чекбокс согласия */}
-                            <div className="joint3-thq-frame72-elm">
-                                <label
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        gap: "8px",
-                                        cursor: "pointer",
-                                    }}
-                                >
-                                    <input
-                                        type="checkbox"
-                                        checked={consent}
-                                        onChange={(e) => {
-                                            setConsent(e.target.checked);
-                                            if (errors.consent)
-                                                setErrors((prev) => ({ ...prev, consent: "" }));
-                                        }}
-                                        style={{
-                                            width: "24px",
-                                            height: "24px",
-                                            borderRadius: "4px",
-                                            accentColor: "#3193cc",
-                                        }}
-                                    />
-                                    <span
-                                        className="joint3-thq-text-elm199"
-                                        style={{ color: errors.consent ? "red" : "#7f7f7f" }}
-                                    >
-                                        Я даю свое согласие на обработку персональных данных
-                                    </span>
-                                </label>
-                                {errors.consent && (
-                                    <span style={{ color: "red", fontSize: "12px" }}>
-                                        {errors.consent}
-                                    </span>
-                                )}
-                            </div>
-                        </div>
-
-                        <ActionButtonBlueMediumText
-                            text={submitted ? "Отправлено" : "Оставить заявку"}
-                            onClick={() => {
-                                if (!submitted) {
-                                    // будет вызван submit через форму
-                                } else {
-                                    resetForm();
-                                }
-                            }}
-                            type="submit"
-                        />
-                    </form>
+                    <SubmissionForm />
+                    
                 </div>
             </div>
         </div>
