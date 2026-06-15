@@ -1,6 +1,6 @@
 /* Состояние успеха */
 .action-button-blue--success {
-  background-color: #4CAF50 !important; /* Зелёный фон */
+  /* background-color: #4CAF50 !important; Зелёный фон */
   pointer-events: none; /* Блокируем повторное нажатие */
 }
 
@@ -24,4 +24,14 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.action-button-blue--disabled {
+  /* opacity: 0.6; */
+  cursor: not-allowed;
+}
+
+.action-button-blue--disabled:hover {
+  transform: none;
+  box-shadow: none;
 }

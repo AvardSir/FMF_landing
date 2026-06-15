@@ -1,9 +1,7 @@
-// SubmissionForm.jsx (или .tsx)
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import "./SubmissionForm.css";
 import SubmitButton from './../hoverButtons/SubmitButton/SubmitButton';
 
-// Функция форматирования телефона под маску +7 (XXX) XXX-XX-XX
 const formatPhone = (value) => {
   const digits = value.replace(/\D/g, "").slice(0, 11);
   if (digits.length === 0) return "";
@@ -28,33 +26,10 @@ export function SubmissionForm({ onSubmit }) {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handlePhoneChange = useCallback((e) => {
-    const rawValue = e.target.value;
-    const formatted = formatPhone(rawValue);
-    setFormData((prev) => ({ ...prev, phone: formatted }));
-    if (errors.phone) {
-      setErrors((prev) => ({ ...prev, phone: "" }));
-    }
-  }, [errors.phone]);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    // Если уже отправлено — сбрасываем форму
-    if (submitted) {
-      resetForm();
-      return;
-    }
-
+  // Функция валидации формы
+  const validateForm = useCallback(() => {
     const newErrors = {};
 
     if (!formData.name.trim()) {
@@ -74,29 +49,89 @@ export function SubmissionForm({ onSubmit }) {
       newErrors.consent = "Необходимо согласие на обработку данных";
     }
 
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  }, [formData, consent]);
+
+  // Проверка, все ли поля валидны в реальном времени
+  const isFormValid = useMemo(() => {
+    const hasErrors = Object.keys(errors).length > 0;
+    const hasEmptyFields = !formData.name.trim() || 
+                          !formData.phone.trim() || 
+                          !formData.email.trim() ||
+                          !consent;
+    
+    // Дополнительная проверка телефона
+    const phoneValid = formData.phone.replace(/\D/g, "").length === 11;
+    
+    // Дополнительная проверка email
+    const emailValid = /\S+@\S+\.\S+/.test(formData.email);
+    
+    const isValid = formData.name.trim() && 
+                   phoneValid && 
+                   emailValid && 
+                   consent && 
+                   !hasErrors;
+    
+    return isValid;
+  }, [formData, consent, errors]);
+
+  const handlePhoneChange = useCallback((e) => {
+    const rawValue = e.target.value;
+    const formatted = formatPhone(rawValue);
+    setFormData((prev) => ({ ...prev, phone: formatted }));
+    if (errors.phone) {
+      setErrors((prev) => ({ ...prev, phone: "" }));
+    }
+  }, [errors.phone]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (submitted) {
+      resetForm();
+      return;
+    }
+
+    // Валидация перед отправкой
+    const isValid = validateForm();
+    if (!isValid) {
       return;
     }
 
     // Отправка данных
     setIsSubmitting(true);
     
-    if (onSubmit) {
-      onSubmit({
-        ...formData,
-        phoneDigits: formData.phone.replace(/\D/g, ""),
-        consent,
-      });
+    try {
+      if (onSubmit) {
+        await onSubmit({
+          ...formData,
+          phoneDigits: formData.phone.replace(/\D/g, ""),
+          consent,
+        });
+      }
+      
+      setSubmitted(true);
+      setSubmitSuccess(true); // Триггерим успешное состояние кнопки
+      
+      // Автоматический сброс через 3 секунды после успеха
+      setTimeout(() => {
+        resetForm();
+      }, 3000);
+    } catch (error) {
+      console.error("Ошибка отправки:", error);
+      // Можно добавить обработку ошибки
+    } finally {
+      setIsSubmitting(false);
     }
-    
-    setSubmitted(true);
-    setIsSubmitting(false);
-    
-    // Автоматический сброс через 10 секунд
-    setTimeout(() => {
-      resetForm();
-    }, 10000);
   };
 
   const resetForm = () => {
@@ -104,6 +139,12 @@ export function SubmissionForm({ onSubmit }) {
     setConsent(false);
     setErrors({});
     setSubmitted(false);
+    setSubmitSuccess(false);
+  };
+
+  // Обработчик сброса успешного состояния кнопки
+  const handleSuccessReset = () => {
+    setSubmitSuccess(false);
   };
 
   return (
@@ -124,6 +165,7 @@ export function SubmissionForm({ onSubmit }) {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  onBlur={() => validateForm()}
                   placeholder="Как к вам обращаться"
                   className={`submission-form-input ${errors.name ? 'submission-form-input-error' : ''}`}
                   disabled={submitted}
@@ -145,6 +187,7 @@ export function SubmissionForm({ onSubmit }) {
                   name="phone"
                   value={formData.phone}
                   onChange={handlePhoneChange}
+                  onBlur={() => validateForm()}
                   placeholder="+7 (___) ___-__-__"
                   className={`submission-form-input ${errors.phone ? 'submission-form-input-error' : ''}`}
                   disabled={submitted}
@@ -166,6 +209,7 @@ export function SubmissionForm({ onSubmit }) {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  onBlur={() => validateForm()}
                   placeholder="Ваша эл.почта"
                   className={`submission-form-input ${errors.email ? 'submission-form-input-error' : ''}`}
                   disabled={submitted}
@@ -186,8 +230,10 @@ export function SubmissionForm({ onSubmit }) {
               checked={consent}
               onChange={(e) => {
                 setConsent(e.target.checked);
-                if (errors.consent)
+                if (errors.consent) {
                   setErrors((prev) => ({ ...prev, consent: "" }));
+                }
+                validateForm();
               }}
               className={`submission-form-checkbox ${errors.consent ? 'submission-form-checkbox-error' : ''}`}
               disabled={submitted}
@@ -205,12 +251,14 @@ export function SubmissionForm({ onSubmit }) {
       </div>
 
       <SubmitButton
-        text={submitted ? "Всё успешно отправлено" : "Оставить заявку"}
-        onClick={() => {
-          // Кнопка вызывает submit формы
-        }}
+        text="Оставить заявку"
+        successText="Всё успешно отправлено"
+        onClick={() => {}}
         type="submit"
         disabled={isSubmitting}
+        isValid={isFormValid}
+        isSubmitSuccess={submitSuccess}
+        onSuccessReset={handleSuccessReset}
       />
     </form>
   );

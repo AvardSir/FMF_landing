@@ -1,5 +1,4 @@
-// SubmitButton.jsx
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './SubmitButton.css'
 
 const SubmitButton = ({ 
@@ -10,33 +9,42 @@ const SubmitButton = ({
   showLeftIcon = true,
   showRightIcon = true,
   onClick,
-  type = "button"
+  type = "button",
+  disabled = false,
+  isValid = false,
+  isSubmitSuccess = false,
+  onSuccessReset
 }) => {
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleClick = (e) => {
-    if (onClick) {
-      onClick(e);
-    }
-    
-    // Если это submit-кнопка, показываем успех
-    if (type === "submit" && !isSuccess) {
+  useEffect(() => {
+    if (isSubmitSuccess) {
       setIsSuccess(true);
-      
       // Автоматически сбрасываем через 3 секунды
       setTimeout(() => {
         setIsSuccess(false);
+        if (onSuccessReset) onSuccessReset();
       }, 3000);
     }
+  }, [isSubmitSuccess, onSuccessReset]);
+
+  const handleClick = (e) => {
+    if (disabled) return;
+    if (onClick) {
+      onClick(e);
+    }
   };
+
+  // Кнопка активна только если форма валидна
+  const isButtonDisabled = disabled || (type === "submit" && !isValid && !isSuccess);
 
   return (
     <button 
       type={type}
-      className={`action-button-blue ${isSuccess ? 'action-button-blue--success' : ''}`}
+      className={`action-button-blue ${isSuccess ? 'action-button-blue--success' : ''} ${isButtonDisabled ? 'action-button-blue--disabled' : ''}`}
       onClick={handleClick}
+      disabled={isButtonDisabled}
     >
-      {/* Левая иконка (появляется при hover) */}
       {showLeftIcon && leftIconSrc && !isSuccess && (
         <div className="action-button-blue__left-icon">
           <img
@@ -47,21 +55,18 @@ const SubmitButton = ({
         </div>
       )}
 
-      {/* Иконка успеха */}
       {isSuccess && (
         <div className="action-button-blue__left-icon">
           <span className="action-button-blue__success-icon">✓</span>
         </div>
       )}
 
-      {/* Текст кнопки */}
       <div className="action-button-blue__text-wrapper">
         <span className="action-button-blue__text">
           {isSuccess ? successText : text}
         </span>
       </div>
 
-      {/* Правая иконка (исчезает при hover) */}
       {showRightIcon && rightIconSrc && !isSuccess && (
         <div className="action-button-blue__right-icon">
           <img
