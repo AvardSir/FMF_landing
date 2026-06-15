@@ -1,9 +1,8 @@
-// OverChoice.jsx (или .tsx)
 import React, { useState } from "react";
 import "./OverChoice.css";
-import { LeftRightArrow } from './../../LeftRightArrow/LeftRightArrow';
+// import { LeftRightArrow } from './../../LeftRightArrow/LeftRightArrow';
 import { SelectionItem } from "../SelectionItem/SelectionItem";
-
+import { LeftRightArrow } from "./../../LeftRightArrow/LeftRightArrow";
 export function OverChoice({ items = [] }) {
   const defaultItems = [
     { age: "18+ лет", text: "Поддержка суставов при травмах" },
@@ -12,8 +11,6 @@ export function OverChoice({ items = [] }) {
   ];
 
   const data = items.length > 0 ? items : defaultItems;
-  
-  // Индекс выбранного элемента (по умолчанию — середина)
   const [activeIndex, setActiveIndex] = useState(Math.floor(data.length / 2));
 
   const goToPrev = () => {
@@ -26,10 +23,8 @@ export function OverChoice({ items = [] }) {
 
   return (
     <div className="joint3-thq-frame277130179-elm">
-      <div onClick={goToPrev} style={{ cursor: "pointer" }}>
-        <LeftRightArrow direction="left" />
-      </div>
-      
+      <LeftRightArrow onLeftClick={goToPrev} onRightClick={goToNext} />
+      {/* LeftRightArrow */}
       <div className="joint3-thq-frame277130178-elm">
         {data.map((item, index) => (
           <SelectionItem
@@ -40,10 +35,6 @@ export function OverChoice({ items = [] }) {
           />
         ))}
       </div>
-
-      {/* <div onClick={goToNext} style={{ cursor: "pointer" }}>
-        <LeftRightArrow direction="right" />
-      </div> */}
     </div>
   );
 }

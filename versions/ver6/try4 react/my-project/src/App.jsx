@@ -13,7 +13,8 @@ import './App.css'
 import ActionButtonBlueMediumText from './components/hoverButtons/ActionButtonBlueMediumText/ActionButtonBlueMediumText'
 import StikyJar from './components/stikyJar/stikyJar'
 // import MaxLogo from './components/MaxLogo/MaxLogo'
-import LeftRightArrow from './components/LeftRightArrow/LeftRightArrow'
+// import LeftRightArrow from './components/LeftRightArrow/LeftRightArrow'
+import { LeftRightArrow } from './components/LeftRightArrow/LeftRightArrow'
 import AccordionSection from "./components/AccordionSection/AccordionSection";
 
 import Navigation from './components/Navigation/Navigation';
@@ -26,7 +27,7 @@ function App() {
   return (
     <>
       <div>
-
+LeftRightArrow
         <link href="./index.css" rel="stylesheet" />
 
         <div className="joint3-container1">
