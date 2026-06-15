@@ -7,9 +7,13 @@
   gap: 4px;
   position: absolute;
   top: 8919px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: inherit
+
+  /* left: 50%;
+  transform: translateX(-50%); */
+
+  width: inherit;
+  padding-left: 40px;
+  
 }
 
 .accordion-item {
