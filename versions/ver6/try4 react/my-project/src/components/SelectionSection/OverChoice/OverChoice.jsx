@@ -1,40 +1,49 @@
 // OverChoice.jsx (или .tsx)
-import React from "react";
+import React, { useState } from "react";
 import "./OverChoice.css";
-// import LeftRightArrow from "../LeftRightArrow/LeftRightArrow";
-// import SelectionItem from "../SelectionItem/SelectionItem";
 import { LeftRightArrow } from './../../LeftRightArrow/LeftRightArrow';
 import { SelectionItem } from "../SelectionItem/SelectionItem";
 
 export function OverChoice({ items = [] }) {
-  // items — массив объектов: { age: string, text: string, variant: "under" | "white" }
-  // Если массив не передан, используются дефолтные значения
   const defaultItems = [
-    { age: "18+ лет", text: "Поддержка суставов при травмах", variant: "under" },
-    { age: "35+ лет", text: "Профилактика возрастных изменений", variant: "white" },
-    { age: "45+", text: "Сохранение здоровья у женщин", variant: "under" },
+    { age: "18+ лет", text: "Поддержка суставов при травмах" },
+    { age: "35+ лет", text: "Профилактика возрастных изменений" },
+    { age: "45+", text: "Сохранение здоровья у женщин" },
   ];
 
   const data = items.length > 0 ? items : defaultItems;
-// LeftRightArrow
+  
+  // Индекс выбранного элемента (по умолчанию — середина)
+  const [activeIndex, setActiveIndex] = useState(Math.floor(data.length / 2));
+
+  const goToPrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? data.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setActiveIndex((prev) => (prev === data.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <div className="joint3-thq-frame277130179-elm">
-      <LeftRightArrow />
-      {/* LeftRightArrow
-      LeftRightArrow */}
-      {/* LeftRightArrow */}
+      <div onClick={goToPrev} style={{ cursor: "pointer" }}>
+        <LeftRightArrow direction="left" />
+      </div>
       
       <div className="joint3-thq-frame277130178-elm">
         {data.map((item, index) => (
-            // SelectionItem
           <SelectionItem
             key={index}
             age={item.age}
             text={item.text}
-            variant={item.variant}
+            variant={index === activeIndex ? "white" : "under"}
           />
         ))}
       </div>
+
+      {/* <div onClick={goToNext} style={{ cursor: "pointer" }}>
+        <LeftRightArrow direction="right" />
+      </div> */}
     </div>
   );
 }
