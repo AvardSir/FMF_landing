@@ -16,6 +16,8 @@ import StikyJar from './components/stikyJar/stikyJar'
 import LeftRightArrow from './components/LeftRightArrow/LeftRightArrow'
 import AccordionSection from "./components/AccordionSection/AccordionSection";
 
+import Navigation from './components/Navigation/Navigation';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -94,6 +96,7 @@ function App() {
                 спортом или прогулками.
               </span>
             </div>
+            
             <span className="joint3-thq-text-elm109">
               Комплекс для тех, кто хочет свободно двигаться и заботиться о своих
               суставах каждый день
@@ -364,7 +367,7 @@ function App() {
             <AccordionSection />
 
 
-            
+
             <div className="joint3-thq-frame1111-elm">
               <div className="joint3-thq-frame1055-elm">
                 <span className="joint3-thq-text-elm161">© 2026, Оптисалт</span>
@@ -386,7 +389,7 @@ function App() {
                   Политика конфиденциальности
                 </span>
               </div>
-              
+
             </div>
 
 
@@ -458,6 +461,11 @@ function App() {
               <div className="joint3-thq-group211-elm2">
                 <img alt="logowhite0415001" src="public/logowhite0415001-5ula.svg" className="joint3-thq-logowhite041-elm2" />
               </div>
+
+
+              <Navigation />
+
+              {/*  */}
               <div className="joint3-thq-frame1060-elm4">
                 <div className="joint3-thq-frame9-elm2">
                   <span className="joint3-thq-text-elm174">О продукте</span>
@@ -476,7 +484,7 @@ function App() {
                 </div>
               </div>
 
-
+              {/*  */}
 
 
 
@@ -500,6 +508,9 @@ function App() {
                     сохранять подвижность и&nbsp;комфорт при&nbsp;активном образе
                     жизни
                   </span>
+                  
+                  <section id="about-product"></section>
+
                   <span className="joint3-thq-text-elm181">
                     Это сбалансированный комплекс витаминов и микроэлементов,
                     разработанный для ежедневного приема. Он обеспечивает питание
@@ -525,7 +536,9 @@ function App() {
 
 
               </div>
+              
             </div>
+            
             <div className="joint3-thq-frame277130173-elm">
               <span className="joint3-thq-text-elm183">
                 Питаем. Восстанавливаем. Сохраняем подвижность.
@@ -585,7 +598,7 @@ function App() {
 
 
 
-            <QuestionsLeftSection     />
+            <QuestionsLeftSection />
             {/*  */}
 
 
@@ -593,7 +606,7 @@ function App() {
 
 
           </div>
-        
+
         </div>
         {/* <link rel="canonical" href="https://fmf-test-2d269j.teleporthq.site/" /> */}
       </div>
