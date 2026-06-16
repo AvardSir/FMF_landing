@@ -20,6 +20,7 @@ import AccordionSection from "./components/AccordionSection/AccordionSection";
 import Navigation from './components/Navigation/Navigation';
 import SelectionSection from './components/SelectionSection/SelectionSection';
 import OfferBlock from './components/OfferBlock/OfferBlock';
+import PricePerBank from './components/PricePerBank/PricePerBank';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
   return (
     <>
       <div>
-        
+
         <link href="./index.css" rel="stylesheet" />
 
         <div className="joint3-container1">
@@ -422,7 +423,11 @@ function App() {
                   <img alt="IMAGE136761" src="public/image136761-hjp6-400w.png" className="joint3-thq-image13-elm" />
                   <div className="joint3-thq-frame277130184-elm">
                     <div className="joint3-thq-frame277130183-elm">
-                      <span className="joint3-thq-text-elm167">3 900 ₽</span>
+
+                      <PricePerBank />
+                      {/* <span className="joint3-thq-text-elm167">3 900 ₽</span> */}
+
+
                       <span className="joint3-thq-text-elm168">
                         420г. / 30 порций
                       </span>
