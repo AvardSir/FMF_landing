@@ -21,7 +21,7 @@ import Navigation from './components/Navigation/Navigation';
 import SelectionSection from './components/SelectionSection/SelectionSection';
 import OfferBlock from './components/OfferBlock/OfferBlock';
 import PricePerBank from './components/PricePerBank/PricePerBank';
-import { CmsText } from './components/Cms/Cms';
+import { CmsText, CmsImage } from './components/Cms/Cms';
 
 
 function App() {
@@ -37,7 +37,15 @@ function App() {
           <div className="joint3-thq-joint3-elm">
             <img alt="Rectangle246761" src="public/rectangle246761-ezb-1100h.png" className="joint3-thq-rectangle24-elm" />
             <img alt="Rectangle256761" src="public/rectangle256761-e5km-200h.png" className="joint3-thq-rectangle25-elm" />
-            <img alt="IMAGE146761" src="public/image146761-h8r-800h.png" className="joint3-thq-image14-elm1" />
+    
+            <CmsImage
+              field="hero-picture_of_a_jar"
+              className="joint3-thq-image14-elm1"
+              alt="IMAGE146761"                          // alt остаётся
+              defaultSrc=""  // резервная картинка
+            />
+
+            {/* <img alt="IMAGE146761" src="public/image146761-h8r-800h.png" className="joint3-thq-image14-elm1" /> */}
 
             {/* <span className="joint3-thq-text-elm100">Свобода движения</span> */}
             {/* <CmsText> */}
@@ -93,7 +101,7 @@ function App() {
                 обновлению хрящевой ткани"     // запасной текст, если поле не заполнено
               />
 
-              
+
             </div>
             <div className="joint3-thq-frame277130168-elm">
               <span className="joint3-thq-text-elm105">420г. / 30 порций</span>

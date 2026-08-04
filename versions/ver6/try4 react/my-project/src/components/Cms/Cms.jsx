@@ -8,10 +8,10 @@ import { useCmsData } from "../../context/CmsDataContext";
 // Простой текст (заголовки, параграфы)
 
 export const CmsText = ({ field, tag: Tag = 'span', className, defaultValue = '' }) => {
-    console.log('field::: ', field);
+    
     // useCmsData
   const { data, loading, error } = useCmsData();
-  console.log('data::: ', data);
+  
 
   if (loading) return <Tag className={className}>...</Tag>;
   if (error || !data) return <Tag className={className}>{defaultValue}</Tag>;
@@ -34,6 +34,7 @@ export const CmsRichText = ({ field, className, defaultValue = '' }) => {
 // Изображение (URL уже обработан в PHP, приходит как строка)
 export const CmsImage = ({ field, alt = '', className, defaultSrc = '' }) => {
   const { data, loading, error } = useCmsData();
+  console.log('data::: ', data);
 
   if (loading) return <div className={className}>Загрузка...</div>;
   if (error || !data) {
