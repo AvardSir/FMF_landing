@@ -1,0 +1,101 @@
+/* Контейнер */
+.joint3-thq-component3-elm1 {
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  position: relative;
+  gap: 0;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+/* Базовые стили для обеих иконок */
+.joint3-thq-frame1059-elm3 {
+  gap: 10px;
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  border-radius: 60px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 0.3s ease;
+  width: 56px; /* 16px padding * 2 + 24px icon = 56px */
+  box-sizing: border-box;
+}
+
+/* Иконка слева — изначально скрыта, но занимает место */
+.joint3-thq-left-icon {
+  opacity: 0;
+  transform: scale(0.8);
+  width: 0; /* схлопываем ширину */
+  padding: 16px 0;
+  overflow: hidden;
+  order: 0;
+}
+
+/* Иконка справа — изначально видна */
+.joint3-thq-right-icon {
+  opacity: 1;
+  transform: scale(1);
+  width: 56px;
+  order: 2;
+}
+
+/* Стиль текста */
+.joint3-thq-frame5-elm3 {
+  gap: 10px;
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+  border-radius: 60px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 0.3s ease;
+  order: 1;
+  margin: 0;
+}
+
+/* Стиль текста */
+.joint3-thq-text-elm169 {
+  color: rgba(49, 147, 204, 1);
+  height: auto;
+  font-size: 24px;
+  font-style: normal;
+  text-align: left;
+  font-family: Onest, sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+/* Стиль картинки */
+.joint3-thq-frame1061-elm3 {
+  width: 24px;
+  height: 24px;
+}
+
+/* Убираем ненужные стили */
+.joint3-thq-frame1060-elm3 {
+  display: none;
+}
+
+/* ============ HOVER ============ */
+.joint3-thq-component3-elm1:hover .joint3-thq-left-icon {
+  opacity: 1;
+  transform: scale(1);
+  width: 56px; /* разворачиваем ширину */
+  padding: 16px;
+}
+
+.joint3-thq-component3-elm1:hover .joint3-thq-right-icon {
+  opacity: 0;
+  transform: scale(0.8);
+  width: 0; /* схлопываем ширину правой иконки */
+  padding: 16px 0;
+  overflow: hidden;
+}
+
+.joint3-thq-component3-elm1:hover .joint3-thq-frame5-elm3 {
+  transform: translateX(0);
+}
