@@ -8,7 +8,7 @@ export const CmsDataProvider = ({ children, pageId = 12 }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const API_URL = `http://fmflanding.test/wp-json/wp/v2/pages/${pageId}`;
+    const API_URL = `https://fmflanding.test/wp-json/wp/v2/pages/${pageId}`;
     fetch(API_URL)
       .then(res => res.json())
       .then(page => {

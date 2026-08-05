@@ -5,7 +5,7 @@ const PricePerBank = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://fmflanding.test/wp-json/wp/v2/pages/12')
+    fetch('https://fmflanding.test/wp-json/wp/v2/pages/12')
       .then(res => {
         if (!res.ok) throw new Error('Ошибка сети');
         return res.json();

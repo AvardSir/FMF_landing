@@ -14,10 +14,10 @@ function App() {
   return (
     <>
 привет
-      <link rel="stylesheet" href="./style.css" />
+      {/* <link rel="stylesheet" href="./style.css" /> */}
       <div>
 
-        <link href="./index.css" rel="stylesheet" />
+        {/* <link href="./index.css" rel="stylesheet" /> */}
 
         <div class="joint3-container1">
           <div class="joint3-thq-joint3-elm">
@@ -710,7 +710,7 @@ function App() {
           </div>
           <a href="https://play.teleporthq.io/signup" class="joint3-link">
             <div aria-label="Sign up to TeleportHQ" class="joint3-container2">
-              <svg width="24" height="24" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+              <svg width="24" height="24" viewBox="0 0 19 21" fill="none" xmlns="https://www.w3.org/2000/svg"
                 class="joint3-icon1">
                 <path
                   d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
