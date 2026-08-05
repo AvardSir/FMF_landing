@@ -1,6 +1,6 @@
 // StikyJar.jsx
 import React, { useRef, useEffect } from 'react';
-import './StikyJar.css';
+import './stikyJar.css';
 
 const StikyJar = ({ 
   imageSrc = "public/image146761-6dy-500h.png",
