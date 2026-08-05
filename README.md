@@ -1,16 +1,78 @@
-# React + Vite
+# Complex SW СУСТАВЫ — лендинг c CMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Одностраничный сайт для биологически активной добавки.
 
-Currently, two official plugins are available:
+Проект построен на **React 19** + **Vite 8**, с CSS-анимациями (Animate.css) и ** CMS использующий WordPress REST API**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Демо
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Статический сайт задеплоен на **Render**:
 
-## Expanding the ESLint configuration
+[https://fmf-landing.onrender.com](https://fmf-landing.onrender.com)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Технологии
+
+- **React 19**
+- **Vite 8**
+- CSS-анимации + Animate.css (CDN)
+- WordPress REST API (для CMS)
+- Render (бесплатный хостинг)
+
+---
+
+## 📦 Установка и запуск
+
+```bash
+git clone https://github.com/ваш-аккаунт/имя-репозитория.git
+cd имя-репозитория
+npm install
+npm run dev
+Откройте http://localhost:5173.
+
+🏗 Сборка для продакшена
+bash
+npm run build    # результат в папке dist
+npm run preview  # локальный предпросмотр собранного сайта
+🌐 Деплой на Render
+Проект настроен как Static Site:
+
+Build Command: npm run build
+
+Publish Directory: dist
+
+Переменная окружения (при необходимости):
+VITE_WP_API_URL — URL WordPress API (по умолчанию используется запасной адрес).
+
+После каждого пуша в основную ветку Render автоматически пересобирает и публикует сайт.
+
+Анимации
+CSS-анимации и Animate.css (подключены через CDN).
+Компонент StikyJar — эффект «прилипания» элемента при скролле.
+
+
+Запуск перед сборкой (при необходимости):
+
+bash
+node fix-paths.js
+⚠️ Скрипт изменяет файлы в src. Перед запуском убедитесь, что у вас есть коммит или резервная копия.
+
+📁 Структура проекта
+text
+my-project/
+├── public/                 # статические файлы (изображения, иконки)
+├── src/
+│   ├── components/         # React-компоненты (StikyJar, PricePerBank, MaxLogo и др.)
+│   ├── App.jsx             # главный компонент
+│   ├── main.jsx            # точка входа
+│   ├── index.css           # глобальные стили
+│   ├── style.css           # дополнительные стили
+│   └── App.css             # стили App
+├── index.html              # шаблон HTML
+├── package.json
+├── vite.config.js
+├── fix-paths.js            # скрипт для автоматического исправления путей
+└── README.md
