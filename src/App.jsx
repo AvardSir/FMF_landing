@@ -35,8 +35,8 @@ function App() {
 
         <div className="joint3-container1">
           <div className="joint3-thq-joint3-elm">
-            <img alt="Rectangle246761" src="public/rectangle246761-ezb-1100h.png" className="joint3-thq-rectangle24-elm" />
-            <img alt="Rectangle256761" src="public/rectangle256761-e5km-200h.png" className="joint3-thq-rectangle25-elm" />
+            <img alt="Rectangle246761" src="/rectangle246761-ezb-1100h.png" className="joint3-thq-rectangle24-elm" />
+            <img alt="Rectangle256761" src="/rectangle256761-e5km-200h.png" className="joint3-thq-rectangle25-elm" />
     
             <CmsImage
               field="hero-picture_of_a_jar"
@@ -45,7 +45,7 @@ function App() {
               defaultSrc=""  // резервная картинка
             />
 
-            {/* <img alt="IMAGE146761" src="public/image146761-h8r-800h.png" className="joint3-thq-image14-elm1" /> */}
+            {/* <img alt="IMAGE146761" src="/image146761-h8r-800h.png" className="joint3-thq-image14-elm1" /> */}
 
             {/* <span className="joint3-thq-text-elm100">Свобода движения</span> */}
             {/* <CmsText> */}
@@ -74,8 +74,8 @@ function App() {
 
               <ActionButtonWhiteBigText
                 text="Купить в 1 клик"
-                leftIconSrc="public/folder.svg"
-                rightIconSrc="public/frame1061i676-d6wk.svg"
+                leftIconSrc="/folder.svg"
+                rightIconSrc="/frame1061i676-d6wk.svg"
               />
 
 
@@ -135,16 +135,16 @@ function App() {
               суставах каждый день
 
             </span>
-            <img alt="Vector446761" src="public/vector446761-6yrp.svg" className="joint3-thq-vector44-elm1" />
-            <img alt="Vector456761" src="public/vector456761-rer.svg" className="joint3-thq-vector45-elm" />
-            <img alt="Rectangle306761" src="public/rectangle306761-el0n-400h.png" className="joint3-thq-rectangle30-elm" />
+            <img alt="Vector446761" src="/vector446761-6yrp.svg" className="joint3-thq-vector44-elm1" />
+            <img alt="Vector456761" src="/vector456761-rer.svg" className="joint3-thq-vector45-elm" />
+            <img alt="Rectangle306761" src="/rectangle306761-el0n-400h.png" className="joint3-thq-rectangle30-elm" />
             <span className="joint3-thq-text-elm110">
               Полноценный рацион для ваших суставов. Ежедневно снабжаем хрящевую
               ткань важными витаминами и&nbsp;микроэлементами, необходимыми для
               поддержания ее структуры и функций.
             </span>
             <span className="joint3-thq-text-elm111">Питание суставов</span>
-            <img alt="Rectangle316761" src="public/rectangle316761-q5mh-400h.png" className="joint3-thq-rectangle31-elm" />
+            <img alt="Rectangle316761" src="/rectangle316761-q5mh-400h.png" className="joint3-thq-rectangle31-elm" />
             <div className="joint3-thq-frame1081-elm">
               <span className="joint3-thq-text-elm112">Регенерация</span>
               <span className="joint3-thq-text-elm113">
@@ -154,9 +154,9 @@ function App() {
                 способствуя ее здоровью изнутри.
               </span>
             </div>
-            <img alt="Ellipse96761" src="public/ellipse96761-1pei-200h.png" className="joint3-thq-ellipse9-elm" />
-            <img alt="Ellipse106761" src="public/ellipse106761-ioh8-200h.png" className="joint3-thq-ellipse10-elm" />
-            <img alt="hugeiconsbone026761" src="public/hugeiconsbone026761-l2fq.svg"
+            <img alt="Ellipse96761" src="/ellipse96761-1pei-200h.png" className="joint3-thq-ellipse9-elm" />
+            <img alt="Ellipse106761" src="/ellipse106761-ioh8-200h.png" className="joint3-thq-ellipse10-elm" />
+            <img alt="hugeiconsbone026761" src="/hugeiconsbone026761-l2fq.svg"
               className="joint3-thq-hugeiconsbone02-elm" />
 
             <SelectionSection />
@@ -164,8 +164,8 @@ function App() {
 
             {/* <div className="joint3-thq-frame1076-elm">
               <section id='for-whom'></section>
-              <img alt="Rectangle356761" src="public/rectangle356761-jsri-900h.png" className="joint3-thq-rectangle35-elm" />
-              <img alt="Vector466761" src="public/vector466761-x0yv.svg" className="joint3-thq-vector46-elm" />
+              <img alt="Rectangle356761" src="/rectangle356761-jsri-900h.png" className="joint3-thq-rectangle35-elm" />
+              <img alt="Vector466761" src="/vector466761-x0yv.svg" className="joint3-thq-vector46-elm" />
               <span className="joint3-thq-text-elm114">
 
 
@@ -214,7 +214,7 @@ function App() {
                 Доза в 3 раза выше конкурентов. Достаточно одной порции в день
               </span>
             </div>
-            <img alt="Rectangle326761" src="public/rectangle326761-cgp-400h.png" className="joint3-thq-rectangle32-elm" />
+            <img alt="Rectangle326761" src="/rectangle326761-cgp-400h.png" className="joint3-thq-rectangle32-elm" />
             <div className="joint3-thq-frame1082-elm">
               <div className="joint3-thq-frame277130187-elm">
                 <span className="joint3-thq-text-elm124">Результат</span>
@@ -225,13 +225,13 @@ function App() {
                 </span>
               </div>
             </div>
-            <img alt="Ellipse116761" src="public/ellipse116761-sfao-200h.png" className="joint3-thq-ellipse11-elm" />
-            <img alt="Ellipse126761" src="public/ellipse126761-a09r-200h.png" className="joint3-thq-ellipse12-elm" />
-            <img alt="phpersonsimplerunbold6761" src="public/phpersonsimplerunbold6761-5sr6.svg"
+            <img alt="Ellipse116761" src="/ellipse116761-sfao-200h.png" className="joint3-thq-ellipse11-elm" />
+            <img alt="Ellipse126761" src="/ellipse126761-a09r-200h.png" className="joint3-thq-ellipse12-elm" />
+            <img alt="phpersonsimplerunbold6761" src="/phpersonsimplerunbold6761-5sr6.svg"
               className="joint3-thq-phpersonsimplerunbold-elm" />
-            <img alt="Rectangle336761" src="public/rectangle336761-0qd-400h.png" className="joint3-thq-rectangle33-elm" />
+            <img alt="Rectangle336761" src="/rectangle336761-0qd-400h.png" className="joint3-thq-rectangle33-elm" />
             <div className="joint3-thq-group8-elm">
-              <img alt="Rectangle346761" src="public/rectangle346761-5ii-400h.png" className="joint3-thq-rectangle34-elm" />
+              <img alt="Rectangle346761" src="/rectangle346761-5ii-400h.png" className="joint3-thq-rectangle34-elm" />
               <div className="joint3-thq-frame277130188-elm">
                 <span className="joint3-thq-text-elm126">Комплексный эффект</span>
                 <span className="joint3-thq-text-elm127">
@@ -241,22 +241,22 @@ function App() {
                   активности.
                 </span>
               </div>
-              <img alt="Ellipse156761" src="public/ellipse156761-cckp-200h.png" className="joint3-thq-ellipse15-elm" />
-              <img alt="Ellipse166761" src="public/ellipse166761-lzdj-200h.png" className="joint3-thq-ellipse16-elm" />
-              <img alt="boxiconsscience6761" src="public/boxiconsscience6761-8mrp.svg"
+              <img alt="Ellipse156761" src="/ellipse156761-cckp-200h.png" className="joint3-thq-ellipse15-elm" />
+              <img alt="Ellipse166761" src="/ellipse166761-lzdj-200h.png" className="joint3-thq-ellipse16-elm" />
+              <img alt="boxiconsscience6761" src="/boxiconsscience6761-8mrp.svg"
                 className="joint3-thq-boxiconsscience-elm1" />
             </div>
             <div className="joint3-thq-frame1073-elm">
               <div className="joint3-thq-frame1072-elm">
-                <img alt="IMAGE166761" src="public/image166761-67ij-400w.png" className="joint3-thq-image16-elm" />
-                <img alt="IMAGE176761" src="public/image176761-618-400w.png" className="joint3-thq-image17-elm" />
+                <img alt="IMAGE166761" src="/image166761-67ij-400w.png" className="joint3-thq-image16-elm" />
+                <img alt="IMAGE176761" src="/image176761-618-400w.png" className="joint3-thq-image17-elm" />
               </div>
             </div>
 
             <StikyJar></StikyJar>
             {/* <div className="joint3-thq-frame1079-elm">
               <div className="joint3-thq-frame1068-elm">
-                <img alt="IMAGE146761" src="public/image146761-6dy-500h.png" className="joint3-thq-image14-elm2" />
+                <img alt="IMAGE146761" src="/image146761-6dy-500h.png" className="joint3-thq-image14-elm2" />
               </div>
             </div> */}
 
@@ -264,11 +264,11 @@ function App() {
 
             <div className="joint3-thq-group6-elm">
               <div className="joint3-thq-frame1069-elm">
-                <img alt="Rectangle366761" src="public/rectangle366761-5ah-800w.png" className="joint3-thq-rectangle36-elm" />
-                <img alt="ChatGPTImage18202617035216761" src="public/chatgptimage18202617035216761-cyhv-1100w.png"
+                <img alt="Rectangle366761" src="/rectangle366761-5ah-800w.png" className="joint3-thq-rectangle36-elm" />
+                <img alt="ChatGPTImage18202617035216761" src="/chatgptimage18202617035216761-cyhv-1100w.png"
                   className="joint3-thq-chat-gpt-image1820261703521-elm" />
-                <img alt="Vector446761" src="public/vector446761-ifj.svg" className="joint3-thq-vector44-elm2" />
-                <img alt="ChatGPTImage18202613583816761" src="public/chatgptimage18202613583816761-00iu-600h.png"
+                <img alt="Vector446761" src="/vector446761-ifj.svg" className="joint3-thq-vector44-elm2" />
+                <img alt="ChatGPTImage18202613583816761" src="/chatgptimage18202613583816761-00iu-600h.png"
                   className="joint3-thq-chat-gpt-image1820261358381-elm" />
               </div>
               <div className="joint3-thq-frame277130174-elm">
@@ -377,9 +377,9 @@ function App() {
                 на&nbsp;рынке используют уменьшенные дозировки ради экономии.
               </span>
             </span>
-            <img alt="Ellipse86761" src="public/ellipse86761-cdp2-200h.png" className="joint3-thq-ellipse8-elm" />
-            <img alt="Ellipse76761" src="public/ellipse76761-16ql-200h.png" className="joint3-thq-ellipse7-elm" />
-            <img alt="healthiconsjointsoutline24px6761" src="public/healthiconsjointsoutline24px6761-0z0h.svg"
+            <img alt="Ellipse86761" src="/ellipse86761-cdp2-200h.png" className="joint3-thq-ellipse8-elm" />
+            <img alt="Ellipse76761" src="/ellipse76761-16ql-200h.png" className="joint3-thq-ellipse7-elm" />
+            <img alt="healthiconsjointsoutline24px6761" src="/healthiconsjointsoutline24px6761-0z0h.svg"
               className="joint3-thq-healthiconsjointsoutline24px-elm" />
             <div className="joint3-thq-frame277130186-elm">
               <span className="joint3-thq-text-elm154">Особенный состав</span>
@@ -389,22 +389,22 @@ function App() {
                 в&nbsp;их&nbsp;метаболизме. Представлено в эффективной дозировке.
               </span>
             </div>
-            <img alt="Ellipse136761" src="public/ellipse136761-vki4-200h.png" className="joint3-thq-ellipse13-elm" />
-            <img alt="Ellipse146761" src="public/ellipse146761-40u-200h.png" className="joint3-thq-ellipse14-elm" />
+            <img alt="Ellipse136761" src="/ellipse136761-vki4-200h.png" className="joint3-thq-ellipse13-elm" />
+            <img alt="Ellipse146761" src="/ellipse146761-40u-200h.png" className="joint3-thq-ellipse14-elm" />
             <div className="joint3-thq-streamlineultimatesciencemoleculestrucutre-elm">
               <div className="joint3-thq-group-elm3">
-                <img alt="Vector6761" src="public/vector6761-34hf.svg" className="joint3-thq-vector-elm1" />
-                <img alt="Vector6761" src="public/vector6761-fyle.svg" className="joint3-thq-vector-elm2" />
-                <img alt="Vector6761" src="public/vector6761-hsg9.svg" className="joint3-thq-vector-elm3" />
-                <img alt="Vector6761" src="public/vector6761-dgbs.svg" className="joint3-thq-vector-elm4" />
+                <img alt="Vector6761" src="/vector6761-34hf.svg" className="joint3-thq-vector-elm1" />
+                <img alt="Vector6761" src="/vector6761-fyle.svg" className="joint3-thq-vector-elm2" />
+                <img alt="Vector6761" src="/vector6761-hsg9.svg" className="joint3-thq-vector-elm3" />
+                <img alt="Vector6761" src="/vector6761-dgbs.svg" className="joint3-thq-vector-elm4" />
               </div>
             </div>
-            <img alt="Rectangle386761" src="public/rectangle386761-992n-200h.png" className="joint3-thq-rectangle38-elm" />
-            <img alt="Rectangle396761" src="public/rectangle396761-82am-200h.png" className="joint3-thq-rectangle39-elm" />
-            <img alt="image276761" src="public/image276761-xdz-700h.png" className="joint3-thq-image27-elm" />
-            <img alt="boxiconsscience6761" src="public/boxiconsscience6761-nhe.svg"
+            <img alt="Rectangle386761" src="/rectangle386761-992n-200h.png" className="joint3-thq-rectangle38-elm" />
+            <img alt="Rectangle396761" src="/rectangle396761-82am-200h.png" className="joint3-thq-rectangle39-elm" />
+            <img alt="image276761" src="/image276761-xdz-700h.png" className="joint3-thq-image27-elm" />
+            <img alt="boxiconsscience6761" src="/boxiconsscience6761-nhe.svg"
               className="joint3-thq-boxiconsscience-elm2" />
-            <img alt="boxiconsscience6761" src="public/boxiconsscience6761-jgqm.svg"
+            <img alt="boxiconsscience6761" src="/boxiconsscience6761-jgqm.svg"
               className="joint3-thq-boxiconsscience-elm3" />
 
 
@@ -419,7 +419,7 @@ function App() {
               </div>
               <div className="joint3-thq-frame1112-elm">
                 <div className="joint3-thq-group211-elm1">
-                  <img alt="logowhite0415001" src="public/logowhite0415001-ilz8.svg" className="joint3-thq-logowhite041-elm1" />
+                  <img alt="logowhite0415001" src="/logowhite0415001-ilz8.svg" className="joint3-thq-logowhite041-elm1" />
                 </div>
                 <span className="joint3-thq-text-elm163">
                   БАД. Не является лекарственным средством. Требуется консультация
@@ -441,12 +441,12 @@ function App() {
             <div className="joint3-thq-group10-elm">
               <section id='price'></section>
               <div className="joint3-thq-frame68-elm">
-                <img alt="IMAGE476761" src="public/image476761-y3so-1000w.png" className="joint3-thq-image47-elm1" />
+                <img alt="IMAGE476761" src="/image476761-y3so-1000w.png" className="joint3-thq-image47-elm1" />
                 <div className="joint3-thq-frame277130185-elm">
                   <span className="joint3-thq-text-elm166">
                     «Complex SW СУСТАВЫ» для&nbsp;опорно-двигательного аппарата
                   </span>
-                  <img alt="IMAGE136761" src="public/image136761-hjp6-400w.png" className="joint3-thq-image13-elm" />
+                  <img alt="IMAGE136761" src="/image136761-hjp6-400w.png" className="joint3-thq-image13-elm" />
                   <div className="joint3-thq-frame277130184-elm">
                     <div className="joint3-thq-frame277130183-elm">
 
@@ -473,7 +473,7 @@ function App() {
                         </span>
                       </div>
                       <div className="joint3-thq-frame1059-elm3">
-                        <img alt="Frame1061I676" src="public/frame1061i676-d6wk.svg" className="joint3-thq-frame1061-elm3" />
+                        <img alt="Frame1061I676" src="/frame1061i676-d6wk.svg" className="joint3-thq-frame1061-elm3" />
                       </div>
                     </div> */}
 
@@ -483,13 +483,13 @@ function App() {
                 </div>
               </div>
               <div className="joint3-thq-frame69-elm">
-                <img alt="Ellipse187281" src="public/ellipse187281-xej-200h.png" className="joint3-thq-ellipse18-elm" />
-                <img alt="Ellipse197281" src="public/ellipse197281-kc5-200h.png" className="joint3-thq-ellipse19-elm" />
-                <img alt="Ellipse177281" src="public/ellipse177281-owca-200h.png" className="joint3-thq-ellipse17-elm" />
-                <img alt="Ellipse207281" src="public/ellipse207281-mfxf-200h.png" className="joint3-thq-ellipse20-elm" />
-                <img alt="Ellipse217281" src="public/ellipse217281-a2n-200h.png" className="joint3-thq-ellipse21-elm" />
-                <img alt="Ellipse227281" src="public/ellipse227281-7z5q-200h.png" className="joint3-thq-ellipse22-elm" />
-                <img alt="IMAGE476761" src="public/image476761-21bs-1000w.png" className="joint3-thq-image47-elm2" />
+                <img alt="Ellipse187281" src="/ellipse187281-xej-200h.png" className="joint3-thq-ellipse18-elm" />
+                <img alt="Ellipse197281" src="/ellipse197281-kc5-200h.png" className="joint3-thq-ellipse19-elm" />
+                <img alt="Ellipse177281" src="/ellipse177281-owca-200h.png" className="joint3-thq-ellipse17-elm" />
+                <img alt="Ellipse207281" src="/ellipse207281-mfxf-200h.png" className="joint3-thq-ellipse20-elm" />
+                <img alt="Ellipse217281" src="/ellipse217281-a2n-200h.png" className="joint3-thq-ellipse21-elm" />
+                <img alt="Ellipse227281" src="/ellipse227281-7z5q-200h.png" className="joint3-thq-ellipse22-elm" />
+                <img alt="IMAGE476761" src="/image476761-21bs-1000w.png" className="joint3-thq-image47-elm2" />
                 <span className="joint3-thq-text-elm170">
                   Инструкция и рекомендации по применению
                 </span>
@@ -508,7 +508,7 @@ function App() {
 
             <div className="joint3-thq-frame9-elm1">
               <div className="joint3-thq-group211-elm2">
-                <img alt="logowhite0415001" src="public/logowhite0415001-5ula.svg" className="joint3-thq-logowhite041-elm2" />
+                <img alt="logowhite0415001" src="/logowhite0415001-5ula.svg" className="joint3-thq-logowhite041-elm2" />
               </div>
 
 
@@ -550,7 +550,7 @@ function App() {
 
             <div className="joint3-thq-frame277130171-elm">
 
-              <img alt="IMAGE466761" src="public/image466761-yd6l-800w.png" className="joint3-thq-image46-elm" />
+              <img alt="IMAGE466761" src="/image466761-yd6l-800w.png" className="joint3-thq-image46-elm" />
 
               <div className="joint3-thq-frame277130170-elm">
                 <div className="joint3-thq-frame277130169-elm">
@@ -583,7 +583,7 @@ function App() {
                     <span className="joint3-thq-text-elm182">СИНЯЯ Оставить заявку</span>
                   </div>
                   <div className="joint3-thq-frame1059-elm5">
-                    <img alt="Frame1061I676" src="public/frame1061i676-dwu.svg" className="joint3-thq-frame1061-elm5" />
+                    <img alt="Frame1061I676" src="/frame1061i676-dwu.svg" className="joint3-thq-frame1061-elm5" />
                   </div>
                 </div> */}
 
@@ -613,7 +613,7 @@ function App() {
                   <span className="joint3-thq-text-elm185">СИНЯЯ Оставить заявку</span>
                 </div>
                 <div className="joint3-thq-frame1059-elm6">
-                  <img alt="Frame1061I676" src="public/frame1061i676-tcax.svg" className="joint3-thq-frame1061-elm6" />
+                  <img alt="Frame1061I676" src="/frame1061i676-tcax.svg" className="joint3-thq-frame1061-elm6" />
                 </div>
               </div> */}
 
@@ -642,7 +642,7 @@ function App() {
                   <span className="joint3-thq-text-elm188">СИНЯЯ Купить в 1 клик</span>
                 </div>
                 <div className="joint3-thq-frame1059-elm7">
-                  <img alt="Frame1061I676" src="public/frame1061i676-m24a.svg" className="joint3-thq-frame1061-elm7" />
+                  <img alt="Frame1061I676" src="/frame1061i676-m24a.svg" className="joint3-thq-frame1061-elm7" />
                 </div>
               </div> */}
 

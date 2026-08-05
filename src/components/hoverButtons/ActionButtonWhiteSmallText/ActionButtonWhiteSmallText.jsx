@@ -1,7 +1,7 @@
 import React from 'react'
 import './ActionButtonWhiteSmallText.css'
 
-const ActionButtonWhiteSmallText = ({ text = "Оставить заявку", iconSrc = "public/frame1061i734-1gkq.svg" }) => {
+const ActionButtonWhiteSmallText = ({ text = "Оставить заявку", iconSrc = "/frame1061i734-1gkq.svg" }) => {
   return (
     <div className="joint3-thq-component5-elm">
       <div className="joint3-thq-frame1060-elm5"></div>

@@ -52,7 +52,7 @@ const AccordionSection = () => {
             ) : (
               <img 
                 alt="toggle" 
-                src="public/frame386761-hulo.svg" 
+                src="/frame386761-hulo.svg" 
                 className="accordion-icon"
               />
             )}

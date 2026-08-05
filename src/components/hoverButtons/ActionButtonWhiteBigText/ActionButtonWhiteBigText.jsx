@@ -3,8 +3,8 @@ import './ActionButtonWhiteBigText.css'
 
 const ActionButtonWhiteBigText = ({ 
   text = "Купить в 1 клик", 
-  leftIconSrc = "public/frame1061i676-d6wk.svg",
-  rightIconSrc = "public/frame1061i676-d6wk.svg",
+  leftIconSrc = "/frame1061i676-d6wk.svg",
+  rightIconSrc = "/frame1061i676-d6wk.svg",
   showLeftIcon = true,    // опционально: показать левую иконку
   showRightIcon = true,   // опционально: показать правую иконку
   onClick 

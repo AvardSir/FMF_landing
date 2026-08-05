@@ -15,13 +15,13 @@ const SelectionSection = () => {
             <section id="for-whom"></section>
             <img
                 alt="Rectangle356761"
-                src="public/rectangle356761-jsri-900h.png"
+                src="/rectangle356761-jsri-900h.png"
                 className="joint3-thq-rectangle35-elm"
             />
 
             <img
                 alt="Vector466761"
-                src="public/vector466761-x0yv.svg"
+                src="/vector466761-x0yv.svg"
                 className="joint3-thq-vector46-elm"
             />
             <span className="joint3-thq-text-elm114">

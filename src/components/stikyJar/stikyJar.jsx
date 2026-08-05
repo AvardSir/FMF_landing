@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import './stikyJar.css';
 
 const StikyJar = ({ 
-  imageSrc = "public/image146761-6dy-500h.png",
+  imageSrc = "/image146761-6dy-500h.png",
   altText = "IMAGE146761",
   className = ""
 }) => {

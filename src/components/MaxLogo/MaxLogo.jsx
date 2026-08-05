@@ -1,12 +1,13 @@
 import React from 'react'
 import "./MaxLogo.css"
-import MaxLogoSvg from '../../../public/Max_logo.svg'
+const MaxLogoSvg = "/Max_logo.svg";
+// import MaxLogo from './../../../old versions/versions/ver6/try4 react/my-project/src/components/MaxLogo/MaxLogo';
 
 const MaxLogo = () => {
   return (
     <div>
       <div className="joint3-thq-logostelegram-elm2">
-        <img alt="Vector7286" src="public/vector7286-15ru.svg" className="joint3-thq-vector-elm5" />
+        <img alt="Vector7286" src="/vector7286-15ru.svg" className="joint3-thq-vector-elm5" />
         <div className="joint3-thq-maxmessengerhorizontallogo1-elm">
           <div className="joint3-thq-group-elm6">
             <div className="joint3-thq-clippathgroup-elm1">

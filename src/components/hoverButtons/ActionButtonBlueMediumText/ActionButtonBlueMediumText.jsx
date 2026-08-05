@@ -3,8 +3,8 @@ import './ActionButtonBlueMediumText.css'
 
 const ActionButtonBlueMediumText = ({ 
   text = "Купить в 1 клик", 
-  leftIconSrc = "public/frame1061i676-cigp.svg",
-  rightIconSrc = "public/frame1061i676-cigp.svg",
+  leftIconSrc = "/frame1061i676-cigp.svg",
+  rightIconSrc = "/frame1061i676-cigp.svg",
   showLeftIcon = true,
   showRightIcon = true,
   onClick 

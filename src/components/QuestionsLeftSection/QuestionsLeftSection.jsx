@@ -125,7 +125,7 @@ export function QuestionsLeftSection() {
                                 <a href="https://t.me/your_username" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', textDecoration: 'none' }}>
                                     <img
                                         alt="Telegram"
-                                        src="public/logostelegram7286-9tf.svg"
+                                        src="/logostelegram7286-9tf.svg"
                                         className="joint3-thq-logostelegram-elm1"
                                     />
                                 </a>
@@ -137,7 +137,7 @@ export function QuestionsLeftSection() {
                                 <a href="https://wa.me/your_number" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', textDecoration: 'none' }}>
                                     <img
                                         alt="WhatsApp"
-                                        src="public/logostelegram7286-26se.svg"
+                                        src="/logostelegram7286-26se.svg"
                                         className="joint3-thq-logostelegram-elm3"
                                     />
                                 </a>
@@ -145,7 +145,7 @@ export function QuestionsLeftSection() {
                                 <a href="viber://chat?number=your_number" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', textDecoration: 'none' }}>
                                     <img
                                         alt="Viber"
-                                        src="public/logostelegram7287-0rp.svg"
+                                        src="/logostelegram7287-0rp.svg"
                                         className="joint3-thq-logostelegram-elm4"
                                     />
                                 </a>
