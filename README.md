@@ -6,6 +6,12 @@
 
 ---
 
+## 📸 Как это выглядит
+
+<img width="1920" height="953" alt="image" src="https://github.com/user-attachments/assets/92e02cf0-34eb-4592-9ec5-8c3ee59cfd7d" />
+
+---
+
 ## 🚀 Демо
 
 Статический сайт задеплоен на **Render**:
